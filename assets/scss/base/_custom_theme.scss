@@ -1,0 +1,14 @@
+$primary: (
+  "primary-10": #FFF9E2,
+  "primary-20": #FFEF8E,
+  "primary-30": #FFDD4A,
+  "primary-40": #F5C700,
+  "primary-50": #A46305,
+);
+
+$accent:(
+  "accent-10": #027FEA,
+);
+
+$theme-colors: map-merge($theme-colors, $primary);
+$theme-colors: map-merge($theme-colors, $accent);
