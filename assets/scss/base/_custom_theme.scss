@@ -7,8 +7,27 @@ $primary: (
 );
 
 $accent:(
-  "accent-10": #027FEA,
+  "accent-10": #C5E4FF,
+  "accent-20": #8BBFEC,
+  "accent-30": #2A8ADC,
+  "accent-40": #027FEA,
+  "accent-50": #004B8B,
 );
+
+$grayscale:(
+  "grayscale-10": #F1F1F1,
+  "grayscale-20": #E8E8E8,
+  "grayscale-30": #D1D1D1,
+  "grayscale-40": #AAAAAA,
+  "grayscale-50": #8E8E8E,
+  "grayscale-60": #797979,
+  "grayscale-70": #666666,
+  "grayscale-80": #525252,
+  "grayscale-90": #404040,
+);
+
+
 
 $theme-colors: map-merge($theme-colors, $primary);
 $theme-colors: map-merge($theme-colors, $accent);
+$theme-colors: map-merge($theme-colors, $grayscale);

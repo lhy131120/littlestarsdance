@@ -627,15 +627,17 @@ $font-weight-bolder:          bolder !default;
 $font-weight-base:            $font-weight-normal !default;
 
 $line-height-base:            1.5 !default;
-$line-height-sm:              1.25 !default;
+$line-height-sm:              1.2 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+$h1-font-size:                $font-size-base * 2.5 !default;   // 40
+$h2-font-size:                $font-size-base * 2 !default;     // 32
+$h3-font-size:                $font-size-base * 1.75 !default;  // 28
+$h4-font-size:                $font-size-base * 1.5 !default;   // 24
+$h5-font-size:                $font-size-base * 1.25 !default;  // 20
+$h6-font-size:                $font-size-base * 1.125!default;  // 18
+$h7-font-size:                $font-size-base !default;         // 16
+$h8-font-size:                $font-size-base * 0.875!default;  // 14
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -645,12 +647,14 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
+  7: $h7-font-size,
+  8: $h8-font-size,
 ) !default;
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
-$headings-margin-bottom:      $spacer * .5 !default;
+$headings-margin-bottom:      0 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
 $headings-font-weight:        500 !default;
