@@ -23,32 +23,29 @@ function moveOutputPlugin() {
 }
 
 export default defineConfig({
-  // base 的寫法:
-  // base: '/Repository 的名稱/'
-  base: '/web-layout-training-vite/',
-  plugins: [
-    liveReload(['./layout/**/*.ejs', './pages/**/*.ejs', './pages/**/*.html']),
-    ViteEjsPlugin(),
-    moveOutputPlugin(),
-  ],
-  server: {
-    // 啟動 server 時預設開啟的頁面
-    open: 'pages/index.html',
-  },
-  build: {
-    rollupOptions: {
-      input: Object.fromEntries(
-        glob
-          .sync('pages/**/*.html')
-          .map((file) => [
-            path.relative(
-              'pages',
-              file.slice(0, file.length - path.extname(file).length)
-            ),
-            fileURLToPath(new URL(file, import.meta.url)),
-          ])
-      ),
-    },
-    outDir: 'dist',
-  },
+	// base 的寫法:
+	// base: '/Repository 的名稱/'
+	base: "/littlestarsdance/",
+	plugins: [
+		liveReload(["./layout/**/*.ejs", "./pages/**/*.ejs", "./pages/**/*.html"]),
+		ViteEjsPlugin(),
+		moveOutputPlugin(),
+	],
+	server: {
+		// 啟動 server 時預設開啟的頁面
+		open: "pages/index.html",
+	},
+	build: {
+		rollupOptions: {
+			input: Object.fromEntries(
+				glob
+					.sync("pages/**/*.html")
+					.map((file) => [
+						path.relative("pages", file.slice(0, file.length - path.extname(file).length)),
+						fileURLToPath(new URL(file, import.meta.url)),
+					])
+			),
+		},
+		outDir: "dist",
+	},
 });
