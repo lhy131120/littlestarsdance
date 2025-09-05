@@ -7,15 +7,15 @@
 
 // scss-docs-start gray-color-variables
 $white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-100: #F1F1F1 !default;
+$gray-200: #E8E8E8 !default;
+$gray-300: #D1D1D1 !default;
+$gray-400: #AAAAAA !default;
+$gray-500: #8E8E8E !default;
+$gray-600: #797979 !default;
+$gray-700: #666666 !default;
+$gray-800: #525252 !default;
+$gray-900: #404040 !default;
 $black:    #000 !default;
 // scss-docs-end gray-color-variables
 
@@ -454,9 +454,10 @@ $spacers: (
   6: $spacer * 2,       // 32px
   7: $spacer * 2.5,     // 40px
   8: $spacer * 3.5,     // 56px 
-  9: $spacer * 4,       // 64px
-  10: $spacer * 5,      // 80px
-  11: $spacer * 7.5,    // 120px
+  9: $spacer * 3.75,    // 60px 
+  10: $spacer * 4,       // 64px
+  11: $spacer * 5,      // 80px
+  12: $spacer * 7.5,    // 120px
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -477,7 +478,7 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-text-align:           null !default;
-$body-color:                $gray-900 !default;
+$body-color:                $gray-800 !default;
 $body-bg:                   $white !default;
 
 $body-secondary-color:      rgba($body-color, .75) !default;
@@ -492,10 +493,10 @@ $body-emphasis-color:       $black !default;
 //
 // Style anchor elements.
 
-$link-color:                              $primary !default;
+$link-color:                              $gray-800 !default; //$primary !default;
 $link-decoration:                         underline !default;
-$link-shade-percentage:                   20% !default;
-$link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
+$link-shade-percentage:                   100% !default;
+$link-hover-color:                        $primary-500; //shift-color($primary-500, $link-shade-percentage) !default;
 $link-hover-decoration:                   null !default;
 
 $stretched-link-pseudo-element:           after !default;
@@ -666,7 +667,7 @@ $font-weight-semibold:        600 !default;
 $font-weight-bold:            700 !default;
 $font-weight-bolder:          bolder !default;
 
-$font-weight-base:            $font-weight-normal !default;
+$font-weight-base:            $font-weight-medium !default;
 
 $line-height-base:            1.5 !default;
 $line-height-sm:              1.2 !default;
