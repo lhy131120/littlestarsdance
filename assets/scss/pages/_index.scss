@@ -1,8 +1,12 @@
-.hemo-hero-wrap {
+.home-hero-wrap {
   aspect-ratio: 1920 / 960;
 
   @include media-breakpoint-down(lg) {
     aspect-ratio: 375 / 702;
     max-height: 702px;
+  }
+
+  .controller {
+    bottom: 40px;
   }
 }
