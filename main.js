@@ -1,17 +1,25 @@
-// import "https://font.emtech.cc/emfont.js";
-import "./assets/scss/all.scss";
+import Swiper from "swiper/bundle";
 import "bootstrap/dist/js/bootstrap.min.js";
 
+import "swiper/css/bundle";
+import "./assets/scss/all.scss";
+
 document.addEventListener("DOMContentLoaded", () => {
-  // console.log("Hello world");
-  // const navbarToggler = document.querySelector(".navbar-toggler");
-  // const offcanvas = document.querySelector(".offcanvas");
-  // const navbar = document.querySelector("header .navbar");
-  // navbarToggler.addEventListener("click", (e) => {
-  //   if (offcanvas.classList.contains("show")) {
-  //     navbarToggler.classList.remove("toggled");
-  //   } else {
-  //     navbarToggler.classList.add("toggled");
-  //   }
-  // });
+
+  if(document.querySelector("#home-hero-wrap")) {
+    const swiper = new Swiper("#home-hero-wrap .swiper", {
+			loop: true,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: true,
+			},
+      effect: "fade",
+			navigation: {
+				nextEl: "#home-hero-wrap .swiper .swiper-button-next",
+				prevEl: "#home-hero-wrap .swiper .swiper-button-prev",
+			},
+		});
+  }
+
+  console.log(Swiper);
 });

@@ -1,3 +1,8 @@
-.index-title {
-  font-size: 100px;
+.hemo-hero-wrap {
+  aspect-ratio: 1920 / 960;
+
+  @include media-breakpoint-down(lg) {
+    aspect-ratio: 375 / 702;
+    max-height: 702px;
+  }
 }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <h1 class="index-title">我是首頁</h1>
+
+    <div class="card" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title">卡片元件</h5>
+        <p class="card-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit,
+          iusto odio assumenda alias id nobis earum!
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal 按鈕 -->
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      打開 modal
+    </button>
+
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+
+    <p class="text-primary fs-6 fs-md-5 fs-lg-4 mb-1">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="text-primary fs-6 fs-md-5 fs-lg-4 mb-2">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="text-primary fs-6 fs-md-5 fs-lg-4 mb-3">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="text-primary fs-6 fs-md-5 fs-lg-4 mb-4">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="text-primary fs-6 fs-md-5 fs-lg-4 mb-5">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="text-primary fs-6 fs-md-5 fs-lg-4 mb-6">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="text-primary mb-7">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="text-primary mb-8">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="text-primary mb-9">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="text-primary mb-10">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="text-primary mb-11">我個人認為義大利麵就應該拌 42 號混泥土</p>
+
+    <p class="text-primary-100">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="text-primary-200">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="text-primary-300">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="text-primary-400">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="text-primary-500">我個人認為義大利麵就應該拌 42 號混泥土</p>
+
+    <p class="text-accent-100">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="text-accent-200">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="text-accent-300">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="text-accent-400">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="text-accent-500">我個人認為義大利麵就應該拌 42 號混泥土</p>
+
+    <p class="fs-1 text-gray-100">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="fs-2 text-gray-200">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="fs-3 text-gray-300">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="fs-4 text-gray-400">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="fs-5 text-gray-500">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="fs-6 text-gray-600">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="fs-7 text-gray-700">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="fs-8 text-gray-800">我個人認為義大利麵就應該拌 42 號混泥土</p>
+    <p class="fs-1 text-gray-900">我個人認為義大利麵就應該拌 42 號混泥土</p>
+
+
+
+    <!-- Modal 元件 -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">內容</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              關閉
+            </button>
+            <button type="button" class="btn btn-primary">確定</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
