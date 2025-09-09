@@ -704,6 +704,7 @@ $h8-font-size: $font-size-base * 0.875 !default;
 
 // scss-docs-start font-sizes
 $font-sizes: (
+  0: 0,
   1: $h1-font-size,
   // 40px
   2: $h2-font-size,

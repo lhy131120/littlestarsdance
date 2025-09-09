@@ -8,6 +8,7 @@
   border-radius: var(--bs-border-radius-sm);
   border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
   letter-spacing: 0.1em;
+  display: inline-block;
 
   &.withIcon {
     display: flex;
@@ -30,6 +31,14 @@
     --bs-btn-disabled-bg: var(--bs-gray-500);
     --bs-btn-disabled-border-color: var(--bs-gray-500);
     border: 0;
+
+    &.arrow-right .btn-icon {
+      background-image: url("data:image/svg+xml,%0A%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 5L16 12L9 19' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
+
+    &.arrow-right:hover .btn-icon {
+      background-image: url("data:image/svg+xml,%0A%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 5L16 12L9 19' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
   }
 
   &-outline-secondary {

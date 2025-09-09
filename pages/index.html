@@ -1,182 +1,428 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>首頁</title>
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>首頁</title>
+	</head>
+	<body>
+		<%- include('./layout/header'); -%>
 
-    <main>
-      <!-- home hero -->
-      <section id="home-hero-wrap" class="home-hero-wrap w-100">
-        <div class="swiper h-100 w-100">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div
-                class="h-100 w-100 overflow-hidden position-relative d-flex align-items-end align-items-lg-center"
-              >
-                <div class="container-fluid mw-1920p px-lg-11 px-xl-13">
-                  <img
-                    src="/assets/images/hero/hero-1.jpg"
-                    class="position-absolute top-50 start-50 translate-middle w-100 h-100 object-fit-cover"
-                    alt=""
-                  />
-                  <ul
-                    class="list-unstyled mb-13 mb-lg-0 position-relative d-flex flex-column gap-4 gap-lg-6 z-2"
-                  >
-                    <li>
-                      <span
-                        class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
-                        >通過舞蹈表達自我</span
-                      >
-                    </li>
-                    <li>
-                      <span
-                        class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
-                        >透過藝術表達建立自信</span
-                      >
-                    </li>
-                    <li>
-                      <button
-                        class="btn btn-primary fs-6 fs-lg-2 px-lg-6 py-lg-4"
-                        type="button"
-                      >
-                        <span>探索課程</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div
-                class="h-100 w-100 overflow-hidden position-relative d-flex align-items-end align-items-lg-center"
-              >
-                <div class="container-fluid mw-1920p px-lg-11 px-xl-13">
-                  <img
-                    src="/assets/images/hero/hero-2.jpg"
-                    class="position-absolute top-50 start-50 translate-middle w-100 h-100 object-fit-cover"
-                    alt=""
-                  />
-                  <ul
-                    class="list-unstyled mb-13 mb-lg-0 position-relative d-flex flex-column gap-4 gap-lg-6 z-2"
-                  >
-                    <li>
-                      <span
-                        class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
-                        >從第一步到精彩表演</span
-                      >
-                    </li>
-                    <li>
-                      <span
-                        class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
-                        >用愛心關懷培養小舞者</span
-                      >
-                    </li>
-                    <li>
-                      <button
-                        class="btn btn-primary fs-6 fs-lg-2 px-lg-6 py-lg-4"
-                        type="button"
-                      >
-                        <span>探索課程</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div
-                class="h-100 w-100 overflow-hidden position-relative d-flex align-items-end align-items-lg-center"
-              >
-                <div class="container-fluid mw-1920p px-lg-11 px-xl-13">
-                  <img
-                    src="/assets/images/hero/hero-3.jpg"
-                    class="position-absolute top-50 start-50 translate-middle w-100 h-100 object-fit-cover"
-                    alt=""
-                  />
-                  <ul
-                    class="list-unstyled mb-13 mb-lg-0 position-relative d-flex flex-column gap-4 gap-lg-6 z-2"
-                  >
-                    <li>
-                      <span
-                        class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
-                        >讓您的孩子在快樂中舞蹈</span
-                      >
-                    </li>
-                    <li>
-                      <span
-                        class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
-                        >3-16歲專業舞蹈教育</span
-                      >
-                    </li>
-                    <li>
-                      <button
-                        class="btn btn-primary fs-6 fs-lg-2 px-lg-6 py-lg-4"
-                        type="button"
-                      >
-                        <span>探索課程</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="controller position-absolute w-100">
-            <div
-              class="mw-1920p mx-auto px-lg-11 px-xl-13 d-flex justify-content-between"
-            >
-              <button type="button" class="swiper-button-prev">上一頁</button>
-              <button type="button" class="swiper-button-next">下一頁</button>
-            </div>
-          </div>
-        </div>
-      </section>
+		<main>
+			<!-- home hero -->
+			<section id="home-hero-wrap" class="home-hero-wrap w-100">
+				<div class="swiper h-100 w-100">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="h-100 w-100 overflow-hidden position-relative d-flex align-items-end align-items-lg-center">
+								<div class="container-fluid mw-1920p px-lg-11 px-xl-13">
+									<img
+										src="/assets/images/hero/hero-1.jpg"
+										class="position-absolute top-50 start-50 translate-middle w-100 h-100 object-fit-cover"
+										alt=""
+									/>
+									<ul class="list-unstyled mb-13 mb-lg-0 position-relative d-flex flex-column gap-4 gap-lg-6 z-2">
+										<li>
+											<span
+												class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
+												>通過舞蹈表達自我</span
+											>
+										</li>
+										<li>
+											<span
+												class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
+												>透過藝術表達建立自信</span
+											>
+										</li>
+										<li>
+											<button class="btn btn-primary fs-6 fs-lg-2 px-lg-6 py-lg-4" type="button">
+												<span>探索課程</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="h-100 w-100 overflow-hidden position-relative d-flex align-items-end align-items-lg-center">
+								<div class="container-fluid mw-1920p px-lg-11 px-xl-13">
+									<img
+										src="/assets/images/hero/hero-2.jpg"
+										class="position-absolute top-50 start-50 translate-middle w-100 h-100 object-fit-cover"
+										alt=""
+									/>
+									<ul class="list-unstyled mb-13 mb-lg-0 position-relative d-flex flex-column gap-4 gap-lg-6 z-2">
+										<li>
+											<span
+												class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
+												>從第一步到精彩表演</span
+											>
+										</li>
+										<li>
+											<span
+												class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
+												>用愛心關懷培養小舞者</span
+											>
+										</li>
+										<li>
+											<button class="btn btn-primary fs-6 fs-lg-2 px-lg-6 py-lg-4" type="button">
+												<span>探索課程</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="h-100 w-100 overflow-hidden position-relative d-flex align-items-end align-items-lg-center">
+								<div class="container-fluid mw-1920p px-lg-11 px-xl-13">
+									<img
+										src="/assets/images/hero/hero-3.jpg"
+										class="position-absolute top-50 start-50 translate-middle w-100 h-100 object-fit-cover"
+										alt=""
+									/>
+									<ul class="list-unstyled mb-13 mb-lg-0 position-relative d-flex flex-column gap-4 gap-lg-6 z-2">
+										<li>
+											<span
+												class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
+												>讓您的孩子在快樂中舞蹈</span
+											>
+										</li>
+										<li>
+											<span
+												class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
+												>3-16歲專業舞蹈教育</span
+											>
+										</li>
+										<li>
+											<button class="btn btn-primary fs-6 fs-lg-2 px-lg-6 py-lg-4" type="button">
+												<span>探索課程</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="controller position-absolute w-100">
+						<div class="container-fluid mw-1920p mx-auto px-lg-11 px-xl-13 d-flex justify-content-between">
+							<button type="button" class="swiper-button-prev">上一頁</button>
+							<button type="button" class="swiper-button-next">下一頁</button>
+						</div>
+					</div>
+				</div>
+			</section>
 
-      <!-- Hot course -->
-      <section id="hot-course" class="py-11 py-lg-14">
-        <div class="container">
-          <h2 class="text-lg-center mb-4 fs-5 fs-lg-1">熱門課程</h2>
-          <p class="text-lg-center mb-7 mb-lg-8 fs-6 fs-lg-4">
-            適合年齡的舞蹈課程,旨在培養創造力和建立自信
-          </p>
-          <div class="row rows-col-1 rows-col-lg-3 g-5">
-            <div class="col">
-              <div class="card">
-                <img
-                  src="/assets/images/8.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <div>
-                    <h5 class="card-title">幼兒芭蕾</h5>
-                    <p class="card-text">
-                      透過各種不同創意動作和想像遊戲溫和地介紹芭蕾基礎。
-                    </p>
-                  </div>
-                  <ul class="list-unstyled">
-                    <li>週六上午10:00</li>
-                    <li>80元 / 月</li>
-                    <li>小班教學</li>
-                  </ul>
-                  <a href="#" class="btn btn-primary mx-auto">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">2</div>
-            <div class="col">3</div>
-          </div>
-        </div>
-      </section>
-    </main>
+			<!-- Hot course -->
+			<section id="hot-course" class="hot-course py-11 py-lg-14 overflow-hidden">
+				<div class="container">
+					<h2 class="text-lg-center mb-4 fs-5 fs-lg-1">熱門課程</h2>
+					<p class="text-lg-center mb-7 mb-lg-8 fs-6 fs-lg-4">適合年齡的舞蹈課程,旨在培養創造力和建立自信</p>
+					<div class="row row-cols-1 g-5 mb-7 d-flex d-lg-none">
+						<div class="col">
+							<div class="card border-0 overflow-hidden">
+								<div class="overflow-hidden rounded-5">
+									<img src="/assets/images/course-thumbnail/course-1.jpg" class="card-img-top" alt="幼兒芭蕾" />
+								</div>
+								<div class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4">
+									<div>
+										<h3 class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500">幼兒芭蕾</h3>
+										<p class="card-text line-clamp-2">透過各種不同創意動作和想像遊戲溫和地介紹芭蕾基礎。</p>
+									</div>
+									<ul class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto">
+										<li class="d-flex gap-4 clock">週六上午10:00</li>
+										<li class="d-flex gap-4 star">80元/月</li>
+										<li class="d-flex gap-4 class">小班教學</li>
+									</ul>
+									<a href="#" class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base">
+										<span>了解更多</span>
+										<span class="btn-icon"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card border-0 overflow-hidden">
+								<div class="overflow-hidden rounded-5">
+									<img src="/assets/images/course-thumbnail/course-2.jpg" class="card-img-top" alt="嘻哈基礎" />
+								</div>
+								<div class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4">
+									<div>
+										<h3 class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500">嘻哈基礎</h3>
+										<p class="card-text line-clamp-2">學習嘻哈基礎,包含高能量動作、節奏訓練和街舞文化。</p>
+									</div>
+									<ul class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto">
+										<li class="d-flex gap-4 clock">週二和週四 下午4:30</li>
+										<li class="d-flex gap-4 star">240元/月</li>
+										<li class="d-flex gap-4 class">小班教學</li>
+									</ul>
+									<a href="#" class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base">
+										<span>了解更多</span>
+										<span class="btn-icon"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card border-0 overflow-hidden">
+								<div class="overflow-hidden rounded-5">
+									<img src="/assets/images/course-thumbnail/course-3.jpg" class="card-img-top" alt="青少年現代舞" />
+								</div>
+								<div class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4">
+									<div>
+										<h3 class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500">青少年現代舞</h3>
+										<p class="card-text line-clamp-2">
+											富有表現力的現代舞,幫助青少年找到獨特的藝術聲音。富有表現力的現代舞,幫助青少年找到獨特的藝術聲音。富有表現力的現代舞,幫助青少年找到獨特的藝術聲音。富有表現力的現代舞,幫助青少年找到獨特的藝術聲音。富有表現力的現代舞,幫助青少年找到獨特的藝術聲音。
+										</p>
+									</div>
+									<ul class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto">
+										<li class="d-flex gap-4 clock">週六上午10:00</li>
+										<li class="d-flex gap-4 star">80元/月</li>
+										<li class="d-flex gap-4 class">小班教學</li>
+									</ul>
+									<a href="#" class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base">
+										<span>了解更多</span>
+										<span class="btn-icon"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="d-none d-lg-block position-relative mb-8">
+						<div class="swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="card border-0 overflow-hidden h-100">
+										<div class="overflow-hidden rounded-5">
+											<img
+												src="/assets/images/course-thumbnail/course-1.jpg"
+												class="card-img-top object-fit-cover"
+												alt="幼兒芭蕾"
+											/>
+										</div>
+										<div class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4">
+											<div>
+												<h3 class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500">幼兒芭蕾</h3>
+												<p class="card-text line-clamp-2">透過各種不同創意動作和想像遊戲溫和地介紹芭蕾基礎。</p>
+											</div>
+											<ul class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto">
+												<li class="d-flex gap-4 clock">週六上午10:00</li>
+												<li class="d-flex gap-4 star">400元/月</li>
+												<li class="d-flex gap-4 class">小班教學</li>
+											</ul>
+											<a href="#" class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base">
+												<span>了解更多</span>
+												<span class="btn-icon"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card border-0 overflow-hidden h-100">
+										<div class="overflow-hidden rounded-5">
+											<img
+												src="/assets/images/course-thumbnail/course-2.jpg"
+												class="card-img-top object-fit-cover"
+												alt="嘻哈基礎"
+											/>
+										</div>
+										<div class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4">
+											<div>
+												<h3 class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500">嘻哈基礎</h3>
+												<p class="card-text line-clamp-2">學習嘻哈基礎,包含高能量動作、節奏訓練和街舞文化。</p>
+											</div>
+											<ul class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto">
+												<li class="d-flex gap-4 clock">週二和週四 下午4:30</li>
+												<li class="d-flex gap-4 star">680元/月</li>
+												<li class="d-flex gap-4 class">小班教學</li>
+											</ul>
+											<a href="#" class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base">
+												<span>了解更多</span>
+												<span class="btn-icon"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card border-0 overflow-hidden h-100">
+										<div class="overflow-hidden rounded-5">
+											<img
+												src="/assets/images/course-thumbnail/course-3.jpg"
+												class="card-img-top object-fit-cover"
+												alt="青少年現代舞"
+											/>
+										</div>
+										<div class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4">
+											<div>
+												<h3 class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500">
+													青少年現代舞
+												</h3>
+												<p class="card-text line-clamp-2">
+													富有表現力的現代舞,幫助青少年找到獨特的藝術聲音。富有表現力的現代舞,幫助青少年找到獨特的藝術聲音。富有表現力的現代舞,幫助青少年找到獨特的藝術聲音。富有表現力的現代舞,幫助青少年找到獨特的藝術聲音。富有表現力的現代舞,幫助青少年找到獨特的藝術聲音。
+												</p>
+											</div>
+											<ul class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto">
+												<li class="d-flex gap-4 clock">週六上午10:00</li>
+												<li class="d-flex gap-4 star">480元/月</li>
+												<li class="d-flex gap-4 class">小班教學</li>
+											</ul>
+											<a href="#" class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base">
+												<span>了解更多</span>
+												<span class="btn-icon"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card border-0 overflow-hidden h-100">
+										<div class="overflow-hidden rounded-5">
+											<img
+												src="/assets/images/course-thumbnail/course-4.jpg"
+												class="card-img-top object-fit-cover"
+												alt="創意芭蕾"
+											/>
+										</div>
+										<div class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4">
+											<div>
+												<h3 class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500">創意芭蕾</h3>
+												<p class="card-text line-clamp-2">透過創意動作和想像遊戲溫和地介紹芭蕾基礎。</p>
+											</div>
+											<ul class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto">
+												<li class="d-flex gap-4 clock">週三下午4:30</li>
+												<li class="d-flex gap-4 star">380元/月</li>
+												<li class="d-flex gap-4 class">小班教學</li>
+											</ul>
+											<a href="#" class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base">
+												<span>了解更多</span>
+												<span class="btn-icon"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card border-0 overflow-hidden h-100">
+										<div class="overflow-hidden rounded-5">
+											<img
+												src="/assets/images/course-thumbnail/course-5.jpg"
+												class="card-img-top object-fit-cover"
+												alt="踢踏舞冒險"
+											/>
+										</div>
+										<div class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4">
+											<div>
+												<h3 class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500">
+													踢踏舞冒險
+												</h3>
+												<p class="card-text line-clamp-2">學習經典踢踏舞技巧和組合，用雙腳創造節奏聲響。</p>
+											</div>
+											<ul class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto">
+												<li class="d-flex gap-4 clock">週六下午2:30</li>
+												<li class="d-flex gap-4 star">400元/月</li>
+												<li class="d-flex gap-4 class">小班教學</li>
+											</ul>
+											<a href="#" class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base">
+												<span>了解更多</span>
+												<span class="btn-icon"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card border-0 overflow-hidden h-100">
+										<div class="overflow-hidden rounded-5">
+											<img
+												src="/assets/images/course-thumbnail/course-6.jpg"
+												class="card-img-top object-fit-cover"
+												alt="兒童爵士舞"
+											/>
+										</div>
+										<div class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4">
+											<div>
+												<h3 class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500">
+													兒童爵士舞
+												</h3>
+												<p class="card-text line-clamp-2">高能量爵士舞課程，專注於節奏、協調和樂趣！</p>
+											</div>
+											<ul class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto">
+												<li class="d-flex gap-4 clock">週六上午12:00</li>
+												<li class="d-flex gap-4 star">500元/月</li>
+												<li class="d-flex gap-4 class">小班教學</li>
+											</ul>
+											<a href="#" class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base">
+												<span>了解更多</span>
+												<span class="btn-icon"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button type="button" class="swiper-button-prev btn-sm d-none d-lg-flex">上一頁</button>
+						<button type="button" class="swiper-button-next btn-sm d-none d-lg-flex">下一頁</button>
+					</div>
+					<a href="javascript:;" class="btn-course d-block lh-0 mx-auto fs-0"><span>查看更多課程</span></a>
+				</div>
+			</section>
 
-    <%- include('./layout/footer'); -%>
+			<!-- Aim -->
+			<section id="aim" class="py-11 py-lg-14">
+				<div class="container">
+					<h2 class="text-lg-center mb-4 fs-5 fs-lg-1">安全與信任</h2>
+					<p class="text-lg-center mb-7 mb-lg-8 fs-6 fs-lg-4">
+						適合年齡的舞蹈課程,您孩子的安全和舒適是我們的首要任務。我們創造了一個讓家長放心、孩子茁壯的環境。
+					</p>
+					<div class="row row-cols-1 row-cols-lg-2 gy-5 gy-lg-0 flex-lg-row-reverse">
+						<div class="col">
+							<div class="py-3 px-5">
+								<div class="overflow-hidden rounded-32 rounded-lg-80" style="box-shadow: 0 6px 3px 6px #ffef8e">
+									<img src="/assets/images/section-aim.jpg" class="object-fit-cover w-100" alt="" />
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row row-cols-2 g-5 h-100">
+								<div class="col">
+									<div
+										class="p-4 py-lg-5 px-lg-6 overflow-hidden border border-2 border-primary-500 rounded-5 d-flex flex-column gap-2 gap-lg-4 h-100"
+									>
+										<h3 class="text-primary-500 fs-7 fs-lg-4">防滑地板</h3>
+										<p class="mb-0 fs-7 fs-lg-5">專業舞蹈地板,專為安全和最佳表現而設計。</p>
+									</div>
+								</div>
+								<div class="col">
+									<div
+										class="p-4 py-lg-5 px-lg-6 overflow-hidden border border-2 border-primary-500 rounded-5 d-flex flex-column gap-2 gap-lg-4 h-100"
+									>
+										<h3 class="text-primary-500 fs-7 fs-lg-4">認證教師</h3>
+										<p class="mb-0 fs-7 fs-lg-5">所有教師都經過專業培訓和背景調查。</p>
+									</div>
+								</div>
+								<div class="col">
+									<div
+										class="p-4 py-lg-5 px-lg-6 overflow-hidden border border-2 border-primary-500 rounded-5 d-flex flex-column gap-2 gap-lg-4 h-100"
+									>
+										<h3 class="text-primary-500 fs-7 fs-lg-4">家長觀看</h3>
+										<p class="mb-0 fs-7 fs-lg-5">觀察窗讓家長可以觀看孩子的學習過程。</p>
+									</div>
+								</div>
+								<div class="col">
+									<div
+										class="p-4 py-lg-5 px-lg-6 overflow-hidden border border-2 border-primary-500 rounded-5 d-flex flex-column gap-2 gap-lg-4 h-100"
+									>
+										<h3 class="text-primary-500 fs-7 fs-lg-4">以兒童為中心關注點</h3>
+										<p class="mb-0 fs-7 fs-lg-5">適合年齡的教學方法,注重情緒健康。</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
-    <script type="module" src="../main.js"></script>
-  </body>
+		<%- include('./layout/footer'); -%>
+
+		<script type="module" src="../main.js"></script>
+	</body>
 </html>

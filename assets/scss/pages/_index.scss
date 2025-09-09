@@ -10,3 +10,24 @@
     bottom: 40px;
   }
 }
+
+// hot-course
+.hot-course {
+  .swiper {
+    .card-img-top {
+      height: 312px;
+    }
+    .swiper-slide {
+      height: auto;
+    }
+    
+  }
+
+  .swiper-button-prev {
+    left: -72px;
+  }
+
+  .swiper-button-next {
+    right: -72px;
+  }
+}
