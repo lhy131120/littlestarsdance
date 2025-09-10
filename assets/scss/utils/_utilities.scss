@@ -38,6 +38,17 @@ $utilities: map-merge(
           none: none,
         ),
       ),
+      "object-position": (
+        property: object-position,
+        responsive: true,
+        values: (
+          top: top,
+          bottom: bottom,
+          center: center,
+          start: left,
+          end: right,
+        )
+      ),
     // scss-docs-end utils-object-fit
     // Opacity utilities
     // scss-docs-start utils-opacity
@@ -48,6 +59,7 @@ $utilities: map-merge(
           0: 0,
           25: 0.25,
           50: 0.5,
+          80: 0.8,
           75: 0.75,
           100: 1,
         ),
@@ -264,9 +276,11 @@ $utilities: map-merge(
     ),
     "max-height": (
       property: max-height,
+      responsive: true,
       class: mh,
       values: (
         100: 100%,
+        346p: 346px,
       ),
     ),
     "viewport-height": (
@@ -838,7 +852,10 @@ $utilities: map-merge(
           3: var(--#{$prefix}border-radius-lg),
           4: var(--#{$prefix}border-radius-xl),
           5: var(--#{$prefix}border-radius-xxl),
+          24:24px,
           32:32px,
+          48:48px,
+          56:56px,
           80:80px,
           circle: 50%,
           pill: var(--#{$prefix}border-radius-pill),

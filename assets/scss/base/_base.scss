@@ -2,6 +2,10 @@
 	letter-spacing: 0.05em;
 }
 
+hr.dashed-1 {
+  border-top: 1px dashed var(--bs-gray-800);
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -25,6 +29,10 @@
 
 .letter-spacing-15 {
 	letter-spacing: 0.15em;
+}
+
+.border-dashed-3-primary-400 {
+  border: 3px dashed var(--bs-primary-400);
 }
 
 // ul li list
@@ -59,6 +67,16 @@ ul {
 			content: "\e902";
 			color: var(--bs-primary-500);
 		}
+
+    &.location:before {
+			content: "\e901";
+			color: var(--bs-primary-500);
+		}
+
+    &.diamond:before {
+      content: "\e904";
+      color: var(--bs-accent-400);
+    }
 	}
 }
 

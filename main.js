@@ -39,5 +39,17 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
   }
 
-  console.log(Swiper);
+  if(document.querySelector("#home-event")) {
+    const swiper = new Swiper("#home-event .swiper", {
+      slidesPerView: "auto",
+      spaceBetween: 24
+    })
+  }
+
+  if(document.querySelector("#home-comments")) {
+    const swipers = document.querySelectorAll("#home-comments .swiper");
+
+    
+  }
+
 });

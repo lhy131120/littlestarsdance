@@ -9,6 +9,7 @@
   border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
   letter-spacing: 0.1em;
   display: inline-block;
+  box-shadow: none !important;
 
   &.withIcon {
     display: flex;
