@@ -10,6 +10,7 @@ hr.dashed-1 {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   -webkit-line-clamp: 2;
   text-overflow: ellipsis;
 }
@@ -128,11 +129,3 @@ ul {
   }
 }
 
-// footer
-footer {
-	a:not(.nav-link) {
-		&:hover {
-			color: #8e8e8e !important;
-		}
-	}
-}

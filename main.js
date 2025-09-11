@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					disableOnInteraction: false,
 					reverseDirection: index === 1 ? true : false,
 				},
-				speed: 1500,
+				speed: 5000,
 			});
     });
   }
