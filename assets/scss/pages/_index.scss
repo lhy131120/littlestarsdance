@@ -114,9 +114,62 @@
 }
 
 .home-comments {
+  position: relative;
+  overflow: hidden;
+
   .swiper {
+    padding: 20px 0;
+    overflow: visible;
+    width: 100%;
+
+    @include media-breakpoint-down(lg) {
+      padding: 0;
+    }
+
+    .swiper-slide {
+      position: relative;
+
+      &:nth-child(odd) {
+        top: 20px;
+
+        @include media-breakpoint-down(lg) {
+          top: 0;
+        }
+      }
+      
+      &:nth-child(even) {
+        bottom: 20px;
+
+        @include media-breakpoint-down(lg) {
+          bottom: 0;
+        }
+      }
+    }
   }
   .card {
     max-width: 432px;
+  }
+}
+
+.home-past-events {
+  a {
+    width: 100%;
+    max-width: 416px;
+    aspect-ratio: 416 / 312;
+    
+    @include media-breakpoint-down(lg) {
+      max-width: 224px;
+      aspect-ratio:  224 / 168;
+    }
+
+    img {
+      transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+    }
   }
 }
