@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>課程</title>
-	</head>
-	<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>課程</title>
+  </head>
+  <body>
     <%- include('./layout/header'); -%>
     <main>
       <%- include('./layout/hero'); -%>
       <section class="py-11 py-lg-14">
         <div class="container">
-          <h2 class="text-lg-center mb-4 fs-4 fs-lg-1">即將舉行的活動</h2>
-					<p class="text-lg-center mb-7 mb-lg-8 fs-6 fs-lg-4 letter-spacing-1">從初學者到進階技巧，我們提供專為啟發和挑戰各程度舞者而設計的課程。</p>
+          <h2 class="text-lg-center mb-4 fs-4 fs-lg-1">我們的舞蹈課程</h2>
+          <p class="text-lg-center mb-7 mb-lg-8 fs-6 fs-lg-4 letter-spacing-1">
+            從初學者到進階技巧，我們提供專為啟發和挑戰各程度舞者而設計的課程。
+          </p>
 
           <div class="row row-cols-2 row-cols-lg-3">
-            <div class="col">1</div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">創意芭蕾</h3>
+                </div>
+              </div>
+            </div>
             <div class="col">1</div>
             <div class="col">1</div>
             <div class="col">1</div>
@@ -25,7 +33,6 @@
             <div class="col">1</div>
           </div>
         </div>
-
       </section>
     </main>
     <%- include('./layout/footer'); -%>

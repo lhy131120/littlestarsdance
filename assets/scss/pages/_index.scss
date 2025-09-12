@@ -135,7 +135,7 @@
           top: 0;
         }
       }
-      
+
       &:nth-child(even) {
         bottom: 20px;
 
@@ -155,14 +155,14 @@
     width: 100%;
     max-width: 416px;
     aspect-ratio: 416 / 312;
-    
+
     @include media-breakpoint-down(lg) {
       max-width: 224px;
-      aspect-ratio:  224 / 168;
+      aspect-ratio: 224 / 168;
     }
 
     img {
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
 
     &:hover {

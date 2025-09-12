@@ -50,48 +50,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
     swipers.forEach((swiperEl, index) => {
       const swiper = new Swiper(swiperEl, {
-				slidesPerView: "auto",
-				spaceBetween: 24,
-				loop: true,
+        slidesPerView: "auto",
+        spaceBetween: 24,
+        loop: true,
         centeredSlides: true,
         centeredSlidesBounds: true,
-				pauseOnMouseEnter: true,
-				freeMode: {
-					enabled: true,
-					minimumVelocity: 0.05,
-					momentumRatio: 1.2,
-				},
-				autoplay: {
-					delay: 5000,
-					disableOnInteraction: false,
-					reverseDirection: index === 1 ? true : false,
-				},
-				speed: 5000,
-			});
+        pauseOnMouseEnter: true,
+        freeMode: {
+          enabled: true,
+          minimumVelocity: 0.05,
+          momentumRatio: 1.2,
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+          reverseDirection: index === 1 ? true : false,
+        },
+        speed: 5000,
+      });
     });
   }
 
-  if(document.querySelector("#home-past-events")) {
+  if (document.querySelector("#home-past-events")) {
     const swiper = new Swiper("#home-past-events .swiper", {
-			slidesPerView: "auto",
-			spaceBetween: 8,
-			centeredSlides: false,
-			centeredSlidesBounds: false,
+      slidesPerView: "auto",
+      spaceBetween: 8,
+      centeredSlides: false,
+      centeredSlidesBounds: false,
       centerInsufficientSlides: true,
-			breakpoints: {
-				992: {
-					spaceBetween: 24,
-					centeredSlides: true,
-					centeredSlidesBounds: true,
-				},
-			},
-			freeMode: {
-				enabled: true,
-				minimumVelocity: 0.05,
-				momentumRatio: 1.2,
-			},
-			speed: 1500,
-		});
+      breakpoints: {
+        992: {
+          spaceBetween: 24,
+          centeredSlides: true,
+          centeredSlidesBounds: true,
+        },
+      },
+      freeMode: {
+        enabled: true,
+        minimumVelocity: 0.05,
+        momentumRatio: 1.2,
+      },
+      speed: 1500,
+    });
   }
-
 });
