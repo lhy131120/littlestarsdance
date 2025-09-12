@@ -28,6 +28,7 @@
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: var(--bs-accent-500);
     --bs-btn-active-border-color: var(--bs-accent-500);
+    --bs-btn-active-shadow: none;
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: var(--bs-gray-500);
     --bs-btn-disabled-border-color: var(--bs-gray-500);
@@ -72,6 +73,22 @@
     }
   }
 
+  &-primary-300 {
+    --bs-btn-color: var(--bs-gray-900);
+    --bs-btn-bg: var(--bs-primary-300);
+    --bs-btn-border-color: var(--bs-primary-300);
+    --bs-btn-hover-color: var(--bs-gray-900);
+    --bs-btn-hover-bg: var(--bs-primary-200);
+    --bs-btn-hover-border-color: var(--bs-primary-200);
+    --bs-btn-active-color: var(--bs-gray-900);
+    --bs-btn-active-bg: var(--bs-primary-400);
+    --bs-btn-active-border-color: var(--bs-primary-400);
+    --bs-btn-active-shadow: none;
+    --bs-btn-disabled-color: var(--bs-gray-900);
+    --bs-btn-disabled-bg: var(--bs-gray-500);
+    --bs-btn-disabled-border-color: var(--bs-gray-500);
+}
+
   .btn-icon {
     width: 1.5rem;
     height: 1.5rem;
@@ -89,6 +106,7 @@
       }
     }
   }
+
 }
 
 .search-btn {
