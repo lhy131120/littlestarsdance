@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>課程</title>
+    <script type="module" crossorigin src="/littlestarsdance/assets/main-C1oslgfL.js"></script>
+    <link rel="stylesheet" crossorigin href="/littlestarsdance/assets/main-Bdrbdvey.css">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <div class="menuBtnWrap d-flex align-items-center justify-content-center">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <button
+          type="button"
+          class="btn-close d-none"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <h1 class="d-block lh-0">
+        <a class="navbar-brand d-inline-block lh-0 m-0 p-0" href="./index.html"
+          ><img
+            src="/littlestarsdance/assets/logo-D5oriFEz.png"
+            class="img-fluid mw-140p mw-md-240p w-100"
+            alt="小星星舞蹈學校"
+        /></a>
+      </h1>
+      <!-- <button
+        class="login btn btn-outline-secondary order-3 ms-4 ms-xl-7 d-flex align-items-center p-2 px-xl-5 gap-2"
+      >
+        <span class="btn-icon member" aria-label="login icon"></span>
+        <span class="d-none d-xl-block">登入</span>
+      </button> -->
+      <button
+        type="button"
+        class="btn btn-outline-secondary withIcon member order-3 ms-4 ms-xl-7 login"
+      >
+        <span class="btn-icon"></span
+        ><span class="d-none d-xl-block">登入</span>
+      </button>
+      <div
+        class="offcanvas offcanvas-top vh-100"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+        data-bs-backdrop="static"
+      >
+        <div class="offcanvas-header" style="padding: 6px 0">
+          <div class="container">
+            <div
+              class="d-flex align-items-center justify-content-between w-100"
+            >
+              <button
+                type="button"
+                class="btn-close m-0 p-0"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+              <a
+                class="navbar-brand d-inline-block lh-0 m-0 p-0"
+                href="./index.html"
+                ><img
+                  src="/littlestarsdance/assets/logo-D5oriFEz.png"
+                  class="img-fluid mw-140p mw-md-240p w-100"
+                  alt="小星星舞蹈學校"
+              /></a>
+              <button
+                class="login btn btn-outline-secondary order-3 ms-4 ms-xl-7 d-flex align-items-center p-2 px-xl-5 gap-2"
+              >
+                <span class="btn-icon member" aria-label="login icon"></span>
+                <span class="d-none d-xl-block">登入</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="offcanvas-body">
+          <form class="d-flex d-lg-none mb-4" role="search">
+            <div class="position-relative w-100 d-flex align-items-center">
+              <input
+                id="searchInput"
+                name="search"
+                class="form-control"
+                type="search"
+                placeholder="搜尋..."
+                aria-label="搜尋..."
+                style="height: 52px"
+              />
+              <button
+                class="search-btn"
+                tabindex="0"
+                aria-label="開始搜尋"
+                type="submit"
+              >
+                開始搜尋
+              </button>
+            </div>
+          </form>
+          <ul
+            class="navbar-nav justify-content-end flex-grow-1 gap-4 gap-xl-7 mb-7 mb-lg-0"
+          >
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2 fs-5 letter-spacing-1" href="./course.html"
+                >課程</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2 fs-5 letter-spacing-1" href="#"
+                >專業指導</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2 fs-5 letter-spacing-1" href="#"
+                >活動</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2 fs-5 letter-spacing-1" href="#"
+                >最新消息</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 py-2 fs-5 letter-spacing-1" href="#"
+                >關於我們</a
+              >
+            </li>
+          </ul>
+          <div class="d-flex d-lg-none flex-column gap-4">
+            <button
+              type="button"
+              class="btn btn-outline-secondary withIcon member"
+            >
+              <span class="btn-icon"></span><span>會員專區</span>
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary withIcon logout"
+            >
+              <span class="btn-icon"></span><span>登出</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    <main>
+      <section
+  id="hero"
+  class="hero d-flex align-items-center justify-content-center text-white"
+>
+  <picture class="position-absolute top-0 start-0 w-100 h-100 z-n1">
+    <img
+      src="/littlestarsdance/assets/hero-1-DzjF0JOn.jpg"
+      alt="hero image"
+      class="w-100 h-100 object-fit-cover object-position-top"
+    />
+  </picture>
+
+  <div class="container position-relative z-3">
+    <div class="py-5">
+      <h1 class="mb-7 fs-3 fs-lg-1 letter-spacing-1 text-center">
+        與我們一起探索舞蹈的樂趣 <br />為兒童和青少年提供精彩的舞蹈課程
+      </h1>
+      <div
+        class="d-none d-lg-flex align-items-center justify-content-center gap-3 flex-wrap"
+      >
+        <p class="mb-0 fs-6 fs-lg-5 letter-spacing-1">按年齡篩選：</p>
+        <div
+          id="course-filters"
+          class="d-flex align-items-center justify-content-center gap-4 gap-lg-5 flex-wrap"
+        >
+          <button type="button" class="btn btn-primary-300" data-range="all">
+            所有課程
+          </button>
+          <button type="button" class="btn btn-primary-300" data-range="kids">
+            3-6歲
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary-300"
+            data-range="children"
+          >
+            7-12歲
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary-300"
+            data-range="teenages"
+          >
+            13-16歲
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      <section class="py-11 py-lg-14">
+        <div class="container">
+          <div class="dropdown mb-11 d-lg-none text-center">
+            <button
+              id="dropdownMenuCourseButton"
+              class="btn btn-primary-300 py-3 px-5 w-100 w-md-50 dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu w-100">
+              <li><a class="dropdown-item" href="#">所有課程</a></li>
+              <li><a class="dropdown-item" href="#"> 3-6歲</a></li>
+              <li><a class="dropdown-item" href="#">7-12歲</a></li>
+              <li><a class="dropdown-item" href="#">13-16歲</a></li>
+            </ul>
+          </div>
+
+          <h2 class="text-lg-center mb-4 fs-4 fs-lg-1">我們的舞蹈課程</h2>
+          <p class="text-lg-center mb-7 mb-lg-8 fs-6 fs-lg-4 letter-spacing-1">
+            從初學者到進階技巧，我們提供專為啟發和挑戰各程度舞者而設計的課程。
+          </p>
+
+          <div
+            id="course-list"
+            class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-6 gx-4 mb-9 mb-lg-11"
+          >
+            <div class="col" data-type="kids">
+              <div class="card border-0 overflow-hidden h-100">
+                <div class="overflow-hidden rounded-5 position-relative h-312p">
+                  <img
+                    src="/littlestarsdance/assets/course-1-CYqg8PWI.jpg"
+                    class="card-img-top object-fit-cover h-100 w-100"
+                    alt="幼兒芭蕾"
+                  />
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3"
+                  >
+                    3-6歲
+                  </div>
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3"
+                  >
+                    初級
+                  </div>
+                </div>
+                <div
+                  class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4"
+                >
+                  <div>
+                    <h3
+                      class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500"
+                    >
+                      幼兒芭蕾
+                    </h3>
+                    <p class="card-text line-clamp-2">
+                      專為初學者設計的舞蹈課程，專注於基本動作、指令遵循和創意表達。
+                    </p>
+                  </div>
+                  <ul
+                    class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto"
+                  >
+                    <li class="d-flex gap-4 clock">週六上午10:00</li>
+                    <li class="d-flex gap-4 star">600元/月</li>
+                    <li class="d-flex gap-4 class">Lily老師</li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base"
+                  >
+                    <span>立即報名</span>
+                    <span class="btn-icon"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col" data-type="kids">
+              <div class="card border-0 overflow-hidden h-100">
+                <div class="overflow-hidden rounded-5 position-relative h-312p">
+                  <img
+                    src="/littlestarsdance/assets/course-2-D13ixetu.jpg"
+                    class="card-img-top object-fit-cover h-100 w-100"
+                    alt="嘻哈基礎"
+                  />
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3"
+                  >
+                    3-6歲
+                  </div>
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3"
+                  >
+                    初級
+                  </div>
+                </div>
+                <div
+                  class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4"
+                >
+                  <div>
+                    <h3
+                      class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500"
+                    >
+                      嘻哈基礎
+                    </h3>
+                    <p class="card-text line-clamp-2">
+                      學習嘻哈基礎，包含高能量動作、節奏訓練和街舞文化。
+                    </p>
+                  </div>
+                  <ul
+                    class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto"
+                  >
+                    <li class="d-flex gap-4 clock">週二和週四 下午4:30</li>
+                    <li class="d-flex gap-4 star">800元/月</li>
+                    <li class="d-flex gap-4 class">Jay 老師</li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base"
+                  >
+                    <span>立即報名</span>
+                    <span class="btn-icon"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col" data-type="kids">
+              <div class="card border-0 overflow-hidden h-100">
+                <div class="overflow-hidden rounded-5 position-relative h-312p">
+                  <img
+                    src="/littlestarsdance/assets/course-7-BMrgzxfY.jpg"
+                    class="card-img-top object-fit-cover h-100 w-100"
+                    alt="幼兒現代舞"
+                  />
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3"
+                  >
+                    3-6歲
+                  </div>
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3"
+                  >
+                    低級
+                  </div>
+                </div>
+                <div
+                  class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4"
+                >
+                  <div>
+                    <h3
+                      class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500"
+                    >
+                      幼兒現代舞
+                    </h3>
+                    <p class="card-text line-clamp-2">
+                      配合輕快的流行曲，加上富有表現力的舞蹈，帶領幼兒接觸基礎動作和增強個人節奏感。
+                    </p>
+                  </div>
+                  <ul
+                    class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto"
+                  >
+                    <li class="d-flex gap-4 clock">週六上午9:00</li>
+                    <li class="d-flex gap-4 star">600元/月</li>
+                    <li class="d-flex gap-4 class">Sophie 老師</li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base"
+                  >
+                    <span>立即報名</span>
+                    <span class="btn-icon"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col" data-type="children">
+              <div class="card border-0 overflow-hidden h-100">
+                <div class="overflow-hidden rounded-5 position-relative h-312p">
+                  <img
+                    src="/littlestarsdance/assets/course-4-DNSBdnoL.jpg"
+                    class="card-img-top object-fit-cover h-100 w-100"
+                    alt="創意芭蕾"
+                  />
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3"
+                  >
+                    7-12歲
+                  </div>
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3"
+                  >
+                    中級
+                  </div>
+                </div>
+                <div
+                  class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4"
+                >
+                  <div>
+                    <h3
+                      class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500"
+                    >
+                      創意芭蕾
+                    </h3>
+                    <p class="card-text line-clamp-2">
+                      透過創意動作和想像遊戲溫和地介紹芭蕾基礎。
+                    </p>
+                  </div>
+                  <ul
+                    class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto"
+                  >
+                    <li class="d-flex gap-4 clock">週六下午2:00</li>
+                    <li class="d-flex gap-4 star">800元/月</li>
+                    <li class="d-flex gap-4 class">Lily老師</li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base"
+                  >
+                    <span>立即報名</span>
+                    <span class="btn-icon"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col" data-type="children">
+              <div class="card border-0 overflow-hidden h-100">
+                <div class="overflow-hidden rounded-5 position-relative h-312p">
+                  <img
+                    src="/littlestarsdance/assets/course-13-QlgMcae7.jpg"
+                    class="card-img-top object-fit-cover h-100 w-100"
+                    alt="進階嘻哈"
+                  />
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3"
+                  >
+                    7-12歲
+                  </div>
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3"
+                  >
+                    中級
+                  </div>
+                </div>
+                <div
+                  class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4"
+                >
+                  <div>
+                    <h3
+                      class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500"
+                    >
+                      進階嘻哈
+                    </h3>
+                    <p class="card-text line-clamp-2">
+                      透過複雜編舞和表演技巧，將您的嘻哈技能提升到新的水準。
+                    </p>
+                  </div>
+                  <ul
+                    class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto"
+                  >
+                    <li class="d-flex gap-4 clock">週六和週日 下午4:30</li>
+                    <li class="d-flex gap-4 star">800元/月</li>
+                    <li class="d-flex gap-4 class">Jay 老師</li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base"
+                  >
+                    <span>立即報名</span>
+                    <span class="btn-icon"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col" data-type="children">
+              <div class="card border-0 overflow-hidden h-100">
+                <div class="overflow-hidden rounded-5 position-relative h-312p">
+                  <img
+                    src="/littlestarsdance/assets/course-12-D2B1dzcV.jpg"
+                    class="card-img-top object-fit-cover h-100 w-100"
+                    alt="當代爵士"
+                  />
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3"
+                  >
+                    7-12歲
+                  </div>
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3"
+                  >
+                    中級
+                  </div>
+                </div>
+                <div
+                  class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4"
+                >
+                  <div>
+                    <h3
+                      class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500"
+                    >
+                      當代爵士
+                    </h3>
+                    <p class="card-text line-clamp-2">
+                      結合爵士技巧與當代舞蹈風格，透過流暢的動作表達自己。
+                    </p>
+                  </div>
+                  <ul
+                    class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto"
+                  >
+                    <li class="d-flex gap-4 clock">週六下午3:00</li>
+                    <li class="d-flex gap-4 star">700元/月</li>
+                    <li class="d-flex gap-4 class">Sophie 老師</li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base"
+                  >
+                    <span>立即報名</span>
+                    <span class="btn-icon"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col" data-type="children">
+              <div class="card border-0 overflow-hidden h-100">
+                <div class="overflow-hidden rounded-5 position-relative h-312p">
+                  <img
+                    src="/littlestarsdance/assets/course-3-D9cKFVnl.jpg"
+                    class="card-img-top object-fit-cover h-100 w-100"
+                    alt="青少年現代舞"
+                  />
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3"
+                  >
+                    7-12歲
+                  </div>
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3"
+                  >
+                    中級
+                  </div>
+                </div>
+                <div
+                  class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4"
+                >
+                  <div>
+                    <h3
+                      class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500"
+                    >
+                      青少年現代舞
+                    </h3>
+                    <p class="card-text line-clamp-2">
+                      富有表現力的現代舞，幫助青少年找到獨特的藝術聲音。
+                    </p>
+                  </div>
+                  <ul
+                    class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto"
+                  >
+                    <li class="d-flex gap-4 clock">週六上午10:30</li>
+                    <li class="d-flex gap-4 star">800元/月</li>
+                    <li class="d-flex gap-4 class">Sophie 老師</li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base"
+                  >
+                    <span>立即報名</span>
+                    <span class="btn-icon"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col" data-type="teenages">
+              <div class="card border-0 overflow-hidden h-100">
+                <div class="overflow-hidden rounded-5 position-relative h-312p">
+                  <img
+                    src="/littlestarsdance/assets/course-11-Da_jRKGo.jpg"
+                    class="card-img-top object-fit-cover h-100 w-100"
+                    alt="踢踏舞冒險"
+                  />
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3"
+                  >
+                    13-16歲
+                  </div>
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3"
+                  >
+                    進階
+                  </div>
+                </div>
+                <div
+                  class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4"
+                >
+                  <div>
+                    <h3
+                      class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500"
+                    >
+                      踢踏舞冒險
+                    </h3>
+                    <p class="card-text line-clamp-2">
+                      學習經典踢踏舞技巧和組合，用雙腳創造節奏聲響。
+                    </p>
+                  </div>
+                  <ul
+                    class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto"
+                  >
+                    <li class="d-flex gap-4 clock">週六下午2:30</li>
+                    <li class="d-flex gap-4 star">1000元/月</li>
+                    <li class="d-flex gap-4 class">Emma 老師</li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base"
+                  >
+                    <span>立即報名</span>
+                    <span class="btn-icon"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <nav class="d-flex justify-content-center">
+            <ul class="pagination mb-0 d-flex align-items-center gap-4">
+              <li class="page-item prev">
+                <a class="page-link" href="#">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item next">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-basic py-7 py-lg-9">
+	<div class="container">
+		<div class="row mb-7 mb-lg-8 justify-content-lg-between gap-7">
+			<div class="col-lg-4">
+				<a href="./index.html" class="d-inline-block lh-0 mb-2 mb-lg-6 mw-240p mw-lg-100">
+					<img src="/littlestarsdance/assets/logo-D5oriFEz.png" class="img-fluid" alt="小星星舞蹈學校" />
+				</a>
+				<p class="fs-lg-5 letter-spacing-1 mb-0">夢想透過舞蹈建築快樂，自2010年以來創造了自信、優秀和快樂的小舞者</p>
+			</div>
+			<div class="col-lg-auto">
+				<div class="d-flex flex-column flex-lg-row gap-7">
+					<div class="d-flex flex-column g-lg-4 py-lg-7 mw-lg-300p w-100">
+						<p class="fs-6 fs-lg-4 mb-2 mb-lg-4 ps-lg-3 lh-sm text-primary-500">快速連結</p>
+						<ul class="nav flex-wrap">
+							<li class="nav-item w-50 w-lg-100"><a class="nav-link ps-0 px-lg-3 py-2 fs-lg-5 d-inline-block" href="#">課程</a></li>
+							<li class="nav-item w-50 w-lg-100"><a class="nav-link ps-0 px-lg-3 py-2 fs-lg-5 d-inline-block" href="#">專業指導</a></li>
+							<li class="nav-item w-50 w-lg-100"><a class="nav-link ps-0 px-lg-3 py-2 fs-lg-5 d-inline-block" href="#">活動</a></li>
+							<li class="nav-item w-50 w-lg-100"><a class="nav-link ps-0 px-lg-3 py-2 fs-lg-5 d-inline-block" href="#">會員註冊</a></li>
+						</ul>
+					</div>
+					<div class="pt-lg-7">
+						<p class="fs-6 fs-lg-4 mb-2 mb-lg-5 ps-lg-3 lh-sm text-primary-500">聯絡資訊</p>
+						<ul class="nav flex-column gap-2 gap-lg-6">
+							<li class="nav-item">
+								<div class="d-flex flex-wrap align-items-center ps-lg-3">
+									<div class="d-flex align-items-center gap-2">
+										<span class="d-none d-lg-block lh-0 icon mail"></span><span class="fs-lg-5 letter-spacing-1">信箱：</span>
+									</div>
+									<a class="d-inline-block letter-spacing-1 fs-lg-5 text-decoration-none" href="mailto:info@littlestarsdance.com"
+										>info@littlestarsdance.com</a
+									>
+								</div>
+							</li>
+							<li class="nav-item">
+								<div class="d-flex flex-wrap align-items-center ps-lg-3">
+									<div class="d-flex align-items-center gap-2">
+										<span class="d-none d-lg-block lh-0 icon phone"></span><span class="fs-lg-5 letter-spacing-1">電話：</span>
+									</div>
+									<a class="d-inline-block letter-spacing-1 fs-lg-5 text-decoration-none" href="tel:+1(555)1234567">+1 (555) 123-4567</a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<div class="d-flex flex-wrap align-items-center ps-lg-3">
+									<div class="d-flex align-items-center gap-2">
+										<span class="d-none d-lg-block lh-0 icon location"></span><span class="fs-lg-5 letter-spacing-1">地址：</span>
+									</div>
+									<a class="d-inline-block letter-spacing-1 fs-lg-5 text-decoration-none" href="https://goo.gl/maps/xyz" target="_blank" rel="noopener">快樂谷舞蹈街 123 號，郵編 90210</a
+									>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="d-flex justify-content-center justify-content-lg-between flex-wrap pt-lg-7 gap-2">
+					<p class="mb-0 fw-medium fs-8 fs-lg-6">©小星星舞蹈學校。保留所有權利。 | 為年輕舞者用</p>
+					<ul class="d-flex w-100 w-lg-auto justify-content-center mb-0 mx-4 gap-4 list-unstyled">
+						<li><a class="d-block fs-8 fs-lg-6 text-decoration-underline" href="javascript:;">隱私權政策</a></li>
+						<li><a class="d-block fs-8 fs-lg-6 text-decoration-underline" href="javascript:;">FAQ</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+  </body>
+</html>
