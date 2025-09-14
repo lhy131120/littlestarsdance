@@ -1,7 +1,7 @@
 @import url("https://font.emtech.cc/css/GenSenRoundedJP");
 @font-face {
-  font-family: 'icomoon';
-  src: url('../fonts/icomoon.woff');
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.woff");
 }
 // Custom.scss
 // Option B: Include parts of Bootstrap
@@ -41,7 +41,7 @@
 @import "bootstrap/scss/card";
 // @import "bootstrap/scss/accordion";
 // @import "bootstrap/scss/breadcrumb";
-// @import "bootstrap/scss/pagination";
+@import "bootstrap/scss/pagination";
 // @import "bootstrap/scss/badge";
 // @import "bootstrap/scss/alert";
 // @import "bootstrap/scss/progress";
@@ -62,6 +62,7 @@
 // 8. Add additional custom code here
 @import "./base/base";
 @import "./components/button";
+@import "./components/pagination";
 @import "./components/input";
 @import "./components/card";
 @import "./helpers/swiper";

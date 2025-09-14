@@ -1,0 +1,40 @@
+.pagination {
+  outline: none;
+  --bs-pagination-color: var(--bs-gray-900);
+  --bs-pagination-bg: var(--bs-primary-200);
+  --bs-pagination-border-color: var(--bs-primary-200);
+  --bs-pagination-hover-bg: var(--bs-primary-300);
+  --bs-pagination-hover-border-color: var(--bs-primary-300);
+
+  .page-item {
+    &.prev .page-link,
+    &.next .page-link {
+      font-size: 0;
+      position: relative;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background-image: url("data:image/svg+xml,%0A%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 5L16 12L9 19' stroke='%23404040' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 24px 24px;
+      }
+    }
+    &.prev .page-link:before {
+      transform: rotate(180deg);
+    }
+  }
+  .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border-radius: 50%;
+  }
+}

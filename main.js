@@ -93,4 +93,27 @@ document.addEventListener("DOMContentLoaded", () => {
       speed: 1500,
     });
   }
+
+  if (
+    document.querySelector("#course-filters") &&
+    document.querySelector("#course-list")
+  ) {
+    const filters = document.querySelectorAll("#course-filters .btn");
+    const courseList = document.querySelector("#course-list");
+    const courses = courseList.querySelectorAll(".col");
+
+    filters.forEach((filter) => {
+      filter.addEventListener("click", (e) => {
+        const range = filter.getAttribute("data-range");
+        const showClass = range === "all" ? null : range;
+
+        courses.forEach((course) => {
+          course.style.display =
+            showClass === null || course.getAttribute("data-type") === showClass
+              ? "block"
+              : "none";
+        });
+      });
+    });
+  }
 });

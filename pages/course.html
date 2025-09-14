@@ -1,263 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>課程</title>
-	</head>
-	<body>
-		<%- include('./layout/header'); -%>
-		<main>
-			<%- include('./layout/hero'); -%>
-			<section class="py-11 py-lg-14">
-				<div class="container">
-					<h2 class="text-lg-center mb-4 fs-4 fs-lg-1">我們的舞蹈課程</h2>
-					<p class="text-lg-center mb-7 mb-lg-8 fs-6 fs-lg-4 letter-spacing-1">
-						從初學者到進階技巧，我們提供專為啟發和挑戰各程度舞者而設計的課程。
-					</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>課程</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+    <main>
+      <%- include('./layout/hero'); -%>
+      <section class="py-11 py-lg-14">
+        <div class="container">
+          <div class="dropdown mb-11 d-lg-none text-center">
+            <button
+              id="dropdownMenuCourseButton"
+              class="btn btn-primary-300 py-3 px-5 w-100 w-md-50 dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu w-100">
+              <li><a class="dropdown-item" href="#">所有課程</a></li>
+              <li><a class="dropdown-item" href="#"> 3-6歲</a></li>
+              <li><a class="dropdown-item" href="#">7-12歲</a></li>
+              <li><a class="dropdown-item" href="#">13-16歲</a></li>
+            </ul>
+          </div>
 
-					<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-6 gx-4">
+          <h2 class="text-lg-center mb-4 fs-4 fs-lg-1">我們的舞蹈課程</h2>
+          <p class="text-lg-center mb-7 mb-lg-8 fs-6 fs-lg-4 letter-spacing-1">
+            從初學者到進階技巧，我們提供專為啟發和挑戰各程度舞者而設計的課程。
+          </p>
 
-						<div class="col">
-							<div class="card border-0 overflow-hidden h-100">
-								<div class="overflow-hidden rounded-5 position-relative">
-									<img
-										src="/assets/images/course-thumbnail/course-1.jpg"
-										class="card-img-top object-fit-cover"
-										alt="幼兒芭蕾"
-									/>
-                  <div class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3">3-6歲</div>
-                  <div class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3">初級</div>
-								</div>
-								<div class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4">
-									<div>
-										<h3 class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500">幼兒芭蕾</h3>
-										<p class="card-text line-clamp-2">專為初學者設計的舞蹈課程，專注於基本動作、指令遵循和創意表達。</p>
-									</div>
-									<ul class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto">
-										<li class="d-flex gap-4 clock">週六上午10:00</li>
-										<li class="d-flex gap-4 star">600元/月</li>
-										<li class="d-flex gap-4 class">Lily老師</li>
-									</ul>
-									<a href="#" class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base">
-										<span>立即報名</span>
-										<span class="btn-icon"></span>
-									</a>
-								</div>
-							</div>
-						</div>
+          <div
+            id="course-list"
+            class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-6 gx-4 mb-9 mb-lg-11"
+          >
+            <div class="col" data-type="kids">
+              <div class="card border-0 overflow-hidden h-100">
+                <div class="overflow-hidden rounded-5 position-relative h-312p">
+                  <img
+                    src="/assets/images/course-thumbnail/course-1.jpg"
+                    class="card-img-top object-fit-cover h-100 w-100"
+                    alt="幼兒芭蕾"
+                  />
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3"
+                  >
+                    3-6歲
+                  </div>
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3"
+                  >
+                    初級
+                  </div>
+                </div>
+                <div
+                  class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4"
+                >
+                  <div>
+                    <h3
+                      class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500"
+                    >
+                      幼兒芭蕾
+                    </h3>
+                    <p class="card-text line-clamp-2">
+                      專為初學者設計的舞蹈課程，專注於基本動作、指令遵循和創意表達。
+                    </p>
+                  </div>
+                  <ul
+                    class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto"
+                  >
+                    <li class="d-flex gap-4 clock">週六上午10:00</li>
+                    <li class="d-flex gap-4 star">600元/月</li>
+                    <li class="d-flex gap-4 class">Lily老師</li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base"
+                  >
+                    <span>立即報名</span>
+                    <span class="btn-icon"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
 
-            <div class="col">
-							<div class="card border-0 overflow-hidden h-100">
-								<div class="overflow-hidden rounded-5 position-relative">
-									<img
-										src="/assets/images/course-thumbnail/course-2.jpg"
-										class="card-img-top object-fit-cover"
-										alt="嘻哈基礎"
-									/>
-                  <div class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3">3-6歲</div>
-                  <div class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3">初級</div>
-								</div>
-								<div class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4">
-									<div>
-										<h3 class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500">嘻哈基礎</h3>
-										<p class="card-text line-clamp-2">學習嘻哈基礎，包含高能量動作、節奏訓練和街舞文化。</p>
-									</div>
-									<ul class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto">
-										<li class="d-flex gap-4 clock">週二和週四 下午4:30</li>
-										<li class="d-flex gap-4 star">800元/月</li>
-										<li class="d-flex gap-4 class">Jay 老師</li>
-									</ul>
-									<a href="#" class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base">
-										<span>立即報名</span>
-										<span class="btn-icon"></span>
-									</a>
-								</div>
-							</div>
-						</div>
+            <div class="col" data-type="kids">
+              <div class="card border-0 overflow-hidden h-100">
+                <div class="overflow-hidden rounded-5 position-relative h-312p">
+                  <img
+                    src="/assets/images/course-thumbnail/course-2.jpg"
+                    class="card-img-top object-fit-cover h-100 w-100"
+                    alt="嘻哈基礎"
+                  />
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3"
+                  >
+                    3-6歲
+                  </div>
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3"
+                  >
+                    初級
+                  </div>
+                </div>
+                <div
+                  class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4"
+                >
+                  <div>
+                    <h3
+                      class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500"
+                    >
+                      嘻哈基礎
+                    </h3>
+                    <p class="card-text line-clamp-2">
+                      學習嘻哈基礎，包含高能量動作、節奏訓練和街舞文化。
+                    </p>
+                  </div>
+                  <ul
+                    class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto"
+                  >
+                    <li class="d-flex gap-4 clock">週二和週四 下午4:30</li>
+                    <li class="d-flex gap-4 star">800元/月</li>
+                    <li class="d-flex gap-4 class">Jay 老師</li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base"
+                  >
+                    <span>立即報名</span>
+                    <span class="btn-icon"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
 
-            <div class="col">
-							<div class="card border-0 overflow-hidden h-100">
-								<div class="overflow-hidden rounded-5 position-relative">
-									<img
-										src="/assets/images/course-thumbnail/course-7.jpg"
-										class="card-img-top object-fit-cover"
-										alt="幼兒現代舞"
-									/>
-                  <div class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3">3-6歲</div>
-                  <div class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3">低級</div>
-								</div>
-								<div class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4">
-									<div>
-										<h3 class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500">幼兒現代舞</h3>
-										<p class="card-text line-clamp-2">配合輕快的流行曲，加上富有表現力的舞蹈，帶領幼兒接觸基礎動作和增強個人節奏感。</p>
-									</div>
-									<ul class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto">
-										<li class="d-flex gap-4 clock">週六上午9:00</li>
-										<li class="d-flex gap-4 star">600元/月</li>
-										<li class="d-flex gap-4 class">Sophie 老師</li>
-									</ul>
-									<a href="#" class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base">
-										<span>立即報名</span>
-										<span class="btn-icon"></span>
-									</a>
-								</div>
-							</div>
-						</div>
+            <div class="col" data-type="kids">
+              <div class="card border-0 overflow-hidden h-100">
+                <div class="overflow-hidden rounded-5 position-relative h-312p">
+                  <img
+                    src="/assets/images/course-thumbnail/course-7.jpg"
+                    class="card-img-top object-fit-cover h-100 w-100"
+                    alt="幼兒現代舞"
+                  />
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3"
+                  >
+                    3-6歲
+                  </div>
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3"
+                  >
+                    低級
+                  </div>
+                </div>
+                <div
+                  class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4"
+                >
+                  <div>
+                    <h3
+                      class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500"
+                    >
+                      幼兒現代舞
+                    </h3>
+                    <p class="card-text line-clamp-2">
+                      配合輕快的流行曲，加上富有表現力的舞蹈，帶領幼兒接觸基礎動作和增強個人節奏感。
+                    </p>
+                  </div>
+                  <ul
+                    class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto"
+                  >
+                    <li class="d-flex gap-4 clock">週六上午9:00</li>
+                    <li class="d-flex gap-4 star">600元/月</li>
+                    <li class="d-flex gap-4 class">Sophie 老師</li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base"
+                  >
+                    <span>立即報名</span>
+                    <span class="btn-icon"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
 
-            <div class="col">
-							<div class="card border-0 overflow-hidden h-100">
-								<div class="overflow-hidden rounded-5 position-relative">
-									<img
-										src="/assets/images/course-thumbnail/course-4.jpg"
-										class="card-img-top object-fit-cover"
-										alt="創意芭蕾"
-									/>
-                  <div class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3">7-12歲</div>
-                  <div class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3">中級</div>
-								</div>
-								<div class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4">
-									<div>
-										<h3 class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500">創意芭蕾</h3>
-										<p class="card-text line-clamp-2">透過創意動作和想像遊戲溫和地介紹芭蕾基礎。</p>
-									</div>
-									<ul class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto">
-										<li class="d-flex gap-4 clock">週六下午2:00</li>
-										<li class="d-flex gap-4 star">800元/月</li>
-										<li class="d-flex gap-4 class">Lily老師</li>
-									</ul>
-									<a href="#" class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base">
-										<span>立即報名</span>
-										<span class="btn-icon"></span>
-									</a>
-								</div>
-							</div>
-						</div>
+            <div class="col" data-type="children">
+              <div class="card border-0 overflow-hidden h-100">
+                <div class="overflow-hidden rounded-5 position-relative h-312p">
+                  <img
+                    src="/assets/images/course-thumbnail/course-4.jpg"
+                    class="card-img-top object-fit-cover h-100 w-100"
+                    alt="創意芭蕾"
+                  />
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3"
+                  >
+                    7-12歲
+                  </div>
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3"
+                  >
+                    中級
+                  </div>
+                </div>
+                <div
+                  class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4"
+                >
+                  <div>
+                    <h3
+                      class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500"
+                    >
+                      創意芭蕾
+                    </h3>
+                    <p class="card-text line-clamp-2">
+                      透過創意動作和想像遊戲溫和地介紹芭蕾基礎。
+                    </p>
+                  </div>
+                  <ul
+                    class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto"
+                  >
+                    <li class="d-flex gap-4 clock">週六下午2:00</li>
+                    <li class="d-flex gap-4 star">800元/月</li>
+                    <li class="d-flex gap-4 class">Lily老師</li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base"
+                  >
+                    <span>立即報名</span>
+                    <span class="btn-icon"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
 
-            <div class="col">
-							<div class="card border-0 overflow-hidden h-100">
-								<div class="overflow-hidden rounded-5 position-relative">
-									<img
-										src="/assets/images/course-thumbnail/course-13.jpg"
-										class="card-img-top object-fit-cover"
-										alt="進階嘻哈"
-									/>
-                  <div class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3">7-12歲</div>
-                  <div class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3">中級</div>
-								</div>
-								<div class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4">
-									<div>
-										<h3 class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500">進階嘻哈</h3>
-										<p class="card-text line-clamp-2">透過複雜編舞和表演技巧，將您的嘻哈技能提升到新的水準。</p>
-									</div>
-									<ul class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto">
-										<li class="d-flex gap-4 clock">週六和週日 下午4:30</li>
-										<li class="d-flex gap-4 star">800元/月</li>
-										<li class="d-flex gap-4 class">Jay 老師</li>
-									</ul>
-									<a href="#" class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base">
-										<span>立即報名</span>
-										<span class="btn-icon"></span>
-									</a>
-								</div>
-							</div>
-						</div>
+            <div class="col" data-type="children">
+              <div class="card border-0 overflow-hidden h-100">
+                <div class="overflow-hidden rounded-5 position-relative h-312p">
+                  <img
+                    src="/assets/images/course-thumbnail/course-13.jpg"
+                    class="card-img-top object-fit-cover h-100 w-100"
+                    alt="進階嘻哈"
+                  />
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3"
+                  >
+                    7-12歲
+                  </div>
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3"
+                  >
+                    中級
+                  </div>
+                </div>
+                <div
+                  class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4"
+                >
+                  <div>
+                    <h3
+                      class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500"
+                    >
+                      進階嘻哈
+                    </h3>
+                    <p class="card-text line-clamp-2">
+                      透過複雜編舞和表演技巧，將您的嘻哈技能提升到新的水準。
+                    </p>
+                  </div>
+                  <ul
+                    class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto"
+                  >
+                    <li class="d-flex gap-4 clock">週六和週日 下午4:30</li>
+                    <li class="d-flex gap-4 star">800元/月</li>
+                    <li class="d-flex gap-4 class">Jay 老師</li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base"
+                  >
+                    <span>立即報名</span>
+                    <span class="btn-icon"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
 
-            <div class="col">
-							<div class="card border-0 overflow-hidden h-100">
-								<div class="overflow-hidden rounded-5 position-relative">
-									<img
-										src="/assets/images/course-thumbnail/course-12.jpg"
-										class="card-img-top object-fit-cover"
-										alt="當代爵士"
-									/>
-                  <div class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3">7-12歲</div>
-                  <div class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3">中級</div>
-								</div>
-								<div class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4">
-									<div>
-										<h3 class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500">當代爵士</h3>
-										<p class="card-text line-clamp-2">結合爵士技巧與當代舞蹈風格，透過流暢的動作表達自己。</p>
-									</div>
-									<ul class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto">
-										<li class="d-flex gap-4 clock">週六下午3:00</li>
-										<li class="d-flex gap-4 star">700元/月</li>
-										<li class="d-flex gap-4 class">Sophie 老師</li>
-									</ul>
-									<a href="#" class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base">
-										<span>立即報名</span>
-										<span class="btn-icon"></span>
-									</a>
-								</div>
-							</div>
-						</div>
+            <div class="col" data-type="children">
+              <div class="card border-0 overflow-hidden h-100">
+                <div class="overflow-hidden rounded-5 position-relative h-312p">
+                  <img
+                    src="/assets/images/course-thumbnail/course-12.jpg"
+                    class="card-img-top object-fit-cover h-100 w-100"
+                    alt="當代爵士"
+                  />
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3"
+                  >
+                    7-12歲
+                  </div>
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3"
+                  >
+                    中級
+                  </div>
+                </div>
+                <div
+                  class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4"
+                >
+                  <div>
+                    <h3
+                      class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500"
+                    >
+                      當代爵士
+                    </h3>
+                    <p class="card-text line-clamp-2">
+                      結合爵士技巧與當代舞蹈風格，透過流暢的動作表達自己。
+                    </p>
+                  </div>
+                  <ul
+                    class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto"
+                  >
+                    <li class="d-flex gap-4 clock">週六下午3:00</li>
+                    <li class="d-flex gap-4 star">700元/月</li>
+                    <li class="d-flex gap-4 class">Sophie 老師</li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base"
+                  >
+                    <span>立即報名</span>
+                    <span class="btn-icon"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
 
-            <div class="col">
-							<div class="card border-0 overflow-hidden h-100">
-								<div class="overflow-hidden rounded-5 position-relative">
-									<img
-										src="/assets/images/course-thumbnail/course-3.jpg"
-										class="card-img-top object-fit-cover"
-										alt="青少年現代舞"
-									/>
-                  <div class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3">7-12歲</div>
-                  <div class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3">中級</div>
-								</div>
-								<div class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4">
-									<div>
-										<h3 class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500">青少年現代舞</h3>
-										<p class="card-text line-clamp-2">富有表現力的現代舞，幫助青少年找到獨特的藝術聲音。</p>
-									</div>
-									<ul class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto">
-										<li class="d-flex gap-4 clock">週六上午10:30</li>
-										<li class="d-flex gap-4 star">800元/月</li>
-										<li class="d-flex gap-4 class">Sophie 老師</li>
-									</ul>
-									<a href="#" class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base">
-										<span>立即報名</span>
-										<span class="btn-icon"></span>
-									</a>
-								</div>
-							</div>
-						</div>
+            <div class="col" data-type="children">
+              <div class="card border-0 overflow-hidden h-100">
+                <div class="overflow-hidden rounded-5 position-relative h-312p">
+                  <img
+                    src="/assets/images/course-thumbnail/course-3.jpg"
+                    class="card-img-top object-fit-cover h-100 w-100"
+                    alt="青少年現代舞"
+                  />
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3"
+                  >
+                    7-12歲
+                  </div>
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3"
+                  >
+                    中級
+                  </div>
+                </div>
+                <div
+                  class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4"
+                >
+                  <div>
+                    <h3
+                      class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500"
+                    >
+                      青少年現代舞
+                    </h3>
+                    <p class="card-text line-clamp-2">
+                      富有表現力的現代舞，幫助青少年找到獨特的藝術聲音。
+                    </p>
+                  </div>
+                  <ul
+                    class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto"
+                  >
+                    <li class="d-flex gap-4 clock">週六上午10:30</li>
+                    <li class="d-flex gap-4 star">800元/月</li>
+                    <li class="d-flex gap-4 class">Sophie 老師</li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base"
+                  >
+                    <span>立即報名</span>
+                    <span class="btn-icon"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
 
-            <div class="col">
-							<div class="card border-0 overflow-hidden h-100">
-								<div class="overflow-hidden rounded-5 position-relative">
-									<img
-										src="/assets/images/course-thumbnail/course-11.jpg"
-										class="card-img-top object-fit-cover"
-										alt="踢踏舞冒險"
-									/>
-                  <div class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3">13-16歲</div>
-                  <div class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3">進階</div>
-								</div>
-								<div class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4">
-									<div>
-										<h3 class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500">踢踏舞冒險</h3>
-										<p class="card-text line-clamp-2">學習經典踢踏舞技巧和組合，用雙腳創造節奏聲響。</p>
-									</div>
-									<ul class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto">
-										<li class="d-flex gap-4 clock">週六下午2:30</li>
-										<li class="d-flex gap-4 star">1000元/月</li>
-										<li class="d-flex gap-4 class">Emma 老師</li>
-									</ul>
-									<a href="#" class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base">
-										<span>立即報名</span>
-										<span class="btn-icon"></span>
-									</a>
-								</div>
-							</div>
-						</div>
+            <div class="col" data-type="teenages">
+              <div class="card border-0 overflow-hidden h-100">
+                <div class="overflow-hidden rounded-5 position-relative h-312p">
+                  <img
+                    src="/assets/images/course-thumbnail/course-11.jpg"
+                    class="card-img-top object-fit-cover h-100 w-100"
+                    alt="踢踏舞冒險"
+                  />
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 start-3"
+                  >
+                    13-16歲
+                  </div>
+                  <div
+                    class="px-4 py-1 fs-7 bg-primary-200 rounded-5 position-absolute top-3 end-3"
+                  >
+                    進階
+                  </div>
+                </div>
+                <div
+                  class="card-body py-3 py-lg-5 px-4 px-lg-5 d-flex flex-column gap-4"
+                >
+                  <div>
+                    <h3
+                      class="card-title mb-2 mb-lg-4 fs-5 fs-lg-3 letter-spacing-1 text-primary-500"
+                    >
+                      踢踏舞冒險
+                    </h3>
+                    <p class="card-text line-clamp-2">
+                      學習經典踢踏舞技巧和組合，用雙腳創造節奏聲響。
+                    </p>
+                  </div>
+                  <ul
+                    class="list-unstyled mb-0 py-2 py-lg-3 d-flex flex-column gap-3 border-dashed-y mt-auto"
+                  >
+                    <li class="d-flex gap-4 clock">週六下午2:30</li>
+                    <li class="d-flex gap-4 star">1000元/月</li>
+                    <li class="d-flex gap-4 class">Emma 老師</li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base"
+                  >
+                    <span>立即報名</span>
+                    <span class="btn-icon"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          
-
-
-					</div>
-				</div>
-			</section>
-		</main>
-		<%- include('./layout/footer'); -%>
-		<script type="module" src="../main.js"></script>
-	</body>
+          <nav class="d-flex justify-content-center">
+            <ul class="pagination mb-0 d-flex align-items-center gap-4">
+              <li class="page-item prev">
+                <a class="page-link" href="#">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item next">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </main>
+    <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+  </body>
 </html>
