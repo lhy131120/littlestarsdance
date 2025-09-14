@@ -96,11 +96,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (
     document.querySelector("#course-filters") &&
-    document.querySelector("#course-list")
+    document.querySelector("#course-list") &&
+    document.querySelector("#dropdownMenuCourse")
   ) {
-    const filters = document.querySelectorAll("#course-filters .btn");
-    const courseList = document.querySelector("#course-list");
-    const courses = courseList.querySelectorAll(".col");
+    const rangeTextMap = {
+      all: "所有課程",
+      kids: "3-6歲",
+      children: "7-12歲",
+      teenages: "13-16歲",
+    };
+    const filters = document.querySelectorAll(
+      "#course-filters .btn, #dropdownMenuCourse .dropdown-item"
+    );
+    const courses = document.querySelectorAll("#course-list .col");
+    const dropdownButton = document.querySelector("#dropdownMenuCourseButton");
 
     filters.forEach((filter) => {
       filter.addEventListener("click", (e) => {
@@ -113,6 +122,10 @@ document.addEventListener("DOMContentLoaded", () => {
               ? "block"
               : "none";
         });
+
+        if (dropdownButton) {
+          dropdownButton.textContent = rangeTextMap[range] || "按年齡篩選";
+        }
       });
     });
   }

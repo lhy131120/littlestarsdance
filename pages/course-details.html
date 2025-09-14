@@ -11,7 +11,10 @@
       <%- include('./layout/hero'); -%>
       <section class="py-11 py-lg-14">
         <div class="container">
-          <div class="dropdown mb-11 d-lg-none text-center">
+          <div
+            id="dropdownMenuCourse"
+            class="dropdown mb-11 d-lg-block text-center"
+          >
             <button
               id="dropdownMenuCourseButton"
               class="btn btn-primary-300 py-3 px-5 w-100 w-md-50 dropdown-toggle"
@@ -19,13 +22,35 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Dropdown button
+              按年齡篩選
             </button>
-            <ul class="dropdown-menu w-100">
-              <li><a class="dropdown-item" href="#">所有課程</a></li>
-              <li><a class="dropdown-item" href="#"> 3-6歲</a></li>
-              <li><a class="dropdown-item" href="#">7-12歲</a></li>
-              <li><a class="dropdown-item" href="#">13-16歲</a></li>
+            <ul class="dropdown-menu w-auto">
+              <li>
+                <a class="dropdown-item" data-range="all" href="javascript:;"
+                  >所有課程</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" data-range="kids" href="javascript:;">
+                  3-6歲</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  data-range="children"
+                  href="javascript:;"
+                  >7-12歲</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  data-range="teenages"
+                  href="javascript:;"
+                  >13-16歲</a
+                >
+              </li>
             </ul>
           </div>
 
@@ -78,7 +103,7 @@
                     <li class="d-flex gap-4 class">Lily老師</li>
                   </ul>
                   <a
-                    href="#"
+                    href="./course-details.html"
                     class="btn btn-primary withIcon arrow-right mx-auto rounded-pill lh-base"
                   >
                     <span>立即報名</span>
