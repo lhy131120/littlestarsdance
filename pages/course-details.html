@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>課程</title>
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
-    <main>
-      <%- include('./layout/hero'); -%>
-      <section class="py-11 py-lg-14">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <h2 class="text-lg-center mb-4 fs-4 fs-lg-1">關於課程</h2>
-              <p>
-                我們的創意芭蕾課程專為3-6歲的小舞者設計。透過富有想像的遊戲和溫柔的指導，孩子們將發現運動的樂趣，同時發展協調性、平衡和創造力。每節課都包含熱身練習、基本芭蕾舞姿勢、簡單的編舞以及富有創意的舞蹈遊戲，幫助孩子建立自信，並培養自我表達能力。
-              </p>
-
-              <h2>您將獲得什麼</h2>
-
-              <ul>
-                <li>提高協調性和平衡能力</li>
-                <li>培養音樂感和節奏感</li>
-                <li>增強自信和自我表達能力</li>
-                <li>激發創造力和想像力</li>
-                <li>透過小組活動提升社交技能</li>
-              </ul>
-
-              <h2>課堂所需物品</h2>
-              <li>舒適且方便活動的衣服</li>
-              <li>芭蕾舞鞋或防滑襪</li>
-              <li>頭髮綁起來（適合長髮</li>
-              <li>水瓶</li>
-            </div>
-
-            <div class="col">
-              <div></div>
-              <div>課程資料</div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <%- include('./layout/footer'); -%>
-    <script type="module" src="../main.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>課程詳細頁</title>
+		<script></script>
+	</head>
+	<body>
+		<%- include('./layout/header'); -%>
+		<main>
+			<%- include('./layout/hero', { isCoursesPage: false, isCoursesDetailsPage: true, courseName: '幼兒芭蕾',
+			heroImageSrc: '/assets/images/course-thumbnail/course-1.jpg', label: ['3-6歲', '初級'] }); -%>
+			<section class="py-11 py-lg-14">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8">
+							<h2 class="text-lg-center mb-4 fs-4 fs-lg-1">關於課程</h2>
+							<p>
+								我們的創意芭蕾課程專為3-6歲的小舞者設計。透過富有想像的遊戲和溫柔的指導，孩子們將發現運動的樂趣，同時發展協調性、平衡和創造力。每節課都包含熱身練習、基本芭蕾舞姿勢、簡單的編舞以及富有創意的舞蹈遊戲，幫助孩子建立自信，並培養自我表達能力。
+							</p>
+							<h2>您將獲得什麼</h2>
+							<ul>
+								<li>提高協調性和平衡能力</li>
+								<li>培養音樂感和節奏感</li>
+								<li>增強自信和自我表達能力</li>
+								<li>激發創造力和想像力</li>
+								<li>透過小組活動提升社交技能</li>
+							</ul>
+							<h2>課堂所需物品</h2>
+							<li>舒適且方便活動的衣服</li>
+							<li>芭蕾舞鞋或防滑襪</li>
+							<li>頭髮綁起來（適合長髮</li>
+							<li>水瓶</li>
+						</div>
+						<div class="col-lg-4">
+							<div></div>
+							<div>課程資料</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<%- include('./layout/footer'); -%>
+		<script type="module" src="../main.js"></script>
+	</body>
 </html>

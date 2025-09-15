@@ -2,6 +2,14 @@
   position: relative;
   aspect-ratio: 14 / 5;
 
+  &.course-details-hero {
+    aspect-ratio: 47 / 15;
+
+    img {
+      object-position: center!important;
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;
