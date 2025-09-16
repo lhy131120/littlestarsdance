@@ -14,14 +14,22 @@
 		<div class="py-5">
 
 
-			<% if (typeof sectionDesc !== 'undefined' && sectionDesc) { %>  <!-- 添加 typeof 防護，檢查是否傳遞且非空 -->
+			<% if (typeof sectionDesc !== 'undefined' && sectionDesc) { %> 
         <h1 class="mb-0 mb-lg-7 fs-3 fs-lg-1 letter-spacing-1 text-center">
-          <%- sectionDesc %>  <!-- 使用 <%- %> 允許 HTML 如 <br />，但確保 sectionDesc 安全 -->
+          <%- sectionDesc %>  
         </h1>
-      <% } else { %>  <!-- 預設文字回退，保持原兩行設計 -->
-        <h1 class="mb-0 mb-lg-7 fs-3 fs-lg-1 letter-spacing-1 text-center">
-          與我們一起探索舞蹈的樂趣 <br />為兒童和青少年提供精彩的舞蹈課程
+      <% } else if (typeof courseName !== 'undefined' && courseName) { %>  
+        <h1 class="mb-4 mb-lg-7 fs-3 fs-lg-1 letter-spacing-1 text-center">
+          <%- courseName %>
         </h1>
+      <% } %>
+
+      <% if (typeof label !== 'undefined' && Array.isArray(label) && label.length > 0) { %>
+        <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap">
+          <% label.forEach(function(item) { %>
+            <span class="badge text-gray-900 rounded-5 bg-primary-300 px-4 py-1 fs-7 fs-lg-6  letter-spacing-1"><%= item %></span>
+          <% }); %>
+        </div>
       <% } %>
 
 			<% if (isCoursesPage) { %>
