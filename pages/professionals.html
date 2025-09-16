@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>專業指導</title>
-	</head>
-	<body>
-		<%- include('./layout/header'); -%>
-		<main>
-      <%- include('./layout/hero', { 
-        isCoursesPage: false, 
-        heroImageSrc: '/assets/images/inside-heros/hero-3.jpg',
-        sectionDesc: '專業教師，舞動孩子未來！' 
-      }); -%>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>專業指導</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+    <main>
+      <%- include('./layout/hero', { isCoursesPage: false, heroImageSrc:
+      '/assets/images/inside-heros/hero-3.jpg', sectionDesc:
+      '專業教師，舞動孩子未來！' }); -%>
 
       <section class="py-11 py-lg-14">
         <div class="container">
           <h2 class="text-lg-center mb-4 fs-4 fs-lg-1">我們的專業導師</h2>
-					<p class="text-lg-center mb-7 mb-lg-8 fs-6 fs-lg-4 letter-spacing-1">
-						舞出自信，專業引導！我們的認證教師帶您孩子與青春節奏共舞！
-					</p>
+          <p class="text-lg-center mb-7 mb-lg-8 fs-6 fs-lg-4 letter-spacing-1">
+            舞出自信，專業引導！我們的認證教師帶您孩子與青春節奏共舞！
+          </p>
 
-          <div class="row"></div>
+          <div class="row">
+            <div class="col">
+              <div></div>
+              <div>
+                Lily老師皇家芭蕾認證教師8年幼兒教學經驗 -
+                專長：幼兒芭蕾、創意舞（3-6歲）- 耐心教學，讓孩子愛上舞蹈！
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
-		<%- include('./layout/footer'); -%>
-		<script type="module" src="../main.js"></script>
-	</body>
+    <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+  </body>
 </html>
