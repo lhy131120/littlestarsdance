@@ -1,6 +1,6 @@
 <section
 	id="hero"
-	class="hero d-flex align-items-center justify-content-center text-white <%= (typeof isCoursesDetailsPage !== 'undefined' && isCoursesDetailsPage) ? 'course-details-hero' : '' %>"
+	class="hero d-flex align-items-center justify-content-center text-white<%= (typeof isCoursesDetailsPage !== 'undefined' && isCoursesDetailsPage) ? 'course-details-hero' : null %> <%= (typeof isToturPage !== 'undefined' && isToturPage) ? 'totur-hero' : null %>"
 >
 	<picture class="position-absolute top-0 start-0 w-100 h-100 z-n1">
 		<img

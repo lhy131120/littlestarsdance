@@ -1,18 +1,33 @@
 .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
   position: relative;
-  aspect-ratio: 14 / 5;
+  aspect-ratio: 16 / 5;
+
+  @include media-breakpoint-down(lg) {
+    aspect-ratio: 4 / 3;
+  }
   
   &.course-details-hero {
-    aspect-ratio: 47 / 15;
-    
+    aspect-ratio: 8 / 2;
+
     @include media-breakpoint-down(lg) {
       aspect-ratio: 12 / 8;
     }
-
-    img {
-      object-position: center!important;
-    }
   }
+
+  // &.totur-hero {
+
+  //   @include media-breakpoint-down(md) {
+  //     aspect-ratio: 1;
+  //   }
+
+  //   img {
+  //     object-position: center!important;
+  //   }
+  // }
 
   &::before {
     content: "";

@@ -8,9 +8,11 @@
   <body>
     <%- include('./layout/header'); -%>
     <main>
-      <%- include('./layout/hero', { isCoursesPage: false, isCoursesDetailsPage:
-      true, courseName: '幼兒芭蕾', heroImageSrc:
-      '/assets/images/course-thumbnail/course-1.jpg', label: ['3-6歲', '初級']
+      <%- include('./layout/courseDetailsHero', {
+        isCoursesDetailsPage: true, 
+        courseName: '幼兒芭蕾', 
+        heroImageSrc: '/assets/images/course-thumbnail/course-1.jpg', 
+        label: ['3-6歲', '初級']
       }); -%>
       <section class="py-11 py-lg-14">
         <div class="container">
