@@ -1,48 +1,15 @@
-<section
-	id="hero"
-	class="hero d-flex align-items-center justify-content-center text-white<%= (typeof isCoursesDetailsPage !== 'undefined' && isCoursesDetailsPage) ? 'course-details-hero' : null %> <%= (typeof isToturPage !== 'undefined' && isToturPage) ? 'totur-hero' : null %>"
->
+<section id="hero" class="hero">
 	<picture class="position-absolute top-0 start-0 w-100 h-100 z-n1">
 		<img
 			src="<%= (typeof heroImageSrc !== 'undefined' && heroImageSrc) ? heroImageSrc : '/assets/images/inside-heros/hero-1.jpg' %>"
 			alt="hero image"
-			class="w-100 h-100 object-fit-cover object-position-top"
+			class="w-100 h-100 object-fit-cover <%= (typeof heroPosition !== 'undefined' && heroPosition) ? 'object-position-' + heroPosition : 'object-position-center' %>"
 		/>
 	</picture>
 
 	<div class="container position-relative z-3">
 		<div class="py-5">
-
-
-			<% if (typeof sectionDesc !== 'undefined' && sectionDesc) { %> 
-        <h1 class="mb-0 mb-lg-7 fs-3 fs-lg-1 letter-spacing-1 text-center">
-          <%- sectionDesc %>  
-        </h1>
-      <% } else if (typeof courseName !== 'undefined' && courseName) { %>  
-        <h1 class="mb-4 mb-lg-7 fs-3 fs-lg-1 letter-spacing-1 text-center">
-          <%- courseName %>
-        </h1>
-      <% } %>
-
-      <% if (typeof label !== 'undefined' && Array.isArray(label) && label.length > 0) { %>
-        <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap">
-          <% label.forEach(function(item) { %>
-            <span class="badge text-gray-900 rounded-5 bg-primary-300 px-4 py-1 fs-7 fs-lg-6  letter-spacing-1"><%= item %></span>
-          <% }); %>
-        </div>
-      <% } %>
-
-			<% if (isCoursesPage) { %>
-			<div class="d-none d-lg-flex align-items-center justify-content-center gap-3 flex-wrap">
-				<p class="mb-0 fs-6 fs-lg-5 letter-spacing-1">按年齡篩選：</p>
-				<div id="course-filters" class="d-flex align-items-center justify-content-center gap-4 gap-lg-5 flex-wrap">
-					<button type="button" class="btn btn-primary-300" data-range="all">所有課程</button>
-					<button type="button" class="btn btn-primary-300" data-range="kids">3-6歲</button>
-					<button type="button" class="btn btn-primary-300" data-range="children">7-12歲</button>
-					<button type="button" class="btn btn-primary-300" data-range="teenages">13-16歲</button>
-				</div>
-			</div>
-			<% } %>
+			<h1 class="mb-0 mb-lg-7 fs-3 fs-lg-1 letter-spacing-1 lh-sm text-center"><%- sectionDesc %></h1>
 		</div>
 	</div>
 </section>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>最新消息</title>
+	</head>
+	<body>
+		<%- include('./layout/header'); -%>
+		<main>
+			<%- include('./layout/hero', { heroImageSrc: '/assets/images/inside-heros/hero-2.jpg', sectionDesc: '最新消息',
+			heroPosition: 'center' }); -%>
+			<section class="py-11 py-lg-14">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-9">
+							<ul class="list-unstyled d-flex flex-column gap-5 gap-lg-6 news-list">
+								<li class="position-relative border border-2 border-gray-300 p-4 p-lg-5 rounded-5 bg-primary-100 special">
+									<h2 class="mb-0 fs-5 fs-lg-3 text-primary-500">新芭蕾練習室正式啟用！</h2>
+									<p class="mb-2 text-accent-300"><small>15-9-2025</small></p>
+									<p class="mb-0 letter-spacing-1">
+										我們很高興宣布，新建的芭蕾練習室已於本週開放！這間設施配備專業防滑地板、鏡面牆和舒適照明，專為3-6歲幼兒設計。由Lily老師帶領的芭蕾課程將率先使用，讓孩子們在更安全的環境中學習優雅舞步。歡迎家長前來參觀！
+									</p>
+								</li>
+								<li class="position-relative border border-2 border-gray-300 p-4 p-lg-5 rounded-5 bg-primary-100 special">
+									<h2 class="mb-0 fs-5 fs-lg-3 text-primary-500">秋季嘻哈課程報名開跑</h2>
+									<p class="mb-2 text-accent-300"><small>10-9-2025</small></p>
+									<p class="mb-0 letter-spacing-1">
+										為迎接新學期，我們推出秋季嘻哈課程系列，由Jay老師指導，適合8-16歲青少年。課程強調即興創作和團隊合作，每週兩堂課，幫助學生發展個人風格。名額有限，早鳥報名享9折優惠，截止日期9月30日！
+									</p>
+								</li>
+								<li class="position-relative border border-2 border-gray-300 p-4 p-lg-5 rounded-5 bg-primary-100">
+									<h2 class="mb-0 fs-5 fs-lg-3 text-primary-500">學校音響系統全面升級</h2>
+									<p class="mb-2 text-accent-300"><small>28-8-2025</small></p>
+									<p class="mb-0 letter-spacing-1">
+										為了提升課程品質，我們完成了音響系統的升級！新設備支援高品質音樂播放和無線連接，讓踢踏舞和爵士舞課程更具節奏感。Emma老師表示，這將讓5-16歲學員的節奏訓練更生動有趣。感謝家長的支持！
+									</p>
+								</li>
+								<li class="position-relative border border-2 border-gray-300 p-4 p-lg-5 rounded-5 bg-primary-100">
+									<h2 class="mb-0 fs-5 fs-lg-3 text-primary-500">現代舞夏日工作坊圓滿結束</h2>
+									<p class="mb-2 text-accent-300"><small>20-8-2025</small></p>
+									<p class="mb-0 letter-spacing-1">
+										上週我們的現代舞夏日工作坊由Sophie老師主持，吸引了超過50位7-12歲學員參與。孩子們透過主題創作學習情感表達，家長反饋熱烈！下次工作坊預計於冬季舉行，敬請期待。
+									</p>
+								</li>
+								<li class="position-relative border border-2 border-gray-300 p-4 p-lg-5 rounded-5 bg-primary-100">
+									<h2 class="mb-0 fs-5 fs-lg-3 text-primary-500">新增親子舞蹈體驗課</h2>
+									<p class="mb-2 text-accent-300"><small>5-8-2025</small></p>
+									<p class="mb-0 letter-spacing-1">
+										我們推出全新親子舞蹈體驗課，適合3-6歲幼兒與家長一同參與。由Lily老師和Emma老師聯合指導，結合芭蕾與踢踏元素，讓家庭在遊戲中增進親子互動。首堂課免費試上，報名從即日起開放！
+									</p>
+								</li>
+
+								<li class="position-relative border border-2 border-gray-300 p-4 p-lg-5 rounded-5 bg-primary-100">
+									<h2 class="mb-0 fs-5 fs-lg-3 text-primary-500">青少年街舞比賽即將開賽</h2>
+									<p class="mb-2 text-accent-300"><small>25-7-2025</small></p>
+									<p class="mb-0 letter-spacing-1">
+										興奮公告！由Jay老師領軍的「青少年街舞大賽」將於10月舉行，開放10-16歲學員報名。比賽聚焦創意與技巧，獲勝者可獲得獎學金。準備好點燃你的青春熱情嗎？詳細資訊請見活動頁面。
+									</p>
+								</li>
+								<li class="position-relative border border-2 border-gray-300 p-4 p-lg-5 rounded-5 bg-primary-100">
+									<h2 class="mb-0 fs-5 fs-lg-3 text-primary-500">舞蹈教室空調系統更新</h2>
+									<p class="mb-2 text-accent-300"><small>15-7-2025</small></p>
+									<p class="mb-0 letter-spacing-1">
+										為提供更舒適的學習環境，我們升級了所有教室的空調系統，確保在炎熱天氣中孩子們能專注練習。這項改善特別惠及Sophie老師的現代舞課程，讓7-12歲學員在涼爽中發揮創意。
+									</p>
+								</li>
+								<li class="position-relative border border-2 border-gray-300 p-4 p-lg-5 rounded-5 bg-primary-100">
+									<h2 class="mb-0 fs-5 fs-lg-3 text-primary-500">暑期踢踏舞強化班開班</h2>
+									<p class="mb-2 text-accent-300"><small>1-7-2025</small></p>
+									<p class="mb-0 letter-spacing-1">
+										暑假來臨，我們推出踢踏舞強化班，由Emma老師指導，適合5-16歲學生。課程聚焦節奏與表演技巧，每週三堂課，幫助孩子提升協調性。家長可選擇線上或實體報名，截止8月1日。
+									</p>
+								</li>
+								<li class="position-relative border border-2 border-gray-300 p-4 p-lg-5 rounded-5 bg-primary-100">
+									<h2 class="mb-0 fs-5 fs-lg-3 text-primary-500">學校與社區合作舉辦舞蹈嘉年華</h2>
+									<p class="mb-2 text-accent-300"><small>20-6-2025</small></p>
+									<p class="mb-0 letter-spacing-1">
+										我們與當地社區合作，計劃於11月舉辦「舞蹈嘉年華」活動！所有年齡組學員均可參與，由四位老師聯合指導。活動包括表演、工作坊和親子遊戲，旨在推廣舞蹈文化。更多細節即將公布！
+									</p>
+								</li>
+								<li class="position-relative border border-2 border-gray-300 p-4 p-lg-5 rounded-5 bg-primary-100">
+									<h2 class="mb-0 fs-5 fs-lg-3 text-primary-500">新增爵士舞進階課程</h2>
+									<p class="mb-2 text-accent-300"><small>10-6-2025</small></p>
+									<p class="mb-0 letter-spacing-1">
+										針對有基礎的青少年，我們新增爵士舞進階課程，由Sophie老師帶領，適合13-16歲學員。課程強調情感融合與即興，幫助學生準備舞台表演。首班於9月開課，報名享早鳥禮品！
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<%- include('./layout/footer'); -%>
+		<script type="module" src="../main.js"></script>
+	</body>
+</html>

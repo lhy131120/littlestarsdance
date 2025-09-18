@@ -17,9 +17,9 @@
 			<% if (typeof label !== 'undefined' && Array.isArray(label) && label.length > 0) { %>
 			<div class="d-flex align-items-center justify-content-center gap-3 flex-wrap">
 				<% label.forEach(function(item) { %>
-				<span class="badge text-gray-900 rounded-5 bg-primary-300 px-4 py-1 fs-7 fs-lg-6 letter-spacing-1"
-					><%= item %></span
-				>
+				<span class="badge text-gray-900 rounded-5 bg-primary-300 px-4 py-1 fs-7 fs-lg-6 letter-spacing-1">
+          <%= item %>
+        </span>
 				<% }); %>
 			</div>
 			<% } %>

@@ -118,6 +118,7 @@ ul {
   height: 68px;
   background: url('/assets/images/btn-class.png') no-repeat center center / contain;
   transition: background .15s ease-in-out;
+
   &:hover {
     background: url('/assets/images/btn-class-hover.png') no-repeat center center / contain;
   }
@@ -128,8 +129,19 @@ ul {
     background: url('/assets/images/btn-class-sm.png') no-repeat center center / contain;
 
     &:hover {
-    background: url('/assets/images/btn-class-sm-hover.png') no-repeat center center / contain;
-  }
+      background: url('/assets/images/btn-class-sm-hover.png') no-repeat center center / contain;
+    }
   }
 }
 
+// news-list
+.news-list .special:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 42px;
+  height: 45px;
+  background: url('/assets/images/big-star.png') no-repeat center center / contain;
+  top: -25px;
+  left: -15px;
+} 

@@ -266,6 +266,7 @@ $utilities: map-merge(
     ),
     "height": (
       property: height,
+      responsive: true,
       class: h,
       values: (
         25: 25%,
@@ -273,6 +274,8 @@ $utilities: map-merge(
         75: 75%,
         100: 100%,
         312p: 312px,
+        346p: 346px,
+        408p: 408px,
         auto: auto,
       ),
     ),
@@ -282,6 +285,7 @@ $utilities: map-merge(
       class: mh,
       values: (
         100: 100%,
+        312p: 312px,
         346p: 346px,
       ),
     ),
