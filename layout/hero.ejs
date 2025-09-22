@@ -4,6 +4,7 @@
 			src="<%= (typeof heroImageSrc !== 'undefined' && heroImageSrc) ? heroImageSrc : '/assets/images/inside-heros/hero-1.jpg' %>"
 			alt="hero image"
 			class="w-100 h-100 object-fit-cover <%= (typeof heroPosition !== 'undefined' && heroPosition) ? 'object-position-' + heroPosition : 'object-position-center' %>"
+      loading="lazy"
 		/>
 	</picture>
 
