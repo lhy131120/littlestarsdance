@@ -1,0 +1,49 @@
+#mainForm > .row {
+  @include media-breakpoint-down(lg) {
+    position: relative;
+  }
+}
+
+#mainForm .formArea {
+  // min-height: 700px;
+  @include media-breakpoint-down(lg) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    height: 100%;
+  }
+}
+
+.image-area {
+  position: relative;
+  aspect-ratio: 4 / 5;
+}
+
+#login-section,
+#register-section {
+  position: absolute;
+  opacity: 0;
+  transform: translateX(100%);
+  width: calc(100% - 64px);
+  transition: all 0.5s ease-in-out;
+}
+
+#login-section.active,
+#register-section.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#loginImage,
+#registerImage {
+  position: absolute;
+  transform: translateX(-100%);
+  transition: all 0.5s ease-in-out;
+}
+
+#loginImage.active,
+#registerImage.active {
+  opacity: 1;
+  transform: translateX(0);
+}

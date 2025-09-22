@@ -38,17 +38,17 @@ $utilities: map-merge(
           none: none,
         ),
       ),
-      "object-position": (
-        property: object-position,
-        responsive: true,
-        values: (
-          top: top,
-          bottom: bottom,
-          center: center,
-          start: left,
-          end: right,
-        )
+    "object-position": (
+      property: object-position,
+      responsive: true,
+      values: (
+        top: top,
+        bottom: bottom,
+        center: center,
+        start: left,
+        end: right,
       ),
+    ),
     // scss-docs-end utils-object-fit
     // Opacity utilities
     // scss-docs-start utils-opacity
@@ -117,6 +117,7 @@ $utilities: map-merge(
     "position":
       (
         property: position,
+        responsive: true,
         values: static relative absolute fixed sticky,
       ),
     "top": (
@@ -298,9 +299,11 @@ $utilities: map-merge(
     ),
     "min-viewport-height": (
       property: min-height,
+      responsive: true,
       class: min-vh,
       values: (
         100: 100vh,
+        700p: 700px,
       ),
     ),
     // scss-docs-end utils-sizing
@@ -689,6 +692,7 @@ $utilities: map-merge(
     "color":
       (
         property: color,
+        responsive: true,
         class: text,
         local-vars: (
           "text-opacity": 1,
@@ -858,11 +862,11 @@ $utilities: map-merge(
           3: var(--#{$prefix}border-radius-lg),
           4: var(--#{$prefix}border-radius-xl),
           5: var(--#{$prefix}border-radius-xxl),
-          24:24px,
-          32:32px,
-          48:48px,
-          56:56px,
-          80:80px,
+          24: 24px,
+          32: 32px,
+          48: 48px,
+          56: 56px,
+          80: 80px,
           circle: 50%,
           pill: var(--#{$prefix}border-radius-pill),
         ),

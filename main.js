@@ -129,4 +129,36 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  if (document.querySelector("#mainForm")) {
+    const from = document.querySelector("#mainForm");
+    const loginSection = document.getElementById("login-section");
+    const registerSection = document.getElementById("register-section");
+    const changeToRegister = document.getElementById("changeToRegister");
+    const changeToLogin = document.getElementById("changeToLogin");
+    const loginImage = document.getElementById("loginImage");
+    const registerImage = document.getElementById("registerImage");
+
+    // 切換到註冊表單
+    changeToRegister.addEventListener("click", () => {
+      loginSection.classList.remove("active");
+      registerSection.classList.add("active");
+      loginImage.classList.remove("active");
+      registerImage.classList.add("active");
+      setTimeout(() => {
+        from.reset();
+      }, 500);
+    });
+
+    // 切換到登入表單
+    changeToLogin.addEventListener("click", () => {
+      registerSection.classList.remove("active");
+      loginSection.classList.add("active");
+      registerImage.classList.remove("active");
+      loginImage.classList.add("active");
+      setTimeout(() => {
+        from.reset();
+      }, 500);
+    });
+  }
 });
