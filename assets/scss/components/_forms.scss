@@ -1,23 +1,34 @@
 #mainForm > .row {
   @include media-breakpoint-down(lg) {
     position: relative;
+    color: #ffffff;
+
+    a {
+      color: #ffffff;
+    }
+
+    .btn {
+      color: #ffffff !important;
+      border-color: #ffffff !important;
+    }
   }
 }
 
 #mainForm .formArea {
-  // min-height: 700px;
+  transition: backdrop-filter 0.3s ease;
   @include media-breakpoint-down(lg) {
     position: absolute;
     top: 0;
     left: 0;
     padding: 0;
     height: 100%;
+    backdrop-filter: blur(3px);
   }
 }
 
 .image-area {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 5; 
 }
 
 #login-section,
@@ -26,7 +37,7 @@
   opacity: 0;
   transform: translateX(100%);
   width: calc(100% - 64px);
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 #login-section.active,
@@ -37,9 +48,10 @@
 
 #loginImage,
 #registerImage {
+  opacity: 0;
   position: absolute;
   transform: translateX(-100%);
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 #loginImage.active,
