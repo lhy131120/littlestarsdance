@@ -6,22 +6,22 @@
 		<title>課程</title>
 	</head>
 	<body>
-		<%- include('./layout/header'); -%>
+		<%- include('./layout/header', {showLogin: true, }); -%>
 		<main>
 			<%- include('./layout/courseHero', { heroImageSrc: '/assets/images/inside-heros/hero-1.jpg', }); -%>
 			<section class="py-11 py-lg-14">
 				<div class="container">
-					<div id="dropdownMenuCourse" class="dropdown mb-11 d-lg-none text-center">
+					<div id="dropdownMenuCourse" class="dropdown mb-11 d-lg-none text-center w-100 w-md-50 mx-auto">
 						<button
 							id="dropdownMenuCourseButton"
-							class="btn btn-primary-300 py-3 px-5 w-100 w-md-50 dropdown-toggle"
+							class="btn btn-primary-300 py-3 px-5 dropdown-toggle w-100"
 							type="button"
 							data-bs-toggle="dropdown"
 							aria-expanded="false"
 						>
 							按年齡篩選
 						</button>
-						<ul class="dropdown-menu w-auto">
+						<ul class="dropdown-menu w-100 w-lg-auto">
 							<li>
 								<a class="dropdown-item" data-range="all" href="javascript:;">所有課程</a>
 							</li>

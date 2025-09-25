@@ -6,7 +6,7 @@
 		<title>關於我們</title>
 	</head>
 	<body>
-		<%- include('./layout/header'); -%>
+		<%- include('./layout/header', {showLogin: true, }); -%>
 		<main>
 			<%- include('./layout/hero', { heroImageSrc: '/assets/images/inside-heros/hero-3.jpg', sectionDesc: '關於我們',
 			heroPosition: 'center' }); -%>

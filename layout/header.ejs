@@ -24,20 +24,36 @@
 				/></a>
 			</h1>
 
-      <% if (typeof isLogined !== 'undefined' && isLogined) { %>
-        <a href="./login.html" aria-label="登入" class="btn btn-outline-secondary withIcon member order-3 ms-4 ms-xl-7 login">
-          <span class="btn-icon"></span><span class="d-none d-xl-block">登入左</span>
-        </a>
-      <% } %>
+			<% if (typeof showLogin !== 'undefined' && !showLogin) { %>
+			<div class="d-flex gap-4 align-items-center order-3 ms-4 ms-xl-7">
+				<a href="javascript:;" id="cart" class="icon cart position-relative fs-0">cart</a>
+				<div class="dropdown dropdown-center">
+          <a href="javascript:;" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false"><img src="/assets/images/icons/type=login.svg" alt="" class="img-fluid"></a>
+					<ul class="dropdown-menu dropdown-menu-end bg-primary-100 rounded-4 p-4 border border-1 border-gray-200" style="box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.1);">
+						<li><a class="dropdown-item p-2 d-block letter-spacing-1 fs-6" href="#">我的帳戶</a></li>
+						<li><a class="dropdown-item p-2 d-block letter-spacing-1 fs-6" href="#">我的訂單</a></li>
+						<li><a class="dropdown-item p-2 d-block letter-spacing-1 fs-6" href="#">我的收藏</a></li>
+						<li><a class="dropdown-item p-2 d-block letter-spacing-1 fs-6" href="#">登出</a></li>
+					</ul>
+				</div>
+			</div>
+			<% } %> <% if (typeof showLogin !== 'undefined' && showLogin ) { %>
+			<a
+				href="./login.html"
+				aria-label="登入"
+				class="btn btn-outline-secondary withIcon member order-3 ms-4 ms-xl-7 login"
+			>
+				<span class="btn-icon"></span><span class="d-none d-xl-block">登入</span>
+			</a>
+			<% } %>
 
-      <% if (typeof isLoginPage === 'undefined' || !isLoginPage ) { %>
-        <a href="./login.html" aria-label="登入" class="btn btn-outline-secondary withIcon member order-3 ms-4 ms-xl-7 login">
-          <span class="btn-icon"></span><span class="d-none d-xl-block">登入</span>
-        </a>
-      <% } %>
-      
-
-			<div class="offcanvas offcanvas-top vh-100" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" data-bs-backdrop="static">
+			<div
+				class="offcanvas offcanvas-top vh-100"
+				tabindex="-1"
+				id="offcanvasNavbar"
+				aria-labelledby="offcanvasNavbarLabel"
+				data-bs-backdrop="static"
+			>
 				<div class="offcanvas-header" style="padding: 6px 0">
 					<div class="container">
 						<div class="d-flex align-items-center justify-content-between w-100">

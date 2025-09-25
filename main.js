@@ -1,7 +1,9 @@
 import Swiper from "swiper/bundle";
+import AOS from "aos";
 import "bootstrap/dist/js/bootstrap.min.js";
 
 import "swiper/css/bundle";
+import "aos/dist/aos.css";
 import "./assets/scss/all.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -187,4 +189,27 @@ document.addEventListener("DOMContentLoaded", () => {
 			}, 500);
 		});
 	}
+
+  if (document.querySelector("#change-password-btn") && document.querySelector("#portfolio-password")) {
+    const changePasswordBtn = document.querySelector("#change-password-btn");
+    const passwordInput = document.querySelector("#portfolio-password");
+
+    changePasswordBtn.addEventListener("click", e => {
+      const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+      if(type === "text") {
+        passwordInput.setAttribute("type", type);
+        passwordInput.disabled = false;
+        passwordInput.focus();
+        const valLength = passwordInput.value.length;
+				passwordInput.setSelectionRange(valLength, valLength);
+        changePasswordBtn.textContent = "確定密碼";
+      } else {
+        passwordInput.value = passwordInput.value.trim();
+        passwordInput.setAttribute("type", type);
+        passwordInput.disabled = true;
+        changePasswordBtn.textContent = "修改密碼";
+      }
+    })
+  } 
+  
 });

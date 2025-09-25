@@ -6,7 +6,7 @@
 		<title>最新消息</title>
 	</head>
 	<body>
-		<%- include('./layout/header'); -%>
+		<%- include('./layout/header', {showLogin: true}); -%>
 		<main>
 			<%- include('./layout/hero', { heroImageSrc: '/assets/images/inside-heros/hero-2.jpg', sectionDesc: '最新消息',
 			heroPosition: 'center' }); -%>

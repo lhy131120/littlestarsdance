@@ -7,7 +7,7 @@
 		<title>首頁</title>
 	</head>
 	<body>
-		<%- include('./layout/header'); -%>
+		<%- include('./layout/header', {showLogin: true, }); -%>
 
 		<main>
 			<!-- home hero -->
@@ -619,7 +619,7 @@
 							</div>
 						</div>
 					</div>
-					<a href="javascript:;" class="btn-course d-block lh-0 mx-auto fs-0"><span>查看更多課程</span></a>
+					<a href="./courses.html" class="btn-course d-block lh-0 mx-auto fs-0"><span>查看更多課程</span></a>
 				</div>
 			</section>
 
