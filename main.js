@@ -1,3 +1,5 @@
+import "https://font.emtech.cc/emfont.js";
+
 import Swiper from "swiper/bundle";
 import AOS from "aos";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -7,6 +9,50 @@ import "aos/dist/aos.css";
 import "./assets/scss/all.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
+  emfont.init({
+    caseSensitive: true,
+    autoApply: false,
+    weight: 500,
+  });
+
+  const loading = document.getElementById("loading");
+	const images = document.querySelectorAll("img"); // 取得所有圖片
+	let loadedCount = 0; // 計數器
+	const totalImages = images.length;
+
+  if (totalImages === 0) {
+		loading.classList.add("hidden");
+		return;
+	}
+
+  images.forEach(function (img) {
+		// 如果圖片已經載入完成（例如從快取）
+		if (img.complete) {
+			handleImageLoad();
+			return;
+		}
+
+		// 載入成功
+		img.addEventListener("load", handleImageLoad);
+
+		// 載入失敗，也視為完成（避免卡住）
+		img.addEventListener("error", handleImageLoad);
+	});
+
+  function handleImageLoad() {
+		loadedCount++;
+		if (loadedCount === totalImages) {
+			// 所有圖片載入完成，隱藏 Loading
+			loading.classList.add("hidden");
+		}
+	}
+
+  // const font = document.querySelector(".emfont-GenSenRoundedJP");
+  // font.style.visibility = "none";
+  // emfont.init(font).then(() => {
+	// 	font.style.display = "visiable";
+	// });
+
 	if (document.querySelector("#home-hero-wrap")) {
 		const swiper = new Swiper("#home-hero-wrap .swiper", {
 			loop: true,
@@ -129,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	if (document.querySelector("#gallery-group-swiper")) {
-    const swiperThumbs = new Swiper("#gallery-group-swiper .gallery-thumbs", {
+		const swiperThumbs = new Swiper("#gallery-group-swiper .gallery-thumbs", {
 			loop: true,
 			spaceBetween: 8,
 			slidesPerView: 5,
@@ -141,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			},
 		});
 
-    const swiperTop = new Swiper("#gallery-group-swiper .gallery-top", {
+		const swiperTop = new Swiper("#gallery-group-swiper .gallery-top", {
 			loop: true,
 			spaceBetween: 12,
 			navigation: {
@@ -190,26 +236,25 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
-  if (document.querySelector("#change-password-btn") && document.querySelector("#portfolio-password")) {
-    const changePasswordBtn = document.querySelector("#change-password-btn");
-    const passwordInput = document.querySelector("#portfolio-password");
+	if (document.querySelector("#change-password-btn") && document.querySelector("#portfolio-password")) {
+		const changePasswordBtn = document.querySelector("#change-password-btn");
+		const passwordInput = document.querySelector("#portfolio-password");
 
-    changePasswordBtn.addEventListener("click", e => {
-      const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
-      if(type === "text") {
-        passwordInput.setAttribute("type", type);
-        passwordInput.disabled = false;
-        passwordInput.focus();
-        const valLength = passwordInput.value.length;
+		changePasswordBtn.addEventListener("click", (e) => {
+			const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+			if (type === "text") {
+				passwordInput.setAttribute("type", type);
+				passwordInput.disabled = false;
+				passwordInput.focus();
+				const valLength = passwordInput.value.length;
 				passwordInput.setSelectionRange(valLength, valLength);
-        changePasswordBtn.textContent = "確定密碼";
-      } else {
-        passwordInput.value = passwordInput.value.trim();
-        passwordInput.setAttribute("type", type);
-        passwordInput.disabled = true;
-        changePasswordBtn.textContent = "修改密碼";
-      }
-    })
-  } 
-  
+				changePasswordBtn.textContent = "確定密碼";
+			} else {
+				passwordInput.value = passwordInput.value.trim();
+				passwordInput.setAttribute("type", type);
+				passwordInput.disabled = true;
+				changePasswordBtn.textContent = "修改密碼";
+			}
+		});
+	}
 });

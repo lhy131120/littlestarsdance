@@ -1,13 +1,10 @@
 * {
 	letter-spacing: 0.05em;
+  font-weight: 500!important;
 }
 
 hr.dashed-1 {
   border-top: 1px dashed var(--bs-gray-800);
-}
-
-.container-960p {
-  max-width: 960px;
 }
 
 .line-clamp-2 {
@@ -184,3 +181,4 @@ ul {
 .dropdown-toggle::after {
   display: none;
 }
+
