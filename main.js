@@ -1,14 +1,13 @@
 import "https://font.emtech.cc/emfont.js";
-
 import Swiper from "swiper/bundle";
 import AOS from "aos";
 import "bootstrap/dist/js/bootstrap.min.js";
-
 import "swiper/css/bundle";
 import "aos/dist/aos.css";
 import "./assets/scss/all.scss";
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+  // 初始化 emfont
   emfont.init({
     caseSensitive: true,
     autoApply: false,
@@ -16,245 +15,294 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const loading = document.getElementById("loading");
-	const images = document.querySelectorAll("img"); // 取得所有圖片
-	let loadedCount = 0; // 計數器
-	const totalImages = images.length;
 
-  if (totalImages === 0) {
-		loading.classList.add("hidden");
-		return;
-	}
+  // 函數：提取所有唯一的圖片 URL（<img> 和 background-image）
+  function getAllImageUrls() {
+    const urls = new Set();
 
-  images.forEach(function (img) {
-		// 如果圖片已經載入完成（例如從快取）
-		if (img.complete) {
-			handleImageLoad();
-			return;
-		}
+    // 收集 <img> 的 src
+    document.querySelectorAll("img").forEach((img) => {
+      if (img.src) urls.add(img.src);
+    });
 
-		// 載入成功
-		img.addEventListener("load", handleImageLoad);
+    // 收集所有元素的 background-image
+    document.querySelectorAll("*").forEach((el) => {
+      const style = window.getComputedStyle(el);
+      const bg = style.backgroundImage;
+      if (bg && bg !== "none") {
+        const match = bg.match(/url\(["']?([^"']+)["']?\)/);
+        if (match && match[1]) urls.add(match[1]);
+      }
+    });
 
-		// 載入失敗，也視為完成（避免卡住）
-		img.addEventListener("error", handleImageLoad);
-	});
+    return Array.from(urls);
+  }
 
-  function handleImageLoad() {
-		loadedCount++;
-		if (loadedCount === totalImages) {
-			// 所有圖片載入完成，隱藏 Loading
-			loading.classList.add("hidden");
-		}
-	}
+  // 獲取所有圖片 URL
+  const imageUrls = getAllImageUrls();
+  // 如果沒有圖片，直接隱藏 Loading 並初始化其他功能
+  if (imageUrls.length === 0) {
+    loading.classList.add("hidden");
+    initializeFeatures();
+    return;
+  }
 
-  // const font = document.querySelector(".emfont-GenSenRoundedJP");
-  // font.style.visibility = "none";
-  // emfont.init(font).then(() => {
-	// 	font.style.display = "visiable";
-	// });
+  // 創建 Promise 陣列：為每個 URL 載入圖片
+  const promises = imageUrls.map((url) => {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.src = url;
+      if (img.complete) return resolve(); // 快取圖片立即解析
+      img.addEventListener("load", resolve);
+      img.addEventListener("error", resolve); // 錯誤也解析，避免卡住
+    });
+  });
 
-	if (document.querySelector("#home-hero-wrap")) {
-		const swiper = new Swiper("#home-hero-wrap .swiper", {
-			loop: true,
-			autoplay: {
-				delay: 5000,
-				disableOnInteraction: true,
-			},
-			effect: "fade",
-			navigation: {
-				nextEl: "#home-hero-wrap .swiper .swiper-button-next",
-				prevEl: "#home-hero-wrap .swiper .swiper-button-prev",
-			},
-		});
-	}
+  // 等待所有圖片載入完成
+  try {
+    await Promise.all(promises);
+    loading.classList.add("hidden");
+    initializeFeatures();
+  } catch (error) {
+    console.error("載入圖片時發生錯誤:", error);
+    loading.classList.add("hidden"); // 即使錯誤也隱藏 Loading
+    initializeFeatures();
+  }
 
-	if (document.querySelector("#hot-course")) {
-		const swiper = new Swiper("#hot-course .swiper", {
-			loop: true,
-			slidesPerView: 2,
-			spaceBetween: 24,
-			breakpoints: {
-				1200: {
-					slidesPerView: 3,
-					spaceBetween: 24,
-				},
-			},
-			navigation: {
-				nextEl: "#hot-course .swiper-button-next",
-				prevEl: "#hot-course .swiper-button-prev",
-			},
-		});
-	}
+  // 初始化所有其他功能（Swiper、AOS、表單等）
+  function initializeFeatures() {
+    AOS.init({
+      once: true,
+      offset: 0,
+      duration: 600,
+    });
 
-	if (document.querySelector("#home-event")) {
-		const swiper = new Swiper("#home-event .swiper", {
-			slidesPerView: "auto",
-			spaceBetween: 24,
-		});
-	}
+    window.addEventListener("load", () => {
+      AOS.refresh();
+    });
 
-	if (document.querySelector("#home-comments")) {
-		const swipers = document.querySelectorAll("#home-comments .swiper");
+    // Swiper for #home-hero-wrap
+    if (document.querySelector("#home-hero-wrap")) {
+      const swiper = new Swiper("#home-hero-wrap .swiper", {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: true,
+        },
+        effect: "fade",
+        navigation: {
+          nextEl: "#home-hero-wrap .swiper .swiper-button-next",
+          prevEl: "#home-hero-wrap .swiper .swiper-button-prev",
+        },
+      });
+    }
 
-		swipers.forEach((swiperEl, index) => {
-			const swiper = new Swiper(swiperEl, {
-				slidesPerView: "auto",
-				spaceBetween: 24,
-				loop: true,
-				centeredSlides: true,
-				centeredSlidesBounds: true,
-				pauseOnMouseEnter: true,
-				freeMode: {
-					enabled: true,
-					minimumVelocity: 0.05,
-					momentumRatio: 1.2,
-				},
-				autoplay: {
-					delay: 3000,
-					disableOnInteraction: false,
-					reverseDirection: index === 1 ? true : false,
-				},
-				speed: 5000,
-			});
-		});
-	}
+    // Swiper for #hot-course
+    if (document.querySelector("#hot-course")) {
+      const swiper = new Swiper("#hot-course .swiper", {
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 24,
+        breakpoints: {
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+          },
+        },
+        navigation: {
+          nextEl: "#hot-course .swiper-button-next",
+          prevEl: "#hot-course .swiper-button-prev",
+        },
+      });
+    }
 
-	if (document.querySelector("#home-past-events")) {
-		const swiper = new Swiper("#home-past-events .swiper", {
-			slidesPerView: "auto",
-			spaceBetween: 8,
-			centeredSlides: false,
-			centeredSlidesBounds: false,
-			centerInsufficientSlides: true,
-			breakpoints: {
-				992: {
-					spaceBetween: 24,
-					centeredSlides: true,
-					centeredSlidesBounds: true,
-				},
-			},
-			freeMode: {
-				enabled: true,
-				minimumVelocity: 0.05,
-				momentumRatio: 1.2,
-			},
-			speed: 1500,
-		});
-	}
+    // Swiper for #home-event
+    if (document.querySelector("#home-event")) {
+      const swiper = new Swiper("#home-event .swiper", {
+        slidesPerView: "auto",
+        spaceBetween: 24,
+      });
+    }
 
-	if (
-		document.querySelector("#course-filters") &&
-		document.querySelector("#course-list") &&
-		document.querySelector("#dropdownMenuCourse")
-	) {
-		const rangeTextMap = {
-			all: "所有課程",
-			kids: "3-6歲",
-			children: "7-12歲",
-			teenages: "13-16歲",
-		};
-		const filters = document.querySelectorAll("#course-filters .btn, #dropdownMenuCourse .dropdown-item");
-		const courses = document.querySelectorAll("#course-list .col");
-		const dropdownButton = document.querySelector("#dropdownMenuCourseButton");
+    // Swiper for #home-comments
+    if (document.querySelector("#home-comments")) {
+      const swipers = document.querySelectorAll("#home-comments .swiper");
+      swipers.forEach((swiperEl, index) => {
+        const swiper = new Swiper(swiperEl, {
+          slidesPerView: "auto",
+          spaceBetween: 24,
+          loop: true,
+          centeredSlides: true,
+          centeredSlidesBounds: true,
+          pauseOnMouseEnter: true,
+          freeMode: {
+            enabled: true,
+            minimumVelocity: 0.05,
+            momentumRatio: 1.2,
+          },
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            reverseDirection: index === 1 ? true : false,
+          },
+          speed: 5000,
+        });
+      });
+    }
 
-		filters.forEach((filter) => {
-			filter.addEventListener("click", (e) => {
-				const range = filter.getAttribute("data-range");
-				const showClass = range === "all" ? null : range;
+    // Swiper for #home-past-events
+    if (document.querySelector("#home-past-events")) {
+      const swiper = new Swiper("#home-past-events .swiper", {
+        slidesPerView: "auto",
+        spaceBetween: 8,
+        centeredSlides: false,
+        centeredSlidesBounds: false,
+        centerInsufficientSlides: true,
+        breakpoints: {
+          992: {
+            spaceBetween: 24,
+            centeredSlides: true,
+            centeredSlidesBounds: true,
+          },
+        },
+        freeMode: {
+          enabled: true,
+          minimumVelocity: 0.05,
+          momentumRatio: 1.2,
+        },
+        speed: 1500,
+      });
+    }
 
-				courses.forEach((course) => {
-					course.style.display =
-						showClass === null || course.getAttribute("data-type") === showClass ? "block" : "none";
-				});
+    // Swiper for #gallery-group-swiper
+    if (document.querySelector("#gallery-group-swiper")) {
+      const swiperThumbs = new Swiper("#gallery-group-swiper .gallery-thumbs", {
+        loop: true,
+        spaceBetween: 8,
+        slidesPerView: 5,
+        freeMode: true,
+        watchSlidesProgress: true,
+        lazy: {
+          loadPrevNext: true, // 預載鄰近滑塊
+          loadPrevNextAmount: 2, // 預載數量
+        },
+      });
 
-				if (dropdownButton) {
-					dropdownButton.textContent = rangeTextMap[range] || "按年齡篩選";
-				}
-			});
-		});
-	}
+      const swiperTop = new Swiper("#gallery-group-swiper .gallery-top", {
+        loop: true,
+        spaceBetween: 12,
+        navigation: {
+          nextEl: "#gallery-group-swiper .gallery-top .swiper-button-next",
+          prevEl: "#gallery-group-swiper .gallery-top .swiper-button-prev",
+        },
+        thumbs: {
+          swiper: swiperThumbs,
+        },
+        lazy: {
+          loadPrevNext: true,
+          loadPrevNextAmount: 2,
+        },
+      });
+    }
 
-	if (document.querySelector("#gallery-group-swiper")) {
-		const swiperThumbs = new Swiper("#gallery-group-swiper .gallery-thumbs", {
-			loop: true,
-			spaceBetween: 8,
-			slidesPerView: 5,
-			freeMode: true,
-			watchSlidesProgress: true,
-			lazy: {
-				loadPrevNext: true, // 預載鄰近滑塊
-				loadPrevNextAmount: 2, // 預載數量
-			},
-		});
+    // 課程篩選邏輯
+    if (
+      document.querySelector("#course-filters") &&
+      document.querySelector("#course-list") &&
+      document.querySelector("#dropdownMenuCourse")
+    ) {
+      const rangeTextMap = {
+        all: "所有課程",
+        kids: "3-6歲",
+        children: "7-12歲",
+        teenages: "13-16歲",
+      };
+      const filters = document.querySelectorAll(
+        "#course-filters .btn, #dropdownMenuCourse .dropdown-item"
+      );
+      const courses = document.querySelectorAll("#course-list .col");
+      const dropdownButton = document.querySelector(
+        "#dropdownMenuCourseButton"
+      );
 
-		const swiperTop = new Swiper("#gallery-group-swiper .gallery-top", {
-			loop: true,
-			spaceBetween: 12,
-			navigation: {
-				nextEl: "#gallery-group-swiper .gallery-top .swiper-button-next",
-				prevEl: "#gallery-group-swiper .gallery-top .swiper-button-prev",
-			},
-			thumbs: {
-				swiper: swiperThumbs,
-			},
-			lazy: {
-				loadPrevNext: true,
-				loadPrevNextAmount: 2,
-			},
-		});
-	}
+      filters.forEach((filter) => {
+        filter.addEventListener("click", (e) => {
+          const range = filter.getAttribute("data-range");
+          const showClass = range === "all" ? null : range;
 
-	if (document.querySelector("#mainForm")) {
-		const from = document.querySelector("#mainForm");
-		const loginSection = document.getElementById("login-section");
-		const registerSection = document.getElementById("register-section");
-		const changeToRegister = document.getElementById("changeToRegister");
-		const changeToLogin = document.getElementById("changeToLogin");
-		const loginImage = document.getElementById("loginImage");
-		const registerImage = document.getElementById("registerImage");
+          courses.forEach((course) => {
+            course.style.display =
+              showClass === null ||
+              course.getAttribute("data-type") === showClass
+                ? "block"
+                : "none";
+          });
 
-		// 切換到註冊表單
-		changeToRegister.addEventListener("click", () => {
-			loginSection.classList.remove("active");
-			registerSection.classList.add("active");
-			loginImage.classList.remove("active");
-			registerImage.classList.add("active");
-			setTimeout(() => {
-				from.reset();
-			}, 500);
-		});
+          if (dropdownButton) {
+            dropdownButton.textContent = rangeTextMap[range] || "按年齡篩選";
+          }
+        });
+      });
+    }
 
-		// 切換到登入表單
-		changeToLogin.addEventListener("click", () => {
-			registerSection.classList.remove("active");
-			loginSection.classList.add("active");
-			registerImage.classList.remove("active");
-			loginImage.classList.add("active");
-			setTimeout(() => {
-				from.reset();
-			}, 500);
-		});
-	}
+    // 表單切換邏輯
+    if (document.querySelector("#mainForm")) {
+      const from = document.querySelector("#mainForm");
+      const loginSection = document.getElementById("login-section");
+      const registerSection = document.getElementById("register-section");
+      const changeToRegister = document.getElementById("changeToRegister");
+      const changeToLogin = document.getElementById("changeToLogin");
+      const loginImage = document.getElementById("loginImage");
+      const registerImage = document.getElementById("registerImage");
 
-	if (document.querySelector("#change-password-btn") && document.querySelector("#portfolio-password")) {
-		const changePasswordBtn = document.querySelector("#change-password-btn");
-		const passwordInput = document.querySelector("#portfolio-password");
+      changeToRegister.addEventListener("click", () => {
+        loginSection.classList.remove("active");
+        registerSection.classList.add("active");
+        loginImage.classList.remove("active");
+        registerImage.classList.add("active");
+        setTimeout(() => {
+          from.reset();
+        }, 500);
+      });
 
-		changePasswordBtn.addEventListener("click", (e) => {
-			const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
-			if (type === "text") {
-				passwordInput.setAttribute("type", type);
-				passwordInput.disabled = false;
-				passwordInput.focus();
-				const valLength = passwordInput.value.length;
-				passwordInput.setSelectionRange(valLength, valLength);
-				changePasswordBtn.textContent = "確定密碼";
-			} else {
-				passwordInput.value = passwordInput.value.trim();
-				passwordInput.setAttribute("type", type);
-				passwordInput.disabled = true;
-				changePasswordBtn.textContent = "修改密碼";
-			}
-		});
-	}
+      changeToLogin.addEventListener("click", () => {
+        registerSection.classList.remove("active");
+        loginSection.classList.add("active");
+        registerImage.classList.remove("active");
+        loginImage.classList.add("active");
+        setTimeout(() => {
+          from.reset();
+        }, 500);
+      });
+    }
+
+    // 密碼輸入邏輯
+    if (
+      document.querySelector("#change-password-btn") &&
+      document.querySelector("#portfolio-password")
+    ) {
+      const changePasswordBtn = document.querySelector("#change-password-btn");
+      const passwordInput = document.querySelector("#portfolio-password");
+
+      changePasswordBtn.addEventListener("click", (e) => {
+        const type =
+          passwordInput.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+        if (type === "text") {
+          passwordInput.setAttribute("type", type);
+          passwordInput.disabled = false;
+          passwordInput.focus();
+          const valLength = passwordInput.value.length;
+          passwordInput.setSelectionRange(valLength, valLength);
+          changePasswordBtn.textContent = "確定密碼";
+        } else {
+          passwordInput.value = passwordInput.value.trim();
+          passwordInput.setAttribute("type", type);
+          passwordInput.disabled = true;
+          changePasswordBtn.textContent = "修改密碼";
+        }
+      });
+    }
+  }
 });

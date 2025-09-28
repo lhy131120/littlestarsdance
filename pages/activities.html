@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>最新活動</title>
   </head>
-  <body class="emfont-GenSenRoundedJP"><%- include('./layout/loading'); -%>
-    <%- include('./layout/header', {showLogin: true}); -%>
+  <body class="emfont-GenSenRoundedJP">
+    <%- include('./layout/loading'); -%> <%- include('./layout/header',
+    {showLogin: true}); -%>
     <main>
       <%- include('./layout/hero', { heroImageSrc:
       '/assets/images/inside-heros/hero-1.jpg', sectionDesc: '最新活動',
@@ -161,7 +162,7 @@
         </div>
       </section>
     </main>
-    <%- include('./layout/footer'); -%>
+    <%- include('./layout/toTopButton'); -%> <%- include('./layout/footer'); -%>
     <script type="module" src="../main.js"></script>
   </body>
 </html>

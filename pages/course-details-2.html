@@ -1,84 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>課程詳細頁</title>
-	</head>
-	<body class="emfont-GenSenRoundedJP"><%- include('./layout/loading'); -%>
-		<%- include('./layout/header', {showLogin: true, }); -%>
-		<main>
-			<%- include('./layout/courseDetailsHero', { isCoursesDetailsPage: true, courseName: '嘻哈基礎', heroImageSrc:
-			'/assets/images/course-thumbnail/course-2.jpg', label: ['3-6歲', '初級'] }); -%>
-			<section class="py-11 py-lg-14">
-				<div class="container">
-					<div class="row justify-content-around gap-7 gap-lg-0">
-						<div class="col-lg-8">
-							<ul class="list-unstyled d-flex flex-column gap-6 gap-lg-7 mb-0">
-								<li>
-									<h2 class="mb-4 fs-4 fs-lg-1">關於課程</h2>
-									<p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>課程詳細頁</title>
+  </head>
+  <body class="emfont-GenSenRoundedJP">
+    <%- include('./layout/loading'); -%> <%- include('./layout/header',
+    {showLogin: true, }); -%>
+    <main>
+      <%- include('./layout/courseDetailsHero', { isCoursesDetailsPage: true,
+      courseName: '嘻哈基礎', heroImageSrc:
+      '/assets/images/course-thumbnail/course-2.jpg', label: ['3-6歲', '初級']
+      }); -%>
+      <section class="py-11 py-lg-14">
+        <div class="container">
+          <div class="row justify-content-around gap-7 gap-lg-0">
+            <div class="col-lg-8">
+              <ul class="list-unstyled d-flex flex-column gap-6 gap-lg-7 mb-0">
+                <li>
+                  <h2 class="mb-4 fs-4 fs-lg-1">關於課程</h2>
+                  <p>
                     這個課程專為3-6歲的孩子設計，旨在通過有趣和互動的方式介紹嘻哈舞蹈的基礎知識。孩子們將學習基本的舞步、節奏和音樂感，同時發展他們的身體協調性和自信心。課程將包括熱身活動、舞蹈練習和創意遊戲，讓孩子們在安全和支持的環境中探索舞蹈的樂趣。無論是初學者還是有一些舞蹈經驗的孩子，都能在這個課程中找到樂趣並提升自己的技能。
                   </p>
-								</li>
-								<li>
-									<h2 class="mb-4 fs-4 fs-lg-1">您將獲得什麼</h2>
-									<ul class="list-unstyled mb-0 d-flex flex-column gap-3">
-										<li class="d-flex gap-2 star">基本的嘻哈舞步和節奏感</li>
-										<li class="d-flex gap-2 star">身體協調性和靈活性</li>
-										<li class="d-flex gap-2 star">團隊合作和社交技能</li>
-										<li class="d-flex gap-2 star">自信心和自我表達能力</li>
-										<li class="d-flex gap-2 star">對舞蹈的熱愛和興趣</li>
-									</ul>
-								</li>
-								<li>
-									<h2 class="mb-4 fs-4 fs-lg-1">課堂所需物品</h2>
-									<ul class="list-unstyled mb-0 d-flex flex-column gap-3">
-										<li class="d-flex gap-2 star">舒適的運動服裝（如T恤和運動褲）</li>
+                </li>
+                <li>
+                  <h2 class="mb-4 fs-4 fs-lg-1">您將獲得什麼</h2>
+                  <ul class="list-unstyled mb-0 d-flex flex-column gap-3">
+                    <li class="d-flex gap-2 star">基本的嘻哈舞步和節奏感</li>
+                    <li class="d-flex gap-2 star">身體協調性和靈活性</li>
+                    <li class="d-flex gap-2 star">團隊合作和社交技能</li>
+                    <li class="d-flex gap-2 star">自信心和自我表達能力</li>
+                    <li class="d-flex gap-2 star">對舞蹈的熱愛和興趣</li>
+                  </ul>
+                </li>
+                <li>
+                  <h2 class="mb-4 fs-4 fs-lg-1">課堂所需物品</h2>
+                  <ul class="list-unstyled mb-0 d-flex flex-column gap-3">
+                    <li class="d-flex gap-2 star">
+                      舒適的運動服裝（如T恤和運動褲）
+                    </li>
                     <li class="d-flex gap-2 star">運動鞋（適合跳舞的鞋子）</li>
                     <li class="d-flex gap-2 star">水瓶</li>
                     <li class="d-flex gap-2 star">開放的心態和積極的態度！</li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-						<div class="col-lg-4">
-							<div class="d-flex flex-column gap-4 p-6 border border-2 border-gray-300 rounded-5 mb-7">
-								<h3 class="fs-1 letter-spacing-1 text-center mb-2 mb-lg-4 text-primary-500">$800/月</h3>
-								<a href="./payment.html" class="btn btn-primary-300 py-lg-3 w-75 w-lg-100 mx-auto">立即報名</a>
-								<button type="button" class="btn btn-primary py-lg-3 w-75 w-lg-100 mx-auto">參加試課</button>
-							</div>
-							<div class="d-flex flex-column gap-4 p-6 border border-2 border-gray-300 rounded-5">
-								<h3 class="fs-1 letter-spacing-1 text-center mb-2 mb-lg-4 text-primary-500">課程資料</h3>
-								<ul class="list-unstyled d-flex flex-column gap-5 mb-0">
-									<li class="text-center">
-										<h4 class="fs-8 fs-lg-7 mb-1">導師</h4>
-										<h5 class="text-primary-500 fs-6 fs-lg-5">Jay老師</h5>
-									</li>
-									<li class="text-center">
-										<h4 class="fs-8 fs-lg-7 mb-1">課程時間</h4>
-										<h5 class="text-primary-500 fs-6 fs-lg-5">每週二和週四 下午4:30</h5>
-									</li>
-									<li class="text-center">
-										<h4 class="fs-8 fs-lg-7 mb-1">每月堂數</h4>
-										<h5 class="text-primary-500 fs-6 fs-lg-5">8堂</h5>
-									</li>
-									<li class="text-center">
-										<h4 class="fs-8 fs-lg-7 mb-1">時長</h4>
-										<h5 class="text-primary-500 fs-6 fs-lg-5">45分鐘</h5>
-									</li>
-									<li class="text-center">
-										<h4 class="fs-8 fs-lg-7 mb-1">地點</h4>
-										<h5 class="text-primary-500 fs-6 fs-lg-5">舞蹈室C</h5>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
-		<%- include('./layout/footer'); -%>
-		<script type="module" src="../main.js"></script>
-	</body>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-4">
+              <div
+                class="d-flex flex-column gap-4 p-6 border border-2 border-gray-300 rounded-5 mb-7"
+              >
+                <h3
+                  class="fs-1 letter-spacing-1 text-center mb-2 mb-lg-4 text-primary-500"
+                >
+                  $800/月
+                </h3>
+                <a
+                  href="./payment.html"
+                  class="btn btn-primary-300 py-lg-3 w-75 w-lg-100 mx-auto"
+                  >立即報名</a
+                >
+                <button
+                  type="button"
+                  class="btn btn-primary py-lg-3 w-75 w-lg-100 mx-auto"
+                >
+                  參加試課
+                </button>
+              </div>
+              <div
+                class="d-flex flex-column gap-4 p-6 border border-2 border-gray-300 rounded-5"
+              >
+                <h3
+                  class="fs-1 letter-spacing-1 text-center mb-2 mb-lg-4 text-primary-500"
+                >
+                  課程資料
+                </h3>
+                <ul class="list-unstyled d-flex flex-column gap-5 mb-0">
+                  <li class="text-center">
+                    <h4 class="fs-8 fs-lg-7 mb-1">導師</h4>
+                    <h5 class="text-primary-500 fs-6 fs-lg-5">Jay老師</h5>
+                  </li>
+                  <li class="text-center">
+                    <h4 class="fs-8 fs-lg-7 mb-1">課程時間</h4>
+                    <h5 class="text-primary-500 fs-6 fs-lg-5">
+                      每週二和週四 下午4:30
+                    </h5>
+                  </li>
+                  <li class="text-center">
+                    <h4 class="fs-8 fs-lg-7 mb-1">每月堂數</h4>
+                    <h5 class="text-primary-500 fs-6 fs-lg-5">8堂</h5>
+                  </li>
+                  <li class="text-center">
+                    <h4 class="fs-8 fs-lg-7 mb-1">時長</h4>
+                    <h5 class="text-primary-500 fs-6 fs-lg-5">45分鐘</h5>
+                  </li>
+                  <li class="text-center">
+                    <h4 class="fs-8 fs-lg-7 mb-1">地點</h4>
+                    <h5 class="text-primary-500 fs-6 fs-lg-5">舞蹈室C</h5>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('./layout/toTopButton'); -%> <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+  </body>
 </html>

@@ -86,18 +86,21 @@
 }
 
 .gallery-group-swiper {
-
   .gallery-thumbs {
-    .swiper-slide{
+    .swiper-slide {
       opacity: 0.6;
       transition: opacity 0.35s ease-in-out;
 
-        img {
+      &.swiper-slide-thumb-active {
+        opacity: 1;
+      }
+
+      img {
         transition: transform 0.35s ease-in-out;
-          &:hover {
-            transform: scale(1.2);
-          }
+        &:hover {
+          transform: scale(1.2);
         }
+      }
       &:hover {
         opacity: 1;
         cursor: pointer;
@@ -106,8 +109,8 @@
   }
   .swiper-button-prev,
   .swiper-button-next {
-    width: 36px!important;
-    height: 36px!important;
+    width: 36px !important;
+    height: 36px !important;
   }
 
   .swiper-button-prev {
@@ -118,9 +121,9 @@
     right: 16px;
   }
 
-  .swiper-button-prev:after, 
+  .swiper-button-prev:after,
   .swiper-button-next:after {
-    width: 24px!important;
-    height: 24px!important;
+    width: 24px !important;
+    height: 24px !important;
   }
 }

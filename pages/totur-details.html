@@ -1,46 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>專業指導</title>
-	</head>
-	<body class="emfont-GenSenRoundedJP"><%- include('./layout/loading'); -%>
-		<%- include('./layout/header', {showLogin: true, }); -%>
-		<main>
-			<%- include('./layout/hero', { isCoursesPage: false, isToturPage: true, heroImageSrc: '/assets/images/inside-heros/hero-3.jpg',
-			sectionDesc: '專業教師，舞動孩子未來！' }); -%>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>專業指導</title>
+  </head>
+  <body class="emfont-GenSenRoundedJP">
+    <%- include('./layout/loading'); -%> <%- include('./layout/header',
+    {showLogin: true, }); -%>
+    <main>
+      <%- include('./layout/hero', { isCoursesPage: false, isToturPage: true,
+      heroImageSrc: '/assets/images/inside-heros/hero-3.jpg', sectionDesc:
+      '專業教師，舞動孩子未來！' }); -%>
 
       <section class="py-11 py-lg-14">
         <div class="container">
           <div class="row">
             <div class="col">
               <div class="mb-2 mw-500p mx-auto">
-                <img src="/assets/images/tutor/Lily.jpg" class="img-fluid" alt="Lily">
+                <img
+                  src="/assets/images/tutor/Lily.jpg"
+                  class="img-fluid"
+                  alt="Lily"
+                />
               </div>
-              <p class="text-center mb-5 mb-lg-9"><small>優雅芭蕾的靈魂導師，讓孩子在舞步中綻放自信</small></p>
+              <p class="text-center mb-5 mb-lg-9">
+                <small>優雅芭蕾的靈魂導師，讓孩子在舞步中綻放自信</small>
+              </p>
               <ul class="list-unstyled d-flex flex-column gap-5 gap-lg-9">
                 <li>
-                  <p class="mb-0 lh-lg">Lily老師擁有超過10年的芭蕾教學經驗，專注於幼兒和青少年的舞蹈教育。她畢業於知名舞蹈學院，並持有國際認可的芭蕾教師資格。Lily老師熱愛與孩子們互動，致力於培養他們對舞蹈的熱情和自信心。</p>
+                  <p class="mb-0 lh-lg">
+                    Lily老師擁有超過10年的芭蕾教學經驗，專注於幼兒和青少年的舞蹈教育。她畢業於知名舞蹈學院，並持有國際認可的芭蕾教師資格。Lily老師熱愛與孩子們互動，致力於培養他們對舞蹈的熱情和自信心。
+                  </p>
                 </li>
                 <li>
                   <h2 class="mb-3 text-primary-500">教學專長</h2>
-                  <p class="mb-0 lh-lg">Lily 老師專精於芭蕾舞教育，特別針對 3-16 歲的幼兒和青少年設計課程。她擅長從基礎姿勢到進階技巧的循序漸進教學，融入遊戲元素，讓孩子在快樂中學習芭蕾的優雅與紀律。無論是初學者還是小小舞者，她都能根據年齡和體能調整課程，幫助孩子發展肢體協調、平衡感和藝術表現力。</p>
+                  <p class="mb-0 lh-lg">
+                    Lily 老師專精於芭蕾舞教育，特別針對 3-16
+                    歲的幼兒和青少年設計課程。她擅長從基礎姿勢到進階技巧的循序漸進教學，融入遊戲元素，讓孩子在快樂中學習芭蕾的優雅與紀律。無論是初學者還是小小舞者，她都能根據年齡和體能調整課程，幫助孩子發展肢體協調、平衡感和藝術表現力。
+                  </p>
                 </li>
                 <li>
                   <h2 class="mb-3 text-primary-500">專業資格</h2>
-                  <ul class="list-unstyled d-flex flex-column gap-2 gap-lg-3 mb-0">
-                    <li class="star d-flex gap-2">畢業於知名舞蹈學院（例如英國皇家舞蹈學院或類似國際機構）。</li>
-                    <li class="star d-flex gap-2">持有國際認可的芭蕾教師資格證書（如 RAD 或 ISTD 認證）。</li>
-                    <li class="star d-flex gap-2">超過 10 年芭蕾教學經驗，曾在多所兒童舞蹈學校擔任首席教練，並參與國際芭蕾工作坊。</li>
+                  <ul
+                    class="list-unstyled d-flex flex-column gap-2 gap-lg-3 mb-0"
+                  >
+                    <li class="star d-flex gap-2">
+                      畢業於知名舞蹈學院（例如英國皇家舞蹈學院或類似國際機構）。
+                    </li>
+                    <li class="star d-flex gap-2">
+                      持有國際認可的芭蕾教師資格證書（如 RAD 或 ISTD 認證）。
+                    </li>
+                    <li class="star d-flex gap-2">
+                      超過 10
+                      年芭蕾教學經驗，曾在多所兒童舞蹈學校擔任首席教練，並參與國際芭蕾工作坊。
+                    </li>
                   </ul>
                 </li>
                 <li>
                   <h2 class="mb-3 text-primary-500">教學理念與個人故事</h2>
-                  <p class="mb-0 lh-lg">Lily 老師的教學理念是「舞蹈不僅是技巧，更是自信的源泉」。她相信每個孩子都擁有獨特的潛力，透過芭蕾能培養他們的堅持與優雅。她自己的故事令人鼓舞：小時候，Lily 曾是個害羞的女孩，透過芭蕾舞找到自信，從街頭小表演到登上國際舞台。她常分享：「我希望每個學生都能像我一樣，在舞步中發現內心的力量。」在課堂上，她不僅教舞步，還融入故事敘述和角色扮演，讓孩子們想像自己是小天鵝或芭蕾公主，激發他們的熱情。許多家長反饋，孩子上課後不僅舞技進步，還變得更勇敢面對挑戰。</p>
+                  <p class="mb-0 lh-lg">
+                    Lily
+                    老師的教學理念是「舞蹈不僅是技巧，更是自信的源泉」。她相信每個孩子都擁有獨特的潛力，透過芭蕾能培養他們的堅持與優雅。她自己的故事令人鼓舞：小時候，Lily
+                    曾是個害羞的女孩，透過芭蕾舞找到自信，從街頭小表演到登上國際舞台。她常分享：「我希望每個學生都能像我一樣，在舞步中發現內心的力量。」在課堂上，她不僅教舞步，還融入故事敘述和角色扮演，讓孩子們想像自己是小天鵝或芭蕾公主，激發他們的熱情。許多家長反饋，孩子上課後不僅舞技進步，還變得更勇敢面對挑戰。
+                  </p>
                 </li>
                 <li>
-                  <h3 class="text-danger text-lg-center fs-6 letter-spacing-1">加入 Lily 老師的課程，讓您的孩子在優雅中成長，成為自信的小舞者！</h3>
+                  <h3 class="text-danger text-lg-center fs-6 letter-spacing-1">
+                    加入 Lily
+                    老師的課程，讓您的孩子在優雅中成長，成為自信的小舞者！
+                  </h3>
                 </li>
               </ul>
             </div>
@@ -149,8 +178,8 @@
           </div> -->
         </div>
       </section>
-		</main>
-		<%- include('./layout/footer'); -%>
-		<script type="module" src="../main.js"></script>
-	</body>
+    </main>
+    <%- include('./layout/toTopButton'); -%> <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+  </body>
 </html>

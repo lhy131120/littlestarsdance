@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>課程詳細頁</title>
   </head>
-  <body class="emfont-GenSenRoundedJP"><%- include('./layout/loading'); -%>
-    <%- include('./layout/header', {showLogin: true, }); -%>
+  <body class="emfont-GenSenRoundedJP">
+    <%- include('./layout/loading'); -%> <%- include('./layout/header',
+    {showLogin: true, }); -%>
     <main>
-      <%- include('./layout/courseDetailsHero', {
-        isCoursesDetailsPage: true, 
-        courseName: '幼兒芭蕾', 
-        heroImageSrc: '/assets/images/course-thumbnail/course-1.jpg', 
-        label: ['3-6歲', '初級']
+      <%- include('./layout/courseDetailsHero', { isCoursesDetailsPage: true,
+      courseName: '幼兒芭蕾', heroImageSrc:
+      '/assets/images/course-thumbnail/course-1.jpg', label: ['3-6歲', '初級']
       }); -%>
       <section class="py-11 py-lg-14">
         <div class="container">
@@ -105,7 +104,7 @@
         </div>
       </section>
     </main>
-    <%- include('./layout/footer'); -%>
+    <%- include('./layout/toTopButton'); -%> <%- include('./layout/footer'); -%>
     <script type="module" src="../main.js"></script>
   </body>
 </html>

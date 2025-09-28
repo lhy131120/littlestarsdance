@@ -1,140 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>會員中心</title>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>會員中心</title>
+  </head>
 
-	<body class="emfont-GenSenRoundedJP"><%- include('./layout/loading'); -%>
-		<%- include('./layout/header', {showLogin: false}); -%>
-		<main>
-			<section class="py-11 py-lg-14">
-				<div class="container">
-					<div class="row">
-						<div class="col">
-							<nav>
-								<div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
-									<button
-										class="nav-link py-3 px-4 active"
-										id="personal-info-tab"
-										data-bs-toggle="tab"
-										data-bs-target="#personal-info"
-										type="button"
-										role="tab"
-										aria-controls="personal-info"
-										aria-selected="true"
-									>
-										個人資料
-									</button>
-									<button
-										class="nav-link py-3 px-4"
-										id="course-info-tab"
-										data-bs-toggle="tab"
-										data-bs-target="#course-info"
-										type="button"
-										role="tab"
-										aria-controls="course-info"
-										aria-selected="false"
-									>
-										課程資訊
-									</button>
-									<button
-										class="nav-link py-3 px-4"
-										id="message-info-tab"
-										data-bs-toggle="tab"
-										data-bs-target="#message-info"
-										type="button"
-										role="tab"
-										aria-controls="message-info"
-										aria-selected="false"
-									>
-										訊息中心
-									</button>
-								</div>
-							</nav>
-							<div class="tab-content" id="nav-tabContent">
-								<div
-									class="tab-pane fade show active"
-									id="personal-info"
-									role="tabpanel"
-									aria-labelledby="personal-info-tab"
-									tabindex="0"
-								>
-									<div class="row justify-content-center">
-										<div class="col-lg-8">
-											<div class="py-5">
-												<table class="table">
-													<tbody>
-														<tr>
-															<th>會員編號:</th>
-															<td>LD2321</td>
-														</tr>
-														<tr>
-															<th>姓名:</th>
-															<td>王小明</td>
-														</tr>
-														<tr>
-															<th>註冊電郵:</th>
-															<td>dsa2f@mail.com</td>
-														</tr>
-														<tr>
-															<th>年齡組別:</th>
-															<td>7-12</td>
-														</tr>
-														<tr>
-															<th>密碼:</th>
-															<td>
-																<form id="portfolio-form" action="">
-																	<div class="d-flex flex-wrap">
-																		<input
-																			class="py-2 px-3 lh-sm fs-6 mb-2 mb-sm-0 me-0 me-sm-3 w-100 w-sm-auto"
-																			id="portfolio-password"
-																			type="password"
+  <body class="emfont-GenSenRoundedJP">
+    <%- include('./layout/loading'); -%> <%- include('./layout/header',
+    {showLogin: false}); -%>
+    <main>
+      <section class="py-11 py-lg-14">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <nav>
+                <div
+                  class="nav nav-tabs justify-content-center"
+                  id="nav-tab"
+                  role="tablist"
+                >
+                  <button
+                    class="nav-link py-3 px-4 active"
+                    id="personal-info-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#personal-info"
+                    type="button"
+                    role="tab"
+                    aria-controls="personal-info"
+                    aria-selected="true"
+                  >
+                    個人資料
+                  </button>
+                  <button
+                    class="nav-link py-3 px-4"
+                    id="course-info-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#course-info"
+                    type="button"
+                    role="tab"
+                    aria-controls="course-info"
+                    aria-selected="false"
+                  >
+                    課程資訊
+                  </button>
+                  <button
+                    class="nav-link py-3 px-4"
+                    id="message-info-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#message-info"
+                    type="button"
+                    role="tab"
+                    aria-controls="message-info"
+                    aria-selected="false"
+                  >
+                    訊息中心
+                  </button>
+                </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="personal-info"
+                  role="tabpanel"
+                  aria-labelledby="personal-info-tab"
+                  tabindex="0"
+                >
+                  <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                      <div class="py-5">
+                        <table class="table">
+                          <tbody>
+                            <tr>
+                              <th>會員編號:</th>
+                              <td>LD2321</td>
+                            </tr>
+                            <tr>
+                              <th>姓名:</th>
+                              <td>王小明</td>
+                            </tr>
+                            <tr>
+                              <th>註冊電郵:</th>
+                              <td>dsa2f@mail.com</td>
+                            </tr>
+                            <tr>
+                              <th>年齡組別:</th>
+                              <td>7-12</td>
+                            </tr>
+                            <tr>
+                              <th>密碼:</th>
+                              <td>
+                                <form id="portfolio-form" action="">
+                                  <div class="d-flex flex-wrap">
+                                    <input
+                                      class="py-2 px-3 lh-sm fs-6 mb-2 mb-sm-0 me-0 me-sm-3 w-100 w-sm-auto"
+                                      id="portfolio-password"
+                                      type="password"
                                       value="mypassword"
-																			disabled
-																		/>
-																		<a
-																			id="change-password-btn"
-																			href="#"
-																			class="btn btn-primary-500"
-																			>修改密碼</a
-																		>
-																	</div>
-																</form>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div
-									class="tab-pane fade"
-									id="course-info"
-									role="tabpanel"
-									aria-labelledby="course-info-tab"
-									tabindex="0"
-								>
-									課程資訊
-								</div>
-								<div
-									class="tab-pane fade"
-									id="message-info"
-									role="tabpanel"
-									aria-labelledby="message-info-tab"
-									tabindex="0"
-								>
-									訊息中心
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
-		<%- include('./layout/footer'); -%>
-		<script type="module" src="../main.js"></script>
-	</body>
+                                      disabled
+                                    />
+                                    <a
+                                      id="change-password-btn"
+                                      href="#"
+                                      class="btn btn-primary-500"
+                                      >修改密碼</a
+                                    >
+                                  </div>
+                                </form>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="course-info"
+                  role="tabpanel"
+                  aria-labelledby="course-info-tab"
+                  tabindex="0"
+                >
+                  課程資訊
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="message-info"
+                  role="tabpanel"
+                  aria-labelledby="message-info-tab"
+                  tabindex="0"
+                >
+                  訊息中心
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('./layout/toTopButton'); -%> <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+  </body>
 </html>
