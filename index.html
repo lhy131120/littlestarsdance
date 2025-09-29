@@ -5,11 +5,56 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>首頁</title>
-		<script type="module" crossorigin src="/littlestarsdance/assets/main-BZMLUjUz.js"></script>
-		<link rel="stylesheet" crossorigin href="/littlestarsdance/assets/main-Bdrbdvey.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<script type="module" crossorigin src="https://font.emtech.cc/emfont.js"></script>
+		<script type="module" crossorigin src="/littlestarsdance/assets/main-DQ5mOGkt.js"></script>
+		<script type="module" crossorigin src="https://font.emtech.cc/emfont.js"></script>
+		<link rel="stylesheet" crossorigin href="/littlestarsdance/assets/main-DtMOqwQH.css">
 	</head>
-	<body>
-		<header>
+	<body class="emfont-GenSenRoundedJP">
+		<div id="loading">
+	<div class="spinner"></div>
+</div>
+
+<style>
+	#loading {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255, 255, 255, 0.95); /* 半透明背景 */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 9999; /* 確保在最上層 */
+	}
+
+	/* Spinner 動畫 */
+	.spinner {
+		border: 8px solid #f3f3f3; /* 灰色邊框 */
+		border-top: 8px solid #a46305; /* 藍色頂邊 */
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		animation: spin 1s linear infinite; /* 旋轉動畫 */
+	}
+
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	/* 隱藏 Loading 的類別 */
+	#loading.hidden {
+		display: none;
+	}
+</style>
+ <header>
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
       <div class="menuBtnWrap d-flex align-items-center justify-content-center">
@@ -36,21 +81,21 @@
             src="/littlestarsdance/assets/logo-D5oriFEz.png"
             class="img-fluid mw-140p mw-md-240p w-100"
             alt="小星星舞蹈學校"
+            loading="lazy"
         /></a>
       </h1>
-      <!-- <button
-        class="login btn btn-outline-secondary order-3 ms-4 ms-xl-7 d-flex align-items-center p-2 px-xl-5 gap-2"
-      >
-        <span class="btn-icon member" aria-label="login icon"></span>
-        <span class="d-none d-xl-block">登入</span>
-      </button> -->
-      <button
-        type="button"
+
+       
+      <a
+        href="./login.html"
+        aria-label="登入"
         class="btn btn-outline-secondary withIcon member order-3 ms-4 ms-xl-7 login"
       >
         <span class="btn-icon"></span
         ><span class="d-none d-xl-block">登入</span>
-      </button>
+      </a>
+      
+
       <div
         class="offcanvas offcanvas-top vh-100"
         tabindex="-1"
@@ -111,28 +156,63 @@
           <ul
             class="navbar-nav justify-content-end flex-grow-1 gap-4 gap-xl-7 mb-7 mb-lg-0"
           >
-            <li class="nav-item">
-              <a class="nav-link px-3 py-2 fs-5 letter-spacing-1" href="./course.html"
+            <li
+              class="nav-item"
+              data-aos="fade-right"
+              data-aos-duration="600"
+              data-aos-delay="0"
+            >
+              <a
+                class="nav-link px-3 py-2 fs-5 letter-spacing-1"
+                href="./courses.html"
                 >課程</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link px-3 py-2 fs-5 letter-spacing-1" href="#"
+            <li
+              class="nav-item"
+              data-aos="fade-right"
+              data-aos-duration="600"
+              data-aos-delay="100"
+            >
+              <a
+                class="nav-link px-3 py-2 fs-5 letter-spacing-1"
+                href="./toturs.html"
                 >專業指導</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link px-3 py-2 fs-5 letter-spacing-1" href="#"
+            <li
+              class="nav-item"
+              data-aos="fade-right"
+              data-aos-duration="600"
+              data-aos-delay="200"
+            >
+              <a
+                class="nav-link px-3 py-2 fs-5 letter-spacing-1"
+                href="./activities.html"
                 >活動</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link px-3 py-2 fs-5 letter-spacing-1" href="#"
+            <li
+              class="nav-item"
+              data-aos="fade-right"
+              data-aos-duration="600"
+              data-aos-delay="300"
+            >
+              <a
+                class="nav-link px-3 py-2 fs-5 letter-spacing-1"
+                href="./news.html"
                 >最新消息</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link px-3 py-2 fs-5 letter-spacing-1" href="#"
+            <li
+              class="nav-item"
+              data-aos="fade-right"
+              data-aos-duration="600"
+              data-aos-delay="400"
+            >
+              <a
+                class="nav-link px-3 py-2 fs-5 letter-spacing-1"
+                href="./about.html"
                 >關於我們</a
               >
             </li>
@@ -159,6 +239,131 @@
 
 		<main>
 			<!-- home hero -->
+			<!-- <section id="home-hero-wrap" class="home-hero-wrap w-100">
+        <div class="swiper h-100 w-100">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div
+                class="h-100 w-100 overflow-hidden position-relative d-flex align-items-end align-items-lg-center"
+              >
+                <div class="container-fluid mw-1920p px-lg-11 px-xl-13">
+                  <img
+                    src="/assets/images/hero/hero-1.jpg"
+                    class="position-absolute top-50 start-50 translate-middle w-100 h-100 object-fit-cover"
+                    alt=""
+                  />
+                  <ul
+                    class="list-unstyled mb-13 mb-lg-0 position-relative d-flex flex-column gap-4 gap-lg-6 z-2"
+                  >
+                    <li>
+                      <span
+                        class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
+                        >通過舞蹈表達自我</span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
+                        >透過藝術表達建立自信</span
+                      >
+                    </li>
+                    <li>
+                      <button
+                        class="btn btn-primary fs-6 fs-lg-2 px-lg-6 py-lg-4"
+                        type="button"
+                      >
+                        <span>探索課程</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="h-100 w-100 overflow-hidden position-relative d-flex align-items-end align-items-lg-center"
+              >
+                <div class="container-fluid mw-1920p px-lg-11 px-xl-13">
+                  <img
+                    src="/assets/images/hero/hero-2.jpg"
+                    class="position-absolute top-50 start-50 translate-middle w-100 h-100 object-fit-cover"
+                    alt=""
+                  />
+                  <ul
+                    class="list-unstyled mb-13 mb-lg-0 position-relative d-flex flex-column gap-4 gap-lg-6 z-2"
+                  >
+                    <li>
+                      <span
+                        class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
+                        >從第一步到精彩表演</span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
+                        >用愛心關懷培養小舞者</span
+                      >
+                    </li>
+                    <li>
+                      <button
+                        class="btn btn-primary fs-6 fs-lg-2 px-lg-6 py-lg-4"
+                        type="button"
+                      >
+                        <span>探索課程</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="h-100 w-100 overflow-hidden position-relative d-flex align-items-end align-items-lg-center"
+              >
+                <div class="container-fluid mw-1920p px-lg-11 px-xl-13">
+                  <img
+                    src="/assets/images/hero/hero-3.jpg"
+                    class="position-absolute top-50 start-50 translate-middle w-100 h-100 object-fit-cover"
+                    alt=""
+                  />
+                  <ul
+                    class="list-unstyled mb-13 mb-lg-0 position-relative d-flex flex-column gap-4 gap-lg-6 z-2"
+                  >
+                    <li>
+                      <span
+                        class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
+                        >讓您的孩子在快樂中舞蹈</span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
+                        >3-16歲專業舞蹈教育</span
+                      >
+                    </li>
+                    <li>
+                      <button
+                        class="btn btn-primary fs-6 fs-lg-2 px-lg-6 py-lg-4"
+                        type="button"
+                      >
+                        <span>探索課程</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="controller position-absolute w-100">
+            <div
+              class="container-fluid mw-1920p mx-auto px-lg-11 px-xl-13 d-flex justify-content-between"
+            >
+              <button type="button" class="swiper-button-prev">上一頁</button>
+              <button type="button" class="swiper-button-next">下一頁</button>
+            </div>
+          </div>
+        </div>
+      </section> -->
 			<section id="home-hero-wrap" class="home-hero-wrap w-100">
 				<div class="swiper h-100 w-100">
 					<div class="swiper-wrapper">
@@ -171,19 +376,19 @@
 										alt=""
 									/>
 									<ul class="list-unstyled mb-13 mb-lg-0 position-relative d-flex flex-column gap-4 gap-lg-6 z-2">
-										<li>
+										<li data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
 											<span
 												class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
 												>通過舞蹈表達自我</span
 											>
 										</li>
-										<li>
+										<li data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
 											<span
 												class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
 												>透過藝術表達建立自信</span
 											>
 										</li>
-										<li>
+										<li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
 											<button class="btn btn-primary fs-6 fs-lg-2 px-lg-6 py-lg-4" type="button">
 												<span>探索課程</span>
 											</button>
@@ -201,19 +406,19 @@
 										alt=""
 									/>
 									<ul class="list-unstyled mb-13 mb-lg-0 position-relative d-flex flex-column gap-4 gap-lg-6 z-2">
-										<li>
+										<li data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
 											<span
 												class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
 												>從第一步到精彩表演</span
 											>
 										</li>
-										<li>
+										<li data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
 											<span
 												class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
 												>用愛心關懷培養小舞者</span
 											>
 										</li>
-										<li>
+										<li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
 											<button class="btn btn-primary fs-6 fs-lg-2 px-lg-6 py-lg-4" type="button">
 												<span>探索課程</span>
 											</button>
@@ -231,19 +436,19 @@
 										alt=""
 									/>
 									<ul class="list-unstyled mb-13 mb-lg-0 position-relative d-flex flex-column gap-4 gap-lg-6 z-2">
-										<li>
+										<li data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
 											<span
 												class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
 												>讓您的孩子在快樂中舞蹈</span
 											>
 										</li>
-										<li>
+										<li data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
 											<span
 												class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
 												>3-16歲專業舞蹈教育</span
 											>
 										</li>
-										<li>
+										<li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
 											<button class="btn btn-primary fs-6 fs-lg-2 px-lg-6 py-lg-4" type="button">
 												<span>探索課程</span>
 											</button>
@@ -261,12 +466,18 @@
 					</div>
 				</div>
 			</section>
-
 			<!-- Hot course -->
 			<section id="hot-course" class="hot-course py-11 py-lg-14 overflow-hidden">
 				<div class="container">
-					<h2 class="text-lg-center mb-4 fs-4 fs-lg-1">熱門課程</h2>
-					<p class="text-lg-center mb-7 mb-lg-8 fs-6 fs-lg-4">適合年齡的舞蹈課程,旨在培養創造力和建立自信</p>
+					<h2 class="text-lg-center mb-4 fs-4 fs-lg-1" data-aos="fade-up" data-aos-duration="800">熱門課程</h2>
+					<p
+						class="text-lg-center mb-7 mb-lg-8 fs-6 fs-lg-4"
+						data-aos="fade-up"
+						data-aos-duration="800"
+						data-aos-delay="100"
+					>
+						適合年齡的舞蹈課程,旨在培養創造力和建立自信
+					</p>
 					<div class="row row-cols-1 g-5 mb-7 d-flex d-lg-none">
 						<div class="col">
 							<div class="card border-0 overflow-hidden">
@@ -290,7 +501,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col">
+						<div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
 							<div class="card border-0 overflow-hidden">
 								<div class="overflow-hidden rounded-5">
 									<img src="/littlestarsdance/assets/course-2-D13ixetu.jpg" class="card-img-top" alt="嘻哈基礎" />
@@ -312,7 +523,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col">
+						<div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
 							<div class="card border-0 overflow-hidden">
 								<div class="overflow-hidden rounded-5">
 									<img src="/littlestarsdance/assets/course-3-D9cKFVnl.jpg" class="card-img-top" alt="青少年現代舞" />
@@ -338,7 +549,7 @@
 					<div class="d-none d-lg-block position-relative mb-8">
 						<div class="swiper">
 							<div class="swiper-wrapper">
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
 									<div class="card border-0 overflow-hidden h-100">
 										<div class="overflow-hidden rounded-5">
 											<img
@@ -366,8 +577,7 @@
 										</div>
 									</div>
 								</div>
-
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
 									<div class="card border-0 overflow-hidden h-100">
 										<div class="overflow-hidden rounded-5">
 											<img
@@ -393,8 +603,7 @@
 										</div>
 									</div>
 								</div>
-
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
 									<div class="card border-0 overflow-hidden h-100">
 										<div class="overflow-hidden rounded-5">
 											<img
@@ -422,7 +631,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
 									<div class="card border-0 overflow-hidden h-100">
 										<div class="overflow-hidden rounded-5">
 											<img
@@ -448,7 +657,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
 									<div class="card border-0 overflow-hidden h-100">
 										<div class="overflow-hidden rounded-5">
 											<img
@@ -474,7 +683,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
 									<div class="card border-0 overflow-hidden h-100">
 										<div class="overflow-hidden rounded-5">
 											<img
@@ -502,7 +711,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
 									<div class="card border-0 overflow-hidden h-100">
 										<div class="overflow-hidden rounded-5">
 											<img
@@ -530,7 +739,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="swiper-slide">
+								<div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
 									<div class="card border-0 overflow-hidden h-100">
 										<div class="overflow-hidden rounded-5">
 											<img
@@ -568,12 +777,17 @@
 			<!-- Aim -->
 			<section id="home-aim" class="py-11 py-lg-14 bg-primary-100">
 				<div class="container">
-					<h2 class="text-lg-center mb-4 fs-4 fs-lg-1">安全與信任</h2>
-					<p class="text-lg-center mb-7 mb-lg-8 fs-6 fs-lg-4">
+					<h2 class="text-lg-center mb-4 fs-4 fs-lg-1" data-aos="fade-up" data-aos-duration="800">安全與信任</h2>
+					<p
+						class="text-lg-center mb-7 mb-lg-8 fs-6 fs-lg-4"
+						data-aos="fade-up"
+						data-aos-duration="800"
+						data-aos-delay="100"
+					>
 						適合年齡的舞蹈課程,您孩子的安全和舒適是我們的首要任務。我們創造了一個讓家長放心、孩子茁壯的環境。
 					</p>
 					<div class="row row-cols-1 row-cols-lg-2 gy-5 gy-lg-0 flex-lg-row-reverse align-items-lg-center mb-7 mb-lg-8">
-						<div class="col">
+						<div class="col" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
 							<div class="py-3 px-5">
 								<div
 									class="overflow-hidden rounded-32 rounded-lg-80"
@@ -589,7 +803,7 @@
 						</div>
 						<div class="col">
 							<div class="row row-cols-2 g-5 h-100">
-								<div class="col">
+								<div class="col" data-aos="fade-right" data-aos-duration="800" data-aos-delay="0">
 									<div
 										class="p-4 py-lg-5 px-lg-6 overflow-hidden border border-2 border-primary-500 rounded-5 d-flex flex-column gap-2 gap-lg-4 h-100"
 									>
@@ -597,7 +811,7 @@
 										<p class="mb-0 fs-7 fs-lg-5">專業舞蹈地板,專為安全和最佳表現而設計。</p>
 									</div>
 								</div>
-								<div class="col">
+								<div class="col" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
 									<div
 										class="p-4 py-lg-5 px-lg-6 overflow-hidden border border-2 border-primary-500 rounded-5 d-flex flex-column gap-2 gap-lg-4 h-100"
 									>
@@ -605,7 +819,7 @@
 										<p class="mb-0 fs-7 fs-lg-5">所有教師都經過專業培訓和背景調查。</p>
 									</div>
 								</div>
-								<div class="col">
+								<div class="col" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
 									<div
 										class="p-4 py-lg-5 px-lg-6 overflow-hidden border border-2 border-primary-500 rounded-5 d-flex flex-column gap-2 gap-lg-4 h-100"
 									>
@@ -613,7 +827,7 @@
 										<p class="mb-0 fs-7 fs-lg-5">觀察窗讓家長可以觀看孩子的學習過程。</p>
 									</div>
 								</div>
-								<div class="col">
+								<div class="col" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
 									<div
 										class="p-4 py-lg-5 px-lg-6 overflow-hidden border border-2 border-primary-500 rounded-5 d-flex flex-column gap-2 gap-lg-4 h-100"
 									>
@@ -627,6 +841,9 @@
 					<div
 						class="row justify-content-center align-items-center text-white bg-accent-400 rounded-5 py-3 py-lg-5 px-4 px-lg-7 mx-auto"
 						style="max-width: 636px"
+						data-aos="fade-up"
+						data-aos-duration="800"
+						data-aos-delay="400"
 					>
 						<div class="col text-center">
 							<h4 class="fs-4 fs-lg-1 mb-2 lh-sm d-block">
@@ -653,14 +870,19 @@
 			<!-- Event -->
 			<section id="home-event" class="home-event py-11 py-lg-14 overflow-hidden">
 				<div class="container">
-					<h2 class="text-lg-center mb-4 fs-4 fs-lg-1">即將舉行的活動</h2>
-					<p class="text-lg-center mb-7 mb-lg-8 fs-6 fs-lg-4 letter-spacing-1">
+					<h2 class="text-lg-center mb-4 fs-4 fs-lg-1" data-aos="fade-up" data-aos-duration="800">即將舉行的活動</h2>
+					<p
+						class="text-lg-center mb-7 mb-lg-8 fs-6 fs-lg-4 letter-spacing-1"
+						data-aos="fade-up"
+						data-aos-duration="800"
+						data-aos-delay="100"
+					>
 						加入我們的精彩表演、工作坊和特別課程,讓我們的舞蹈社區團結起來。
 					</p>
 
 					<div class="swiper mb-7 mb-lg-8 overflow-visible">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide h-auto">
+							<div class="swiper-slide h-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
 								<div class="card border border-1 border-gray-300 rounded-5 rounded-lg-56 overflow-hidden h-100">
 									<div class="p-2 p-lg-4 position-relative">
 										<div class="overflow-hidden rounded-4 rounded-lg-48">
@@ -697,7 +919,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="swiper-slide h-auto">
+							<div class="swiper-slide h-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
 								<div class="card border border-1 border-gray-300 rounded-5 rounded-lg-56 overflow-hidden h-100">
 									<div class="p-2 p-lg-4 position-relative">
 										<div class="overflow-hidden rounded-4 rounded-lg-48">
@@ -731,7 +953,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="swiper-slide h-auto">
+							<div class="swiper-slide h-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
 								<div class="card border border-1 border-gray-300 rounded-5 rounded-lg-56 overflow-hidden h-100">
 									<div class="p-2 p-lg-4 position-relative">
 										<div class="overflow-hidden rounded-4 rounded-lg-48">
@@ -767,7 +989,13 @@
 							</div>
 						</div>
 					</div>
-					<a href="javascript:;" class="btn-course d-block lh-0 mx-auto fs-0"><span>查看更多課程</span></a>
+					<a
+						href="./courses.html"
+						class="btn-course d-block lh-0 mx-auto fs-0"
+						data-aos="fade-up"
+						data-aos-duration="800"
+						><span>查看更多課程</span></a
+					>
 				</div>
 			</section>
 
@@ -783,6 +1011,9 @@
 							<div
 								class="py-6 px-5 p-lg-7 rounded-5 text-lg-start text-center"
 								style="background-color: rgba(255, 255, 255, 0.8)"
+								data-aos="fade-left"
+								data-aos-duration="1000"
+								data-aos-delay="200"
 							>
 								<h2 class="mb-4 fs-4 fs-lg-3 lh-sm">想要接受我們最新的課程和活動資訊?</h2>
 								<p class="mb-5 fs-8 fs-lg-5 letter-spacing-1">訂閱我們獲取更多第一手最新消息</p>
@@ -805,11 +1036,13 @@
 
 			<!-- Student Comments -->
 			<section id="home-comments" class="home-comments py-11 py-lg-14 bg-basic">
-				<h2 class="text-center position-relative mb-7 mb-lg-8 fs-4 fs-lg-1">學員的話</h2>
+				<h2 class="text-center position-relative mb-7 mb-lg-8 fs-4 fs-lg-1" data-aos="fade-up" data-aos-duration="800">
+					學員的話
+				</h2>
 				<!-- swiper 1 -->
 				<div class="swiper">
 					<div class="swiper-wrapper mb-6">
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="0">
 							<div class="card bg-white border-0 rounded-32">
 								<div class="card-body py-4 py-lg-5 px-6 px-lg-7">
 									<ul class="list-unstyled mb-0 d-flex align-items-center">
@@ -828,7 +1061,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
 							<div class="card bg-white border-0 rounded-32">
 								<div class="card-body py-4 py-lg-5 px-6 px-lg-7">
 									<ul class="list-unstyled mb-0 d-flex align-items-center">
@@ -847,7 +1080,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
 							<div class="card bg-white border-0 rounded-32">
 								<div class="card-body py-4 py-lg-5 px-6 px-lg-7">
 									<ul class="list-unstyled mb-0 d-flex align-items-center">
@@ -866,7 +1099,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
 							<div class="card bg-white border-0 rounded-32">
 								<div class="card-body py-4 py-lg-5 px-6 px-lg-7">
 									<ul class="list-unstyled mb-0 d-flex align-items-center">
@@ -885,7 +1118,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
 							<div class="card bg-white border-0 rounded-32">
 								<div class="card-body py-4 py-lg-5 px-6 px-lg-7">
 									<ul class="list-unstyled mb-0 d-flex align-items-center">
@@ -904,7 +1137,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
 							<div class="card bg-white border-0 rounded-32">
 								<div class="card-body py-4 py-lg-5 px-6 px-lg-7">
 									<ul class="list-unstyled mb-0 d-flex align-items-center">
@@ -923,7 +1156,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
 							<div class="card bg-white border-0 rounded-32">
 								<div class="card-body py-4 py-lg-5 px-6 px-lg-7">
 									<ul class="list-unstyled mb-0 d-flex align-items-center">
@@ -942,7 +1175,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="700">
 							<div class="card bg-white border-0 rounded-32">
 								<div class="card-body py-4 py-lg-5 px-6 px-lg-7">
 									<ul class="list-unstyled mb-0 d-flex align-items-center">
@@ -961,7 +1194,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="800">
 							<div class="card bg-white border-0 rounded-32">
 								<div class="card-body py-4 py-lg-5 px-6 px-lg-7">
 									<ul class="list-unstyled mb-0 d-flex align-items-center">
@@ -980,7 +1213,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="900">
 							<div class="card bg-white border-0 rounded-32">
 								<div class="card-body py-4 py-lg-5 px-6 px-lg-7">
 									<ul class="list-unstyled mb-0 d-flex align-items-center">
@@ -1004,7 +1237,7 @@
 				<!-- swiper 2 -->
 				<div class="swiper">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="0">
 							<div class="card bg-white border-0 rounded-32">
 								<div class="card-body py-4 py-lg-5 px-6 px-lg-7">
 									<ul class="list-unstyled mb-0 d-flex align-items-center">
@@ -1023,7 +1256,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
 							<div class="card bg-white border-0 rounded-32">
 								<div class="card-body py-4 py-lg-5 px-6 px-lg-7">
 									<ul class="list-unstyled mb-0 d-flex align-items-center">
@@ -1042,7 +1275,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
 							<div class="card bg-white border-0 rounded-32">
 								<div class="card-body py-4 py-lg-5 px-6 px-lg-7">
 									<ul class="list-unstyled mb-0 d-flex align-items-center">
@@ -1061,7 +1294,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
 							<div class="card bg-white border-0 rounded-32">
 								<div class="card-body py-4 py-lg-5 px-6 px-lg-7">
 									<ul class="list-unstyled mb-0 d-flex align-items-center">
@@ -1080,7 +1313,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
 							<div class="card bg-white border-0 rounded-32">
 								<div class="card-body py-4 py-lg-5 px-6 px-lg-7">
 									<ul class="list-unstyled mb-0 d-flex align-items-center">
@@ -1099,7 +1332,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
 							<div class="card bg-white border-0 rounded-32">
 								<div class="card-body py-4 py-lg-5 px-6 px-lg-7">
 									<ul class="list-unstyled mb-0 d-flex align-items-center">
@@ -1118,7 +1351,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
 							<div class="card bg-white border-0 rounded-32">
 								<div class="card-body py-4 py-lg-5 px-6 px-lg-7">
 									<ul class="list-unstyled mb-0 d-flex align-items-center">
@@ -1137,7 +1370,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="700">
 							<div class="card bg-white border-0 rounded-32">
 								<div class="card-body py-4 py-lg-5 px-6 px-lg-7">
 									<ul class="list-unstyled mb-0 d-flex align-items-center">
@@ -1156,7 +1389,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="800">
 							<div class="card bg-white border-0 rounded-32">
 								<div class="card-body py-4 py-lg-5 px-6 px-lg-7">
 									<ul class="list-unstyled mb-0 d-flex align-items-center">
@@ -1175,7 +1408,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="900">
 							<div class="card bg-white border-0 rounded-32">
 								<div class="card-body py-4 py-lg-5 px-6 px-lg-7">
 									<ul class="list-unstyled mb-0 d-flex align-items-center">
@@ -1201,10 +1434,16 @@
 			<!-- Past Events -->
 			<section id="home-past-events" class="home-past-events py-11 py-lg-14">
 				<div class="container-fluid px-lg-0">
-					<h2 class="text-lg-center position-relative mb-7 mb-lg-8 fs-4 fs-lg-1">過往表演活動</h2>
+					<h2
+						class="text-lg-center position-relative mb-7 mb-lg-8 fs-4 fs-lg-1"
+						data-aos="fade-up"
+						data-aos-duration="800"
+					>
+						過往表演活動
+					</h2>
 					<div class="swiper">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide">
+							<div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
 								<a href="javascript:;" class="d-block lh-0 overflow-hidden">
 									<img
 										src="/littlestarsdance/assets/course-10-1YbgSE0y.jpg"
@@ -1213,17 +1452,17 @@
 									/>
 								</a>
 							</div>
-							<div class="swiper-slide">
+							<div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
 								<a href="javascript:;" class="d-block lh-0 overflow-hidden">
 									<img src="/littlestarsdance/assets/course-6-BHD7Ax6W.jpg" class="object-fit-cover w-100 h-100" alt="" />
 								</a>
 							</div>
-							<div class="swiper-slide">
+							<div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
 								<a href="javascript:;" class="d-block lh-0 overflow-hidden">
 									<img src="/littlestarsdance/assets/course-4-DNSBdnoL.jpg" class="object-fit-cover w-100 h-100" alt="" />
 								</a>
 							</div>
-							<div class="swiper-slide">
+							<div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
 								<a href="javascript:;" class="d-block lh-0 overflow-hidden">
 									<img
 										src="/littlestarsdance/assets/course-12-D2B1dzcV.jpg"
@@ -1232,7 +1471,7 @@
 									/>
 								</a>
 							</div>
-							<div class="swiper-slide">
+							<div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
 								<a href="javascript:;" class="d-block lh-0 overflow-hidden">
 									<img src="/littlestarsdance/assets/course-5-D-zcWh4K.jpg" class="object-fit-cover w-100 h-100" alt="" />
 								</a>
@@ -1243,30 +1482,96 @@
 			</section>
 		</main>
 
-		<footer class="bg-basic py-7 py-lg-9">
+		<div id="back-to-top" title="回到頂部"></div>
+
+<style>
+  #back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #a46305;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, bottom 0.3s, background-color 0.3s;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  #back-to-top.show {
+    opacity: 1;
+    bottom: 60px;
+    visibility: visible;
+  }
+
+  #back-to-top:hover {
+    background-color: #027fea;
+  }
+
+  #back-to-top::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border: 3px solid white;
+    border-left: none;
+    border-bottom: none;
+    transform: rotate(-45deg);
+    display: block;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const backToTopButton = document.getElementById("back-to-top");
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 100) {
+        backToTopButton.classList.add("show");
+      } else {
+        backToTopButton.classList.remove("show");
+      }
+    });
+
+    backToTopButton.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  });
+</script>
+ <footer class="bg-basic py-7 py-lg-9 overflow-hidden">
 	<div class="container">
 		<div class="row mb-7 mb-lg-8 justify-content-lg-between gap-7">
 			<div class="col-lg-4">
-				<a href="./index.html" class="d-inline-block lh-0 mb-2 mb-lg-6 mw-240p mw-lg-100">
+				<a href="./index.html" class="d-inline-block lh-0 mb-2 mb-lg-6 mw-240p mw-lg-100" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="0">
 					<img src="/littlestarsdance/assets/logo-D5oriFEz.png" class="img-fluid" alt="小星星舞蹈學校" />
 				</a>
-				<p class="fs-lg-5 letter-spacing-1 mb-0">夢想透過舞蹈建築快樂，自2010年以來創造了自信、優秀和快樂的小舞者</p>
+				<p class="fs-lg-5 letter-spacing-1 mb-0" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">夢想透過舞蹈建築快樂，自2010年以來創造了自信、優秀和快樂的小舞者</p>
 			</div>
 			<div class="col-lg-auto">
 				<div class="d-flex flex-column flex-lg-row gap-7">
 					<div class="d-flex flex-column g-lg-4 py-lg-7 mw-lg-300p w-100">
-						<p class="fs-6 fs-lg-4 mb-2 mb-lg-4 ps-lg-3 lh-sm text-primary-500">快速連結</p>
+						<p class="fs-6 fs-lg-4 mb-2 mb-lg-4 ps-lg-3 lh-sm text-primary-500" data-aos="fade-down" data-aos-duration="800" data-aos-delay="300">快速連結</p>
 						<ul class="nav flex-wrap">
-							<li class="nav-item w-50 w-lg-100"><a class="nav-link ps-0 px-lg-3 py-2 fs-lg-5 d-inline-block" href="#">課程</a></li>
-							<li class="nav-item w-50 w-lg-100"><a class="nav-link ps-0 px-lg-3 py-2 fs-lg-5 d-inline-block" href="#">專業指導</a></li>
-							<li class="nav-item w-50 w-lg-100"><a class="nav-link ps-0 px-lg-3 py-2 fs-lg-5 d-inline-block" href="#">活動</a></li>
-							<li class="nav-item w-50 w-lg-100"><a class="nav-link ps-0 px-lg-3 py-2 fs-lg-5 d-inline-block" href="#">會員註冊</a></li>
+							<li class="nav-item w-50 w-lg-100" data-aos="fade-right" data-aos-duration="600" data-aos-delay="400"><a class="nav-link ps-0 px-lg-3 py-2 fs-lg-5 d-inline-block" href="./course.html">課程</a></li>
+							<li class="nav-item w-50 w-lg-100" data-aos="fade-right" data-aos-duration="600" data-aos-delay="500"><a class="nav-link ps-0 px-lg-3 py-2 fs-lg-5 d-inline-block" href="./toturs.html">專業指導</a></li>
+							<li class="nav-item w-50 w-lg-100" data-aos="fade-right" data-aos-duration="600" data-aos-delay="600"><a class="nav-link ps-0 px-lg-3 py-2 fs-lg-5 d-inline-block" href="./activities.html">活動</a></li>
+							<li class="nav-item w-50 w-lg-100" data-aos="fade-right" data-aos-duration="600" data-aos-delay="700"><a class="nav-link ps-0 px-lg-3 py-2 fs-lg-5 d-inline-block" href="./news.html">最新消息</a></li>
+							<li class="nav-item w-50 w-lg-100" data-aos="fade-right" data-aos-duration="600" data-aos-delay="800"><a class="nav-link ps-0 px-lg-3 py-2 fs-lg-5 d-inline-block" href="./login.html">會員註冊</a></li>
 						</ul>
 					</div>
 					<div class="pt-lg-7">
-						<p class="fs-6 fs-lg-4 mb-2 mb-lg-5 ps-lg-3 lh-sm text-primary-500">聯絡資訊</p>
+						<p class="fs-6 fs-lg-4 mb-2 mb-lg-5 ps-lg-3 lh-sm text-primary-500" data-aos="fade-down" data-aos-duration="800" data-aos-delay="400">聯絡資訊</p>
 						<ul class="nav flex-column gap-2 gap-lg-6">
-							<li class="nav-item">
+							<li class="nav-item" data-aos="fade-left" data-aos-duration="600" data-aos-delay="500">
 								<div class="d-flex flex-wrap align-items-center ps-lg-3">
 									<div class="d-flex align-items-center gap-2">
 										<span class="d-none d-lg-block lh-0 icon mail"></span><span class="fs-lg-5 letter-spacing-1">信箱：</span>
@@ -1276,7 +1581,7 @@
 									>
 								</div>
 							</li>
-							<li class="nav-item">
+							<li class="nav-item" data-aos="fade-left" data-aos-duration="600" data-aos-delay="600">
 								<div class="d-flex flex-wrap align-items-center ps-lg-3">
 									<div class="d-flex align-items-center gap-2">
 										<span class="d-none d-lg-block lh-0 icon phone"></span><span class="fs-lg-5 letter-spacing-1">電話：</span>
@@ -1284,7 +1589,7 @@
 									<a class="d-inline-block letter-spacing-1 fs-lg-5 text-decoration-none" href="tel:+1(555)1234567">+1 (555) 123-4567</a>
 								</div>
 							</li>
-							<li class="nav-item">
+							<li class="nav-item" data-aos="fade-left" data-aos-duration="600" data-aos-delay="700">
 								<div class="d-flex flex-wrap align-items-center ps-lg-3">
 									<div class="d-flex align-items-center gap-2">
 										<span class="d-none d-lg-block lh-0 icon location"></span><span class="fs-lg-5 letter-spacing-1">地址：</span>
@@ -1301,16 +1606,15 @@
 		<div class="row">
 			<div class="col">
 				<div class="d-flex justify-content-center justify-content-lg-between flex-wrap pt-lg-7 gap-2">
-					<p class="mb-0 fw-medium fs-8 fs-lg-6">©小星星舞蹈學校。保留所有權利。 | 為年輕舞者用</p>
+					<p class="mb-0 fw-medium fs-8 fs-lg-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">©小星星舞蹈學校。保留所有權利。 | 為年輕舞者用</p>
 					<ul class="d-flex w-100 w-lg-auto justify-content-center mb-0 mx-4 gap-4 list-unstyled">
-						<li><a class="d-block fs-8 fs-lg-6 text-decoration-underline" href="javascript:;">隱私權政策</a></li>
-						<li><a class="d-block fs-8 fs-lg-6 text-decoration-underline" href="javascript:;">FAQ</a></li>
+						<li data-aos="fade-up" data-aos-duration="600" data-aos-delay="900"><a class="d-block fs-8 fs-lg-6 text-decoration-underline" href="./policy.html">隱私權政策</a></li>
+						<li data-aos="fade-up" data-aos-duration="600" data-aos-delay="1000"><a class="d-block fs-8 fs-lg-6 text-decoration-underline" href="./faq.html">FAQ</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
-</footer>
-
+</footer>
 	</body>
 </html>
