@@ -1,5 +1,5 @@
-<section id="hero" class="hero">
-	<picture class="position-absolute top-0 start-0 w-100 h-100 z-n1">
+<section id="hero" class="hero overflow-hidden">
+	<picture class="position-absolute top-0 start-0 w-100 h-100 z-n1" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="0">
 		<img
 			src="<%= (typeof heroImageSrc !== 'undefined' && heroImageSrc) ? heroImageSrc : '/assets/images/inside-heros/hero-1.jpg' %>"
 			alt="hero image"
@@ -10,7 +10,7 @@
 
 	<div class="container position-relative z-3">
 		<div class="py-5">
-			<h1 class="mb-0 mb-lg-7 fs-3 fs-lg-1 letter-spacing-1 lh-sm text-center"><%- sectionDesc %></h1>
+			<h1 class="mb-0 mb-lg-7 fs-3 fs-lg-1 letter-spacing-1 lh-sm text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200"><%- sectionDesc %></h1>
 		</div>
 	</div>
 </section>

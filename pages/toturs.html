@@ -1,132 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>專業指導</title>
-  </head>
-  <body class="emfont-GenSenRoundedJP">
-    <%- include('./layout/loading'); -%> <%- include('./layout/header',
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>專業指導</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="emfont-GenSenRoundedJP">
+  <%- include('./layout/loading'); -%>
+  <%- include('./layout/header',
     {showLogin: true, }); -%>
-    <main>
-      <%- include('./layout/hero', { heroImageSrc:
+  <main>
+    <%- include('./layout/hero', { heroImageSrc:
       '/assets/images/inside-heros/hero-3.jpg', sectionDesc: '專業教師<br />舞動孩子未來',
       }); -%>
-
-      <section class="py-11 py-lg-14">
-        <div class="container">
-          <h2 class="text-lg-center mb-4 fs-4 fs-lg-1">我們的專業導師</h2>
-          <p class="text-lg-center mb-4 mb-lg-5 fs-6 fs-lg-4 letter-spacing-1">
-            舞出自信，專業引導！我們的認證教師帶您孩子與青春節奏共舞！
-          </p>
-
-          <div class="row justify-content-center">
-            <div class="col-lg-10">
-              <ul class="list-unstyled d-flex flex-column gap-5 gap-lg-0">
-                <li class="row g-0 align-items-center">
-                  <div class="col-lg-6">
-                    <div>
-                      <img
-                        src="/assets/images/tutor/Lily.jpg"
-                        class="img-fluid"
-                        alt="Lily老師"
-                      />
-                    </div>
+    <section class="py-11 py-lg-14">
+      <div class="container">
+        <h2 class="text-lg-center mb-4 fs-4 fs-lg-1" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">我們的專業導師</h2>
+        <p class="text-lg-center mb-4 mb-lg-5 fs-6 fs-lg-4 letter-spacing-1" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          舞出自信，專業引導！我們的認證教師帶您孩子與青春節奏共舞！
+        </p>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <ul class="list-unstyled d-flex flex-column gap-5 gap-lg-0">
+              <li class="row g-0 align-items-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800" data-aos-delay="0" data-aos-anchor-placement="top-bottom">
+                  <div>
+                    <img src="/assets/images/tutor/Lily.jpg" class="img-fluid" alt="Lily老師" />
                   </div>
-                  <div class="col-lg-6">
-                    <div
-                      class="position-relative py-3 py-lg-4 px-4 px-lg-5 lh-lg"
-                    >
-                      <p>
-                        Lily老師擁有超過10年的芭蕾教學經驗，專注於幼兒和青少年的舞蹈教育。她畢業於知名舞蹈學院，並持有國際認可的芭蕾教師資格。Lily老師熱愛與孩子們互動，致力於培養他們對舞蹈的熱情和自信心。
-                      </p>
-                      <a
-                        href="./totur-details.html"
-                        class="btn btn-outline-secondary"
-                        >了解更多</a
-                      >
-                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100" data-aos-anchor-placement="top-bottom">
+                  <div class="position-relative py-3 py-lg-4 px-4 px-lg-5 lh-lg">
+                    <p>
+                      Lily老師擁有超過10年的芭蕾教學經驗，專注於幼兒和青少年的舞蹈教育。她畢業於知名舞蹈學院，並持有國際認可的芭蕾教師資格。Lily老師熱愛與孩子們互動，致力於培養他們對舞蹈的熱情和自信心。
+                    </p>
+                    <a href="./totur-details.html" class="btn btn-outline-secondary" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">了解更多</a>
                   </div>
-                </li>
-
-                <li class="row g-0 align-items-center flex-lg-row-reverse">
-                  <div class="col-lg-6">
-                    <div>
-                      <img
-                        src="/assets/images/tutor/Jay.jpg"
-                        class="img-fluid"
-                        alt="Jay老師"
-                      />
-                    </div>
+                </div>
+              </li>
+              <li class="row g-0 align-items-center flex-lg-row-reverse" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800" data-aos-delay="0" data-aos-anchor-placement="top-bottom">
+                  <div>
+                    <img src="/assets/images/tutor/Jay.jpg" class="img-fluid" alt="Jay老師" />
                   </div>
-                  <div class="col-lg-6">
-                    <div
-                      class="position-relative py-3 py-lg-4 px-4 px-lg-5 lh-lg"
-                    >
-                      <p>
-                        Jay老師是一位經驗豐富的嘻哈舞蹈教練，擁有超過8年的教學經驗。他曾在多個國際舞蹈比賽中獲獎，並且熱衷於分享街舞文化。Jay老師注重學生的個人風格發展，並鼓勵他們在舞台上自信表現。
-                      </p>
-                      <a href="javscript:;" class="btn btn-outline-secondary"
-                        >了解更多</a
-                      >
-                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100" data-aos-anchor-placement="top-bottom">
+                  <div class="position-relative py-3 py-lg-4 px-4 px-lg-5 lh-lg">
+                    <p>
+                      Jay老師是一位經驗豐富的嘻哈舞蹈教練，擁有超過8年的教學經驗。他曾在多個國際舞蹈比賽中獲獎，並且熱衷於分享街舞文化。Jay老師注重學生的個人風格發展，並鼓勵他們在舞台上自信表現。
+                    </p>
+                    <a href="javscript:;" class="btn btn-outline-secondary" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">了解更多</a>
                   </div>
-                </li>
-
-                <li class="row g-0 align-items-center">
-                  <div class="col-lg-6">
-                    <div>
-                      <img
-                        src="/assets/images/tutor/Sophie.jpg"
-                        class="img-fluid"
-                        alt="Sophie老師"
-                      />
-                    </div>
+                </div>
+              </li>
+              <li class="row g-0 align-items-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800" data-aos-delay="0" data-aos-anchor-placement="top-bottom">
+                  <div>
+                    <img src="/assets/images/tutor/Sophie.jpg" class="img-fluid" alt="Sophie老師" />
                   </div>
-                  <div class="col-lg-6">
-                    <div
-                      class="position-relative py-3 py-lg-4 px-4 px-lg-5 lh-lg"
-                    >
-                      <p>
-                        Sophie老師擁有現代舞和爵士舞的雙重專業背景，並在國際舞台上有豐富的表演經驗。她熱愛教學，致力於幫助學生發掘他們的舞蹈潛力。Sophie老師注重技術與情感的結合，鼓勵學生在舞蹈中找到自我表達的方式。
-                      </p>
-                      <a href="javscript:;" class="btn btn-outline-secondary"
-                        >了解更多</a
-                      >
-                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100" data-aos-anchor-placement="top-bottom">
+                  <div class="position-relative py-3 py-lg-4 px-4 px-lg-5 lh-lg">
+                    <p>
+                      Sophie老師擁有現代舞和爵士舞的雙重專業背景，並在國際舞台上有豐富的表演經驗。她熱愛教學，致力於幫助學生發掘他們的舞蹈潛力。Sophie老師注重技術與情感的結合，鼓勵學生在舞蹈中找到自我表達的方式。
+                    </p>
+                    <a href="javscript:;" class="btn btn-outline-secondary" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">了解更多</a>
                   </div>
-                </li>
-
-                <li class="row g-0 align-items-center flex-lg-row-reverse">
-                  <div class="col-lg-6">
-                    <div>
-                      <img
-                        src="/assets/images/tutor/Emma.jpg"
-                        class="img-fluid"
-                        alt="Emma老師"
-                      />
-                    </div>
+                </div>
+              </li>
+              <li class="row g-0 align-items-center flex-lg-row-reverse" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800" data-aos-delay="0" data-aos-anchor-placement="top-bottom">
+                  <div>
+                    <img src="/assets/images/tutor/Emma.jpg" class="img-fluid" alt="Emma老師" />
                   </div>
-                  <div class="col-lg-6">
-                    <div
-                      class="position-relative py-3 py-lg-4 px-4 px-lg-5 lh-lg"
-                    >
-                      <p>
-                        Emma老師是一位專業的踢踏舞教練，擁有多年的教學經驗。她曾在多個國際踢踏舞比賽中獲獎，並且熱衷於分享踢踏舞的樂趣。Emma老師注重學生的節奏感和協調性，並鼓勵他們在舞台上自信表現。
-                      </p>
-                      <a href="javscript:;" class="btn btn-outline-secondary"
-                        >了解更多</a
-                      >
-                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100" data-aos-anchor-placement="top-bottom">
+                  <div class="position-relative py-3 py-lg-4 px-4 px-lg-5 lh-lg">
+                    <p>
+                      Emma老師是一位專業的踢踏舞教練，擁有多年的教學經驗。她曾在多個國際踢踏舞比賽中獲獎，並且熱衷於分享踢踏舞的樂趣。Emma老師注重學生的節奏感和協調性，並鼓勵他們在舞台上自信表現。
+                    </p>
+                    <a href="javscript:;" class="btn btn-outline-secondary" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">了解更多</a>
                   </div>
-                </li>
-              </ul>
-            </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
-    </main>
-    <%- include('./layout/toTopButton'); -%> <%- include('./layout/footer'); -%>
-    <script type="module" src="../main.js"></script>
-  </body>
+      </div>
+    </section>
+  </main>
+  <%- include('./layout/toTopButton'); -%>
+  <%- include('./layout/footer'); -%>
+  <script type="module" src="../main.js"></script>
+</body>
+
 </html>
