@@ -1,200 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>結帳頁</title>
-  </head>
-  <body class="emfont-GenSenRoundedJP">
-    <%- include('./layout/loading'); -%> <%- include('./layout/header',
-    {showLogin: true, }); -%>
-    <main>
-      <section class="py-11 py-lg-14">
-        <div class="container">
-          <h2 class="mb-4 fs-4 fs-lg-1">安全結帳</h2>
-          <p class="mb-lg-5 letter-spacing-1 text-primary-500">
-            您距離加入我們的舞蹈社群僅一步之遙！
-          </p>
-          <div class="row g-6 g-lg-auto mb-6">
-            <div class="col-lg-6">
-              <div class="p-6 border border-2 border-gray-200 rounded-5">
-                <h3 class="mb-2 mb-lg-3 fs-6 fs-lg-4 letter-spacing-1">
-                  付款資訊
-                </h3>
-                <p class="mb-4 text-danger">
-                  <small>您的付款資訊是安全且加密</small>
-                </p>
-                <form class="row gy-5 gx-4">
-                  <div class="col-6">
-                    <div class="form-floating">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="lastName"
-                        placeholder="姓氏"
-                      />
-                      <label for="lastName">姓氏</label>
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="form-floating">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="firstName"
-                        placeholder="名字"
-                      />
-                      <label for="firstName">名字</label>
-                    </div>
-                  </div>
-                  <div class="col-auto w-100">
-                    <div class="form-floating">
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="mail"
-                        placeholder="Email address"
-                      />
-                      <label for="mail">Email address</label>
-                    </div>
-                  </div>
-                  <div class="col-auto w-100">
-                    <div class="form-floating">
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="cardNumber"
-                        placeholder="卡號"
-                      />
-                      <label for="cardNumber">卡號</label>
-                    </div>
-                  </div>
-                  <hr class="mt-5 mb-1" />
-                  <div class="row g-2">
-                    <div class="col-4">
-                      <label class="form-label" for="expiryMonth">到期月</label>
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="expiryMonth"
-                        placeholder="MM"
-                        min="1"
-                        max="12"
-                        step="1"
-                        required
-                      />
-                    </div>
-                    <div class="col-4">
-                      <label class="form-label" for="expiryYear">到期年</label>
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="expiryYear"
-                        placeholder="YY"
-                        min="1"
-                        max="31"
-                        step="1"
-                        required
-                      />
-                    </div>
-                    <div class="col-4">
-                      <label class="form-label" for="cvc">CVC</label>
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="cvc"
-                        placeholder="CVC"
-                        min="000"
-                        max="999"
-                        step="1"
-                        maxlength="4"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div class="col-auto w-100">
-                    <button
-                      type="submit"
-                      class="btn btn-primary-300 py-lg-3 w-100"
-                    >
-                      提交付款
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="p-6 border border-2 border-gray-200 rounded-5">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item py-3 px-4 active">
-                    <h3 class="fs-4 fs-lg-5">訂單詳細</h3>
-                  </li>
-                  <li class="list-group-item py-3">
-                    <ul class="list-unstyled mb-0 d-flex flex-column gap-1">
-                      <li
-                        class="d-flex align-items-center justify-content-between"
-                      >
-                        <span class="d-block mb-5" style="width: 150px">
-                          <img
-                            src="/assets/images/course-thumbnail/course-1.jpg"
-                            class="w-100 h-100 object-fit-cover"
-                            alt=""
-                          />
-                        </span>
-                      </li>
-                      <li
-                        class="d-flex align-items-center justify-content-between"
-                      >
-                        <span>課程名稱</span><span>創意芭蕾</span>
-                      </li>
-                      <li
-                        class="d-flex align-items-center justify-content-between"
-                      >
-                        <span>課程時間</span><span>每週六上午 10:00</span>
-                      </li>
-                      <li
-                        class="d-flex align-items-center justify-content-between"
-                      >
-                        <span>每月堂數</span><span>4堂</span>
-                      </li>
-                      <li
-                        class="d-flex align-items-center justify-content-between"
-                      >
-                        <span>時長</span><span>45分鐘</span>
-                      </li>
-                      <li
-                        class="d-flex align-items-center justify-content-between"
-                      >
-                        <span>導師</span><span>Lily老師</span>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="list-group-item py-3 px-4">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <span>小計</span>
-                      <span>$600 / 月</span>
-                    </div>
-                  </li>
-                  <li class="list-group-item py-3 px-4">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <span>總計</span>
-                      <span class="text-primary-500 fs-5">$600</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+<html lang="zh-Hant">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+		<link rel="manifest" href="/favicon/manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png" />
+		<title>結帳頁</title>
+	</head>
+	<body class="emfont-GenSenRoundedJP">
+		<%- include('./layout/loading'); -%> <%- include('./layout/header', {showLogin: true, }); -%>
+		<main>
+			<section class="py-11 py-lg-14">
+				<div class="container">
+					<h2 class="mb-4 fs-4 fs-lg-1">安全結帳</h2>
+					<p class="mb-lg-5 letter-spacing-1 text-primary-500">您距離加入我們的舞蹈社群僅一步之遙！</p>
+					<div class="row g-6 g-lg-auto mb-6">
+						<div class="col-lg-6">
+							<div class="p-6 border border-2 border-gray-200 rounded-5">
+								<h3 class="mb-2 mb-lg-3 fs-6 fs-lg-4 letter-spacing-1">付款資訊</h3>
+								<p class="mb-4 text-danger">
+									<small>您的付款資訊是安全且加密</small>
+								</p>
+								<form class="row gy-5 gx-4">
+									<div class="col-6">
+										<div class="form-floating">
+											<input type="text" class="form-control" id="lastName" placeholder="姓氏" />
+											<label for="lastName">姓氏</label>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="form-floating">
+											<input type="text" class="form-control" id="firstName" placeholder="名字" />
+											<label for="firstName">名字</label>
+										</div>
+									</div>
+									<div class="col-auto w-100">
+										<div class="form-floating">
+											<input type="email" class="form-control" id="mail" placeholder="Email address" />
+											<label for="mail">Email address</label>
+										</div>
+									</div>
+									<div class="col-auto w-100">
+										<div class="form-floating">
+											<input type="number" class="form-control" id="cardNumber" placeholder="卡號" />
+											<label for="cardNumber">卡號</label>
+										</div>
+									</div>
+									<hr class="mt-5 mb-1" />
+									<div class="row g-2">
+										<div class="col-4">
+											<label class="form-label" for="expiryMonth">到期月</label>
+											<input
+												type="number"
+												class="form-control"
+												id="expiryMonth"
+												placeholder="MM"
+												min="1"
+												max="12"
+												step="1"
+												required
+											/>
+										</div>
+										<div class="col-4">
+											<label class="form-label" for="expiryYear">到期年</label>
+											<input
+												type="number"
+												class="form-control"
+												id="expiryYear"
+												placeholder="YY"
+												min="1"
+												max="31"
+												step="1"
+												required
+											/>
+										</div>
+										<div class="col-4">
+											<label class="form-label" for="cvc">CVC</label>
+											<input
+												type="number"
+												class="form-control"
+												id="cvc"
+												placeholder="CVC"
+												min="000"
+												max="999"
+												step="1"
+												maxlength="4"
+												required
+											/>
+										</div>
+									</div>
+									<div class="col-auto w-100">
+										<button type="submit" class="btn btn-primary-300 py-lg-3 w-100">提交付款</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="p-6 border border-2 border-gray-200 rounded-5">
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item py-3 px-4 active">
+										<h3 class="fs-4 fs-lg-5">訂單詳細</h3>
+									</li>
+									<li class="list-group-item py-3">
+										<ul class="list-unstyled mb-0 d-flex flex-column gap-1">
+											<li class="d-flex align-items-center justify-content-between">
+												<span class="d-block mb-5" style="width: 150px">
+													<img
+														src="/assets/images/course-thumbnail/course-1.jpg"
+														class="w-100 h-100 object-fit-cover"
+														alt=""
+													/>
+												</span>
+											</li>
+											<li class="d-flex align-items-center justify-content-between">
+												<span>課程名稱</span><span>創意芭蕾</span>
+											</li>
+											<li class="d-flex align-items-center justify-content-between">
+												<span>課程時間</span><span>每週六上午 10:00</span>
+											</li>
+											<li class="d-flex align-items-center justify-content-between">
+												<span>每月堂數</span><span>4堂</span>
+											</li>
+											<li class="d-flex align-items-center justify-content-between">
+												<span>時長</span><span>45分鐘</span>
+											</li>
+											<li class="d-flex align-items-center justify-content-between">
+												<span>導師</span><span>Lily老師</span>
+											</li>
+										</ul>
+									</li>
+									<li class="list-group-item py-3 px-4">
+										<div class="d-flex justify-content-between align-items-center">
+											<span>小計</span>
+											<span>$600 / 月</span>
+										</div>
+									</li>
+									<li class="list-group-item py-3 px-4">
+										<div class="d-flex justify-content-between align-items-center">
+											<span>總計</span>
+											<span class="text-primary-500 fs-5">$600</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 
-          <a href="javscript:;" class="btn btn-primary-300">返回</a>
-        </div>
-      </section>
-    </main>
-    <%- include('./layout/toTopButton'); -%> <%- include('./layout/footer'); -%>
-    <script type="module" src="../main.js"></script>
-  </body>
+					<a href="javscript:;" class="btn btn-primary-300">返回</a>
+				</div>
+			</section>
+		</main>
+		<%- include('./layout/toTopButton'); -%> <%- include('./layout/footer'); -%>
+		<script type="module" src="../main.js"></script>
+	</body>
 </html>

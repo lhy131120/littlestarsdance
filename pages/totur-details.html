@@ -1,101 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+		<link rel="manifest" href="/favicon/manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png" />
+		<title>課程詳細頁</title>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>課程詳細頁</title>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-
-<body class="emfont-GenSenRoundedJP">
-  <%- include('./layout/loading'); -%>
-  <%- include('./layout/header',
-    {showLogin: true, }); -%>
-  <main>
-    <%- include('./layout/courseDetailsHero', { isCoursesDetailsPage: true,
-      courseName: '幼兒芭蕾', heroImageSrc:
-      '/assets/images/course-thumbnail/course-1.jpg', label: ['3-6歲', '初級']
-      }); -%>
-    <section class="py-11 py-lg-14">
-      <div class="container">
-        <div class="row justify-content-around gap-7 gap-lg-0">
-          <div class="col-lg-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
-            <ul class="list-unstyled d-flex flex-column gap-6 gap-lg-7 mb-0">
-              <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-                <h2 class="mb-4 fs-4 fs-lg-1">關於課程</h2>
-                <p>
-                  我們的創意芭蕾課程專為3-6歲的小舞者設計。透過富有想像的遊戲和溫柔的指導，孩子們將發現運動的樂趣，同時發展協調性、平衡和創造力。每節課都包含熱身練習、基本芭蕾舞姿勢、簡單的編舞以及富有創意的舞蹈遊戲，幫助孩子建立自信，並培養自我表達能力。
-                </p>
-              </li>
-              <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                <h2 class="mb-4 fs-4 fs-lg-1">您將獲得什麼</h2>
-                <ul class="list-unstyled mb-0 d-flex flex-column gap-3">
-                  <li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="0">提高協調性和平衡能力</li>
-                  <li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">培養音樂感和節奏感</li>
-                  <li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="200">增強自信和自我表達能力</li>
-                  <li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="300">激發創造力和想像力</li>
-                  <li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="400">透過小組活動提升社交技能</li>
-                </ul>
-              </li>
-              <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                <h2 class="mb-4 fs-4 fs-lg-1">課堂所需物品</h2>
-                <ul class="list-unstyled mb-0 d-flex flex-column gap-3">
-                  <li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="0">舒適且方便活動的衣服</li>
-                  <li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">芭蕾舞鞋或防滑襪</li>
-                  <li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="200">頭髮綁起來（適合長髮</li>
-                  <li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="300">水瓶</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
-            <div class="d-flex flex-column gap-4 p-6 border border-2 border-gray-300 rounded-5 mb-7" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-              <h3 class="fs-1 letter-spacing-1 text-center mb-2 mb-lg-4 text-primary-500">
-                $600/月
-              </h3>
-              <a href="./payment.html" class="btn btn-primary-300 py-lg-3 w-75 w-lg-100 mx-auto" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">立即報名</a>
-              <button type="button" class="btn btn-primary py-lg-3 w-75 w-lg-100 mx-auto" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-                參加試課
-              </button>
-            </div>
-            <div class="d-flex flex-column gap-4 p-6 border border-2 border-gray-300 rounded-5" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-              <h3 class="fs-1 letter-spacing-1 text-center mb-2 mb-lg-4 text-primary-500">
-                課程資料
-              </h3>
-              <ul class="list-unstyled d-flex flex-column gap-5 mb-0">
-                <li class="text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
-                  <h4 class="fs-8 fs-lg-7 mb-1">導師</h4>
-                  <h5 class="text-primary-500 fs-6 fs-lg-5">Lily老師</h5>
-                </li>
-                <li class="text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-                  <h4 class="fs-8 fs-lg-7 mb-1">課程時間</h4>
-                  <h5 class="text-primary-500 fs-6 fs-lg-5">
-                    每週六上午 10:00
-                  </h5>
-                </li>
-                <li class="text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-                  <h4 class="fs-8 fs-lg-7 mb-1">每月堂數</h4>
-                  <h5 class="text-primary-500 fs-6 fs-lg-5">4堂</h5>
-                </li>
-                <li class="text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-                  <h4 class="fs-8 fs-lg-7 mb-1">時長</h4>
-                  <h5 class="text-primary-500 fs-6 fs-lg-5">45分鐘</h5>
-                </li>
-                <li class="text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
-                  <h4 class="fs-8 fs-lg-7 mb-1">地點</h4>
-                  <h5 class="text-primary-500 fs-6 fs-lg-5">舞蹈室A</h5>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <%- include('./layout/toTopButton'); -%>
-  <%- include('./layout/footer'); -%>
-  <script type="module" src="../main.js"></script>
-</body>
-
+	<body class="emfont-GenSenRoundedJP">
+		<%- include('./layout/loading'); -%> <%- include('./layout/header', {showLogin: true, }); -%>
+		<main>
+			<%- include('./layout/courseDetailsHero', { isCoursesDetailsPage: true, courseName: '幼兒芭蕾', heroImageSrc:
+			'/assets/images/course-thumbnail/course-1.jpg', label: ['3-6歲', '初級'] }); -%>
+			<section class="py-11 py-lg-14">
+				<div class="container">
+					<div class="row justify-content-around gap-7 gap-lg-0">
+						<div class="col-lg-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
+							<ul class="list-unstyled d-flex flex-column gap-6 gap-lg-7 mb-0">
+								<li data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+									<h2 class="mb-4 fs-4 fs-lg-1">關於課程</h2>
+									<p>
+										我們的創意芭蕾課程專為3-6歲的小舞者設計。透過富有想像的遊戲和溫柔的指導，孩子們將發現運動的樂趣，同時發展協調性、平衡和創造力。每節課都包含熱身練習、基本芭蕾舞姿勢、簡單的編舞以及富有創意的舞蹈遊戲，幫助孩子建立自信，並培養自我表達能力。
+									</p>
+								</li>
+								<li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+									<h2 class="mb-4 fs-4 fs-lg-1">您將獲得什麼</h2>
+									<ul class="list-unstyled mb-0 d-flex flex-column gap-3">
+										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="0">
+											提高協調性和平衡能力
+										</li>
+										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">
+											培養音樂感和節奏感
+										</li>
+										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="200">
+											增強自信和自我表達能力
+										</li>
+										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="300">
+											激發創造力和想像力
+										</li>
+										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="400">
+											透過小組活動提升社交技能
+										</li>
+									</ul>
+								</li>
+								<li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+									<h2 class="mb-4 fs-4 fs-lg-1">課堂所需物品</h2>
+									<ul class="list-unstyled mb-0 d-flex flex-column gap-3">
+										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="0">
+											舒適且方便活動的衣服
+										</li>
+										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">
+											芭蕾舞鞋或防滑襪
+										</li>
+										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="200">
+											頭髮綁起來（適合長髮
+										</li>
+										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="300">
+											水瓶
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
+							<div
+								class="d-flex flex-column gap-4 p-6 border border-2 border-gray-300 rounded-5 mb-7"
+								data-aos="fade-up"
+								data-aos-duration="800"
+								data-aos-delay="100"
+							>
+								<h3 class="fs-1 letter-spacing-1 text-center mb-2 mb-lg-4 text-primary-500">$600/月</h3>
+								<a
+									href="./payment.html"
+									class="btn btn-primary-300 py-lg-3 w-75 w-lg-100 mx-auto"
+									data-aos="fade-up"
+									data-aos-duration="600"
+									data-aos-delay="0"
+									>立即報名</a
+								>
+								<button
+									type="button"
+									class="btn btn-primary py-lg-3 w-75 w-lg-100 mx-auto"
+									data-aos="fade-up"
+									data-aos-duration="600"
+									data-aos-delay="100"
+								>
+									參加試課
+								</button>
+							</div>
+							<div
+								class="d-flex flex-column gap-4 p-6 border border-2 border-gray-300 rounded-5"
+								data-aos="fade-up"
+								data-aos-duration="800"
+								data-aos-delay="200"
+							>
+								<h3 class="fs-1 letter-spacing-1 text-center mb-2 mb-lg-4 text-primary-500">課程資料</h3>
+								<ul class="list-unstyled d-flex flex-column gap-5 mb-0">
+									<li class="text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+										<h4 class="fs-8 fs-lg-7 mb-1">導師</h4>
+										<h5 class="text-primary-500 fs-6 fs-lg-5">Lily老師</h5>
+									</li>
+									<li class="text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+										<h4 class="fs-8 fs-lg-7 mb-1">課程時間</h4>
+										<h5 class="text-primary-500 fs-6 fs-lg-5">每週六上午 10:00</h5>
+									</li>
+									<li class="text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+										<h4 class="fs-8 fs-lg-7 mb-1">每月堂數</h4>
+										<h5 class="text-primary-500 fs-6 fs-lg-5">4堂</h5>
+									</li>
+									<li class="text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+										<h4 class="fs-8 fs-lg-7 mb-1">時長</h4>
+										<h5 class="text-primary-500 fs-6 fs-lg-5">45分鐘</h5>
+									</li>
+									<li class="text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+										<h4 class="fs-8 fs-lg-7 mb-1">地點</h4>
+										<h5 class="text-primary-500 fs-6 fs-lg-5">舞蹈室A</h5>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<%- include('./layout/toTopButton'); -%> <%- include('./layout/footer'); -%>
+		<script type="module" src="../main.js"></script>
+	</body>
 </html>

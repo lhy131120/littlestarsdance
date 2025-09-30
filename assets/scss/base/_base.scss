@@ -114,6 +114,33 @@ ul {
   & > :not(caption) > * > * {
     padding: 0.75rem 0.5rem;
   }
+
+  &-course-info {
+    tr {
+      @include media-breakpoint-down(lg) {
+        display: table-row;
+        flex-wrap: inherit;
+        gap: inherit;
+      }
+    }
+
+    th,td {
+      @include media-breakpoint-down(lg) {
+        display: table-cell;
+        width: auto;
+      }
+    }
+
+    th {
+      @include media-breakpoint-down(lg) {
+        min-width: 140px;
+      }
+
+      @include media-breakpoint-down(md) {
+        min-width: 120px;
+      }
+    }
+  }
 }
 
 .icon {

@@ -1,142 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+		<link rel="manifest" href="/favicon/manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png" />
 		<title>首頁</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 	</head>
 	<body class="emfont-GenSenRoundedJP">
 		<%- include('./layout/loading'); -%> <%- include('./layout/header', {showLogin: true, }); -%>
 
 		<main>
 			<!-- home hero -->
-			<!-- <section id="home-hero-wrap" class="home-hero-wrap w-100">
-        <div class="swiper h-100 w-100">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div
-                class="h-100 w-100 overflow-hidden position-relative d-flex align-items-end align-items-lg-center"
-              >
-                <div class="container-fluid mw-1920p px-lg-11 px-xl-13">
-                  <img
-                    src="/assets/images/hero/hero-1.jpg"
-                    class="position-absolute top-50 start-50 translate-middle w-100 h-100 object-fit-cover"
-                    alt=""
-                  />
-                  <ul
-                    class="list-unstyled mb-13 mb-lg-0 position-relative d-flex flex-column gap-4 gap-lg-6 z-2"
-                  >
-                    <li>
-                      <span
-                        class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
-                        >通過舞蹈表達自我</span
-                      >
-                    </li>
-                    <li>
-                      <span
-                        class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
-                        >透過藝術表達建立自信</span
-                      >
-                    </li>
-                    <li>
-                      <button
-                        class="btn btn-primary fs-6 fs-lg-2 px-lg-6 py-lg-4"
-                        type="button"
-                      >
-                        <span>探索課程</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div
-                class="h-100 w-100 overflow-hidden position-relative d-flex align-items-end align-items-lg-center"
-              >
-                <div class="container-fluid mw-1920p px-lg-11 px-xl-13">
-                  <img
-                    src="/assets/images/hero/hero-2.jpg"
-                    class="position-absolute top-50 start-50 translate-middle w-100 h-100 object-fit-cover"
-                    alt=""
-                  />
-                  <ul
-                    class="list-unstyled mb-13 mb-lg-0 position-relative d-flex flex-column gap-4 gap-lg-6 z-2"
-                  >
-                    <li>
-                      <span
-                        class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
-                        >從第一步到精彩表演</span
-                      >
-                    </li>
-                    <li>
-                      <span
-                        class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
-                        >用愛心關懷培養小舞者</span
-                      >
-                    </li>
-                    <li>
-                      <button
-                        class="btn btn-primary fs-6 fs-lg-2 px-lg-6 py-lg-4"
-                        type="button"
-                      >
-                        <span>探索課程</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div
-                class="h-100 w-100 overflow-hidden position-relative d-flex align-items-end align-items-lg-center"
-              >
-                <div class="container-fluid mw-1920p px-lg-11 px-xl-13">
-                  <img
-                    src="/assets/images/hero/hero-3.jpg"
-                    class="position-absolute top-50 start-50 translate-middle w-100 h-100 object-fit-cover"
-                    alt=""
-                  />
-                  <ul
-                    class="list-unstyled mb-13 mb-lg-0 position-relative d-flex flex-column gap-4 gap-lg-6 z-2"
-                  >
-                    <li>
-                      <span
-                        class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
-                        >讓您的孩子在快樂中舞蹈</span
-                      >
-                    </li>
-                    <li>
-                      <span
-                        class="d-inline-block px-5 px-lg-10 py-1 py-lg-3 fs-5 fs-lg-1 lh-lg-sm letter-spacing-15 bg-primary-500 text-white"
-                        >3-16歲專業舞蹈教育</span
-                      >
-                    </li>
-                    <li>
-                      <button
-                        class="btn btn-primary fs-6 fs-lg-2 px-lg-6 py-lg-4"
-                        type="button"
-                      >
-                        <span>探索課程</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="controller position-absolute w-100">
-            <div
-              class="container-fluid mw-1920p mx-auto px-lg-11 px-xl-13 d-flex justify-content-between"
-            >
-              <button type="button" class="swiper-button-prev">上一頁</button>
-              <button type="button" class="swiper-button-next">下一頁</button>
-            </div>
-          </div>
-        </div>
-      </section> -->
 			<section id="home-hero-wrap" class="home-hero-wrap w-100">
 				<div class="swiper h-100 w-100">
 					<div class="swiper-wrapper">

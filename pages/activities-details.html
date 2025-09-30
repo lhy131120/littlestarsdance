@@ -1,145 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+		<link rel="manifest" href="/favicon/manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png" />
+		<title>最新活動詳細 - 小公主芭蕾展演</title>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>最新活動詳細 - 小公主芭蕾展演</title>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-
-<body class="emfont-GenSenRoundedJP">
-  <%- include('./layout/loading'); -%>
-  <%- include('./layout/header',
-    {showLogin: true, }); -%>
-  <main>
-    <%- include('./layout/hero', { heroImageSrc:
-      '/assets/images/events/event-1/1.jpg', sectionDesc: '小公主芭蕾展演',
-      heroPosition: 'center' }); -%>
-    <section id="activities-details" class="py-11 py-lg-14">
-      <div class="container">
-        <div class="d-flex flex-column flex-lg-row align-items-baseline mb-4 mb-lg-5 gap-2 gap-lg-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
-          <h2 class="text-primary-500">小公主芭蕾展演</h2>
-          <p class="fs-8 mb-0">2025年10月15日（週六）</p>
-        </div>
-        <div class="row g-9">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
-            <div id="gallery-group-swiper" class="gallery-group-swiper">
-              <div class="swiper gallery-top">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide overflow-hidden h-auto">
-                    <img class="h-100 w-100 object-fit-cover" src="/assets/images/events/event-1/1.jpg" alt="小公主芭蕾展演 - 1" />
-                  </div>
-                  <div class="swiper-slide overflow-hidden h-auto">
-                    <img class="h-100 w-100 object-fit-cover" src="/assets/images/events/event-1/2.jpg" alt="小公主芭蕾展演 - 2" />
-                  </div>
-                  <div class="swiper-slide overflow-hidden h-auto">
-                    <img class="h-100 w-100 object-fit-cover" src="/assets/images/events/event-1/3.jpg" alt="小公主芭蕾展演 - 3" />
-                  </div>
-                  <div class="swiper-slide overflow-hidden h-auto">
-                    <img class="h-100 w-100 object-fit-cover" src="/assets/images/events/event-1/4.jpg" alt="小公主芭蕾展演 - 4" />
-                  </div>
-                  <div class="swiper-slide overflow-hidden h-auto">
-                    <img class="h-100 w-100 object-fit-cover" src="/assets/images/events/event-1/5.jpg" alt="小公主芭蕾展演 - 5" />
-                  </div>
-                  <div class="swiper-slide overflow-hidden h-auto">
-                    <img class="h-100 w-100 object-fit-cover" src="/assets/images/events/event-1/6.jpg" alt="小公主芭蕾展演 - 6" />
-                  </div>
-                  <div class="swiper-slide overflow-hidden h-auto">
-                    <img class="h-100 w-100 object-fit-cover" src="/assets/images/events/event-1/7.jpg" alt="小公主芭蕾展演 - 7" />
-                  </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-              </div>
-              <div class="swiper gallery-thumbs mt-2">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide overflow-hidden h-auto">
-                    <img class="h-100 w-100 object-fit-cover" src="/assets/images/events/event-1/1.jpg" alt="小公主芭蕾展演 - 1" />
-                  </div>
-                  <div class="swiper-slide overflow-hidden h-auto">
-                    <img class="h-100 w-100 object-fit-cover" src="/assets/images/events/event-1/2.jpg" alt="小公主芭蕾展演 - 2" />
-                  </div>
-                  <div class="swiper-slide overflow-hidden h-auto">
-                    <img class="h-100 w-100 object-fit-cover" src="/assets/images/events/event-1/3.jpg" alt="小公主芭蕾展演 - 3" />
-                  </div>
-                  <div class="swiper-slide overflow-hidden h-auto">
-                    <img class="h-100 w-100 object-fit-cover" src="/assets/images/events/event-1/4.jpg" alt="小公主芭蕾展演 - 4" />
-                  </div>
-                  <div class="swiper-slide overflow-hidden h-auto">
-                    <img class="h-100 w-100 object-fit-cover" src="/assets/images/events/event-1/5.jpg" alt="小公主芭蕾展演 - 5" />
-                  </div>
-                  <div class="swiper-slide overflow-hidden h-auto">
-                    <img class="h-100 w-100 object-fit-cover" src="/assets/images/events/event-1/6.jpg" alt="小公主芭蕾展演 - 6" />
-                  </div>
-                  <div class="swiper-slide overflow-hidden h-auto">
-                    <img class="h-100 w-100 object-fit-cover" src="/assets/images/events/event-1/7.jpg" alt="小公主芭蕾展演 - 7" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
-            <ul class="list-unstyled mb-0 d-flex flex-column gap-4">
-              <li data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
-                <h3 class="mb-2 fs-4 fs-lg-4 text-primary-500">簡介:</h3>
-                <p class="fs-7 letter-spacing-1 lh-base mb-0">
-                  讓您的孩子化身小公主，登上夢想舞臺！「小公主芭蕾展演」由Lily老師指導，3-6歲學員將展示優雅芭蕾動作，分享學習的快樂與自信！
-                </p>
-              </li>
-              <li data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-                <h3 class="mb-2 fs-4 fs-lg-4 text-primary-500">地點:</h3>
-                <p class="fs-7 letter-spacing-1 lh-base mb-0">
-                  快樂舞蹈學校表演廳（台北市中正區幸福路123號）
-                </p>
-              </li>
-              <li data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-                <h3 class="mb-2 fs-4 fs-lg-4 text-primary-500">時間：</h3>
-                <p class="fs-7 letter-spacing-1 lh-base mb-0">
-                  下午2:00-3:30
-                </p>
-              </li>
-              <li data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-                <h3 class="mb-2 fs-4 fs-lg-4 text-primary-500">適合年齡：</h3>
-                <p class="fs-7 letter-spacing-1 lh-base mb-0">3-6歲</p>
-              </li>
-              <li data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
-                <h3 class="mb-2 fs-4 fs-lg-4 text-primary-500">負責老師：</h3>
-                <p class="fs-7 letter-spacing-1 lh-base mb-0">Lily老師</p>
-              </li>
-              <li data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
-                <h3 class="mb-2 fs-4 fs-lg-4 text-primary-500">費用：</h3>
-                <p class="fs-7 letter-spacing-1 lh-base mb-0">
-                  免費觀賞，學員只需提交服裝費200元
-                </p>
-              </li>
-              <li data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
-                <h3 class="mb-2 fs-4 fs-lg-4 text-primary-500">內容：</h3>
-                <p class="fs-7 letter-spacing-1 lh-base mb-0">
-                  幼兒芭蕾表演（10-15分鐘/組），含簡單故事編舞，如「天鵝湖小精靈」。家長可錄影，活動後有茶點交流時間
-                </p>
-              </li>
-              <li data-aos="fade-up" data-aos-duration="600" data-aos-delay="700">
-                <h3 class="mb-2 fs-4 fs-lg-4 text-primary-500">安全措施：</h3>
-                <p class="fs-7 letter-spacing-1 lh-base mb-0">
-                  專業舞臺、防滑地板、緊急醫療待命
-                </p>
-              </li>
-              <li data-aos="fade-up" data-aos-duration="600" data-aos-delay="800">
-                <h3 class="mb-2 fs-4 fs-lg-4 text-primary-500">報名方式：</h3>
-                <p class="fs-7 letter-spacing-1 lh-base mb-0">
-                  線上表單，截止2025年10月1日
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <%- include('./layout/toTopButton'); -%>
-  <%- include('./layout/footer'); -%>
-  <script type="module" src="../main.js"></script>
-</body>
-
+	<body class="emfont-GenSenRoundedJP">
+		<%- include('./layout/loading'); -%> <%- include('./layout/header', {showLogin: true, }); -%>
+		<main>
+			<%- include('./layout/hero', { heroImageSrc: '/assets/images/events/event-1/1.jpg', sectionDesc: '小公主芭蕾展演',
+			heroPosition: 'center' }); -%>
+			<section id="activities-details" class="py-11 py-lg-14">
+				<div class="container">
+					<div
+						class="d-flex flex-column flex-lg-row align-items-baseline mb-4 mb-lg-5 gap-2 gap-lg-4"
+						data-aos="fade-up"
+						data-aos-duration="800"
+						data-aos-delay="0"
+					>
+						<h2 class="text-primary-500">小公主芭蕾展演</h2>
+						<p class="fs-8 mb-0">2025年10月15日（週六）</p>
+					</div>
+					<div class="row g-9">
+						<div class="col-lg-6" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
+							<div id="gallery-group-swiper" class="gallery-group-swiper">
+								<div class="swiper gallery-top">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide overflow-hidden h-auto">
+											<img
+												class="h-100 w-100 object-fit-cover"
+												src="/assets/images/events/event-1/1.jpg"
+												alt="小公主芭蕾展演 - 1"
+											/>
+										</div>
+										<div class="swiper-slide overflow-hidden h-auto">
+											<img
+												class="h-100 w-100 object-fit-cover"
+												src="/assets/images/events/event-1/2.jpg"
+												alt="小公主芭蕾展演 - 2"
+											/>
+										</div>
+										<div class="swiper-slide overflow-hidden h-auto">
+											<img
+												class="h-100 w-100 object-fit-cover"
+												src="/assets/images/events/event-1/3.jpg"
+												alt="小公主芭蕾展演 - 3"
+											/>
+										</div>
+										<div class="swiper-slide overflow-hidden h-auto">
+											<img
+												class="h-100 w-100 object-fit-cover"
+												src="/assets/images/events/event-1/4.jpg"
+												alt="小公主芭蕾展演 - 4"
+											/>
+										</div>
+										<div class="swiper-slide overflow-hidden h-auto">
+											<img
+												class="h-100 w-100 object-fit-cover"
+												src="/assets/images/events/event-1/5.jpg"
+												alt="小公主芭蕾展演 - 5"
+											/>
+										</div>
+										<div class="swiper-slide overflow-hidden h-auto">
+											<img
+												class="h-100 w-100 object-fit-cover"
+												src="/assets/images/events/event-1/6.jpg"
+												alt="小公主芭蕾展演 - 6"
+											/>
+										</div>
+										<div class="swiper-slide overflow-hidden h-auto">
+											<img
+												class="h-100 w-100 object-fit-cover"
+												src="/assets/images/events/event-1/7.jpg"
+												alt="小公主芭蕾展演 - 7"
+											/>
+										</div>
+									</div>
+									<div class="swiper-button-next"></div>
+									<div class="swiper-button-prev"></div>
+								</div>
+								<div class="swiper gallery-thumbs mt-2">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide overflow-hidden h-auto">
+											<img
+												class="h-100 w-100 object-fit-cover"
+												src="/assets/images/events/event-1/1.jpg"
+												alt="小公主芭蕾展演 - 1"
+											/>
+										</div>
+										<div class="swiper-slide overflow-hidden h-auto">
+											<img
+												class="h-100 w-100 object-fit-cover"
+												src="/assets/images/events/event-1/2.jpg"
+												alt="小公主芭蕾展演 - 2"
+											/>
+										</div>
+										<div class="swiper-slide overflow-hidden h-auto">
+											<img
+												class="h-100 w-100 object-fit-cover"
+												src="/assets/images/events/event-1/3.jpg"
+												alt="小公主芭蕾展演 - 3"
+											/>
+										</div>
+										<div class="swiper-slide overflow-hidden h-auto">
+											<img
+												class="h-100 w-100 object-fit-cover"
+												src="/assets/images/events/event-1/4.jpg"
+												alt="小公主芭蕾展演 - 4"
+											/>
+										</div>
+										<div class="swiper-slide overflow-hidden h-auto">
+											<img
+												class="h-100 w-100 object-fit-cover"
+												src="/assets/images/events/event-1/5.jpg"
+												alt="小公主芭蕾展演 - 5"
+											/>
+										</div>
+										<div class="swiper-slide overflow-hidden h-auto">
+											<img
+												class="h-100 w-100 object-fit-cover"
+												src="/assets/images/events/event-1/6.jpg"
+												alt="小公主芭蕾展演 - 6"
+											/>
+										</div>
+										<div class="swiper-slide overflow-hidden h-auto">
+											<img
+												class="h-100 w-100 object-fit-cover"
+												src="/assets/images/events/event-1/7.jpg"
+												alt="小公主芭蕾展演 - 7"
+											/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+							<ul class="list-unstyled mb-0 d-flex flex-column gap-4">
+								<li data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+									<h3 class="mb-2 fs-4 fs-lg-4 text-primary-500">簡介:</h3>
+									<p class="fs-7 letter-spacing-1 lh-base mb-0">
+										讓您的孩子化身小公主，登上夢想舞臺！「小公主芭蕾展演」由Lily老師指導，3-6歲學員將展示優雅芭蕾動作，分享學習的快樂與自信！
+									</p>
+								</li>
+								<li data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+									<h3 class="mb-2 fs-4 fs-lg-4 text-primary-500">地點:</h3>
+									<p class="fs-7 letter-spacing-1 lh-base mb-0">快樂舞蹈學校表演廳（台北市中正區幸福路123號）</p>
+								</li>
+								<li data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+									<h3 class="mb-2 fs-4 fs-lg-4 text-primary-500">時間：</h3>
+									<p class="fs-7 letter-spacing-1 lh-base mb-0">下午2:00-3:30</p>
+								</li>
+								<li data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+									<h3 class="mb-2 fs-4 fs-lg-4 text-primary-500">適合年齡：</h3>
+									<p class="fs-7 letter-spacing-1 lh-base mb-0">3-6歲</p>
+								</li>
+								<li data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+									<h3 class="mb-2 fs-4 fs-lg-4 text-primary-500">負責老師：</h3>
+									<p class="fs-7 letter-spacing-1 lh-base mb-0">Lily老師</p>
+								</li>
+								<li data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+									<h3 class="mb-2 fs-4 fs-lg-4 text-primary-500">費用：</h3>
+									<p class="fs-7 letter-spacing-1 lh-base mb-0">免費觀賞，學員只需提交服裝費200元</p>
+								</li>
+								<li data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+									<h3 class="mb-2 fs-4 fs-lg-4 text-primary-500">內容：</h3>
+									<p class="fs-7 letter-spacing-1 lh-base mb-0">
+										幼兒芭蕾表演（10-15分鐘/組），含簡單故事編舞，如「天鵝湖小精靈」。家長可錄影，活動後有茶點交流時間
+									</p>
+								</li>
+								<li data-aos="fade-up" data-aos-duration="600" data-aos-delay="700">
+									<h3 class="mb-2 fs-4 fs-lg-4 text-primary-500">安全措施：</h3>
+									<p class="fs-7 letter-spacing-1 lh-base mb-0">專業舞臺、防滑地板、緊急醫療待命</p>
+								</li>
+								<li data-aos="fade-up" data-aos-duration="600" data-aos-delay="800">
+									<h3 class="mb-2 fs-4 fs-lg-4 text-primary-500">報名方式：</h3>
+									<p class="fs-7 letter-spacing-1 lh-base mb-0">線上表單，截止2025年10月1日</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<%- include('./layout/toTopButton'); -%> <%- include('./layout/footer'); -%>
+		<script type="module" src="../main.js"></script>
+	</body>
 </html>

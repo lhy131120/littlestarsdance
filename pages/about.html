@@ -1,119 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+		<link rel="manifest" href="/favicon/manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png" />
+		<title>關於我們</title>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>關於我們</title>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-
-<body class="emfont-GenSenRoundedJP">
-  <%- include('./layout/loading'); -%>
-  <%- include('./layout/header',
-    {showLogin: true, }); -%>
-  <main>
-    <%- include('./layout/hero', { heroImageSrc:
-      '/assets/images/inside-heros/hero-3.jpg', sectionDesc: '關於我們',
-      heroPosition: 'center' }); -%>
-    <section class="py-11 py-lg-14">
-      <div class="container">
-        <div class="row-cols-1 g-5">
-          <div class="col">
-            <div class="d-flex flex-column gap-4 gap-lg-7">
-              <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
-                <h2 class="mb-4 fs-4 fs-lg-1 text-primary-500">
-                  歡迎來到Little Stars Dance
-                </h2>
-                <p class="letter-spacing-1" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-                  Little Stars
-                  Dance成立於2015年，專為3-16歲的幼兒和青少年提供專業的舞蹈教育。我們致力於在安全與舒適的環境中，培養孩子們的舞蹈興趣，讓他們透過舞蹈探索自我、發揮創意，並發展社交能力、自信心、紀律性和團隊精神。我們的使命是為每位孩子打造愉快的學習體驗，讓舞蹈成為他們終生的快樂興趣。
-                </p>
-                <p class="letter-spacing-1" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                  無論是初學者還是進階舞者，我們的課程涵蓋各種舞蹈領域，從優雅的芭蕾到動感的街舞，都由經驗豐富的專業老師指導。透過精心設計的課程，我們不僅教導舞蹈技巧，還幫助孩子們在舞步中找到表達自我的方式，點亮他們的星光夢想。
-                </p>
-              </div>
-              <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                <h2 class="mb-4 fs-4 fs-lg-1 text-primary-500">
-                  我們的使命與價值
-                </h2>
-                <ul class="list-unstyled d-flex flex-column gap-3">
-                  <li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="0">
-                    安全與舒適的環境：我們優先確保每堂課都在溫馨、安全的空間進行，讓孩子們無憂無慮地學習。
-                  </li>
-                  <li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">
-                    各種舞蹈領域的專長：涵蓋芭蕾、嘻哈、現代舞、爵士舞和踢踏舞等多樣風格，滿足不同年齡和興趣的需求。
-                  </li>
-                  <li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="200">
-                    培養創意與社交能力：鼓勵孩子們創新表達，透過團體練習提升合作精神。
-                  </li>
-                  <li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="300">
-                    表達自我與建立自信：舞蹈不僅是動作，更是孩子們展示內心世界的平台，幫助他們培養紀律和團隊精神。
-                  </li>
-                  <li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="400">
-                    為青少年建立愉快的興趣：讓舞蹈成為生活中的快樂來源，陪伴他們成長。
-                  </li>
-                </ul>
-              </div>
-              <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                <h2 class="mb-4 fs-4 fs-lg-1 text-primary-500">
-                  我們的專業老師團隊
-                </h2>
-                <p class="letter-spacing-1" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
-                  我們的教師團隊擁有豐富的教學經驗和熱情，熱愛與孩子互動，致力於激發每位學員的潛力。以下是我們的優秀老師，他們不僅傳授技巧，還透過有趣的課程和互動，幫助孩子們愛上舞蹈，收穫成長的喜悅：
-                </p>
-              </div>
-              <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
-                <h3 class="mb-3 fs-6 fs-lg-5 text-decoration-underline">
-                  Lily老師：優雅芭蕾的靈魂導師，讓孩子在舞步中綻放自信
-                </h3>
-                <ul class="list-unstyled mb-6 mb-lg-8">
-                  <li class="d-flex gap-2 class" data-aos="fade-right" data-aos-duration="600" data-aos-delay="0">
-                    Lily
-                    老師的課程不僅提升孩子的體態與優雅，還透過小表演和親子互動，讓家長見證孩子的成長。許多學生在她的指導下，參加校內外展演，獲得自信與成就感。家長常分享，孩子們上課後變得更專注和快樂，舞蹈成為他們日常的正面能量來源。
-                  </li>
-                </ul>
-                <h3 class="mb-3 fs-6 fs-lg-5 text-decoration-underline" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
-                  Jay 老師：街頭嘻哈的能量爆發者，點燃青少年的個性火花
-                </h3>
-                <ul class="list-unstyled mb-6 mb-lg-8">
-                  <li class="d-flex gap-2 class" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">
-                    Jay
-                    老師的課程充滿互動挑戰和團隊battle，讓青少年釋放能量，培養獨立思考和創意。學生們常在課程中創作自己的舞步，參加街舞表演或比賽，獲得同儕認可和自我成就。Jay反饋，孩子不僅舞技進步，還舞技進步，還學會面對挑戰的勇氣，讓舞蹈成為他們青春的亮點。
-                  </li>
-                </ul>
-                <h3 class="mb-3 fs-6 fs-lg-5 text-decoration-underline" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
-                  Sophie 老師：現代爵士的靈感藝術家，喚醒孩子內心的情感舞者
-                </h3>
-                <ul class="list-unstyled mb-6 mb-lg-8">
-                  <li class="d-flex gap-2 class" data-aos="fade-right" data-aos-duration="600" data-aos-delay="200">
-                    Sophie
-                    老師的課程融入故事元素，讓孩子透過舞蹈表達情緒，療癒內心並激發想像力。學生常在表演中發現自己的故事，家長看到孩子變得更開放和自信。課程還包括親子分享會，讓家庭一起參與，強化親子連結並見證成長。
-                  </li>
-                </ul>
-                <h3 class="mb-3 fs-6 fs-lg-5 text-decoration-underline" data-aos="fade-up" data-aos-duration="800" data-aos-delay="900">
-                  Emma 老師：踢踏節奏的快樂傳播者，踏出孩子自信的節拍
-                </h3>
-                <ul class="list-unstyled mb-6 mb-lg-8">
-                  <li class="d-flex gap-2 class" data-aos="fade-right" data-aos-duration="600" data-aos-delay="300">
-                    Lily Emma
-                    老師的課程像音樂遊戲，讓孩子在節奏中找到樂趣，提升專注力和協調性。學生常參與敲擊表演，培養團隊默契，並在比賽中獲得獎項。家長分享孩子上課後變得更活潑，舞蹈成為他們釋放壓力和展現個性的方式。
-                  </li>
-                </ul>
-                <div class="bg-accent-400 rounded-5 p-4 mb-0 fs-7 fs-lg-5 text-center text-primary-300" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1000">
-                  準備讓您的孩子舞動夢想？探索我們的課程，與專業教師一起開啟快樂旅程！專業教師，舞動孩子未來！
-                </div>
-              </div>
-              <a href="./totur-details.html" class="btn btn-outline-secondary mx-auto" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1100">了解更多</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <%- include('./layout/toTopButton'); -%>
-  <%- include('./layout/footer'); -%>
-  <script type="module" src="../main.js"></script>
-</body>
-
+	<body class="emfont-GenSenRoundedJP">
+		<%- include('./layout/loading'); -%> <%- include('./layout/header', {showLogin: true, }); -%>
+		<main>
+			<%- include('./layout/hero', { heroImageSrc: '/assets/images/inside-heros/hero-3.jpg', sectionDesc: '關於我們',
+			heroPosition: 'center' }); -%>
+			<section class="py-11 py-lg-14">
+				<div class="container">
+					<div class="row-cols-1 g-5">
+						<div class="col">
+							<div class="d-flex flex-column gap-4 gap-lg-7">
+								<div data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
+									<h2 class="mb-4 fs-4 fs-lg-1 text-primary-500">歡迎來到Little Stars Dance</h2>
+									<p class="letter-spacing-1" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+										Little Stars
+										Dance成立於2015年，專為3-16歲的幼兒和青少年提供專業的舞蹈教育。我們致力於在安全與舒適的環境中，培養孩子們的舞蹈興趣，讓他們透過舞蹈探索自我、發揮創意，並發展社交能力、自信心、紀律性和團隊精神。我們的使命是為每位孩子打造愉快的學習體驗，讓舞蹈成為他們終生的快樂興趣。
+									</p>
+									<p class="letter-spacing-1" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+										無論是初學者還是進階舞者，我們的課程涵蓋各種舞蹈領域，從優雅的芭蕾到動感的街舞，都由經驗豐富的專業老師指導。透過精心設計的課程，我們不僅教導舞蹈技巧，還幫助孩子們在舞步中找到表達自我的方式，點亮他們的星光夢想。
+									</p>
+								</div>
+								<div data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+									<h2 class="mb-4 fs-4 fs-lg-1 text-primary-500">我們的使命與價值</h2>
+									<ul class="list-unstyled d-flex flex-column gap-3">
+										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="0">
+											安全與舒適的環境：我們優先確保每堂課都在溫馨、安全的空間進行，讓孩子們無憂無慮地學習。
+										</li>
+										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">
+											各種舞蹈領域的專長：涵蓋芭蕾、嘻哈、現代舞、爵士舞和踢踏舞等多樣風格，滿足不同年齡和興趣的需求。
+										</li>
+										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="200">
+											培養創意與社交能力：鼓勵孩子們創新表達，透過團體練習提升合作精神。
+										</li>
+										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="300">
+											表達自我與建立自信：舞蹈不僅是動作，更是孩子們展示內心世界的平台，幫助他們培養紀律和團隊精神。
+										</li>
+										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="400">
+											為青少年建立愉快的興趣：讓舞蹈成為生活中的快樂來源，陪伴他們成長。
+										</li>
+									</ul>
+								</div>
+								<div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+									<h2 class="mb-4 fs-4 fs-lg-1 text-primary-500">我們的專業老師團隊</h2>
+									<p class="letter-spacing-1" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+										我們的教師團隊擁有豐富的教學經驗和熱情，熱愛與孩子互動，致力於激發每位學員的潛力。以下是我們的優秀老師，他們不僅傳授技巧，還透過有趣的課程和互動，幫助孩子們愛上舞蹈，收穫成長的喜悅：
+									</p>
+								</div>
+								<div data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+									<h3 class="mb-3 fs-6 fs-lg-5 text-decoration-underline">
+										Lily老師：優雅芭蕾的靈魂導師，讓孩子在舞步中綻放自信
+									</h3>
+									<ul class="list-unstyled mb-6 mb-lg-8">
+										<li class="d-flex gap-2 class" data-aos="fade-right" data-aos-duration="600" data-aos-delay="0">
+											Lily
+											老師的課程不僅提升孩子的體態與優雅，還透過小表演和親子互動，讓家長見證孩子的成長。許多學生在她的指導下，參加校內外展演，獲得自信與成就感。家長常分享，孩子們上課後變得更專注和快樂，舞蹈成為他們日常的正面能量來源。
+										</li>
+									</ul>
+									<h3
+										class="mb-3 fs-6 fs-lg-5 text-decoration-underline"
+										data-aos="fade-up"
+										data-aos-duration="800"
+										data-aos-delay="700"
+									>
+										Jay 老師：街頭嘻哈的能量爆發者，點燃青少年的個性火花
+									</h3>
+									<ul class="list-unstyled mb-6 mb-lg-8">
+										<li class="d-flex gap-2 class" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">
+											Jay
+											老師的課程充滿互動挑戰和團隊battle，讓青少年釋放能量，培養獨立思考和創意。學生們常在課程中創作自己的舞步，參加街舞表演或比賽，獲得同儕認可和自我成就。Jay反饋，孩子不僅舞技進步，還舞技進步，還學會面對挑戰的勇氣，讓舞蹈成為他們青春的亮點。
+										</li>
+									</ul>
+									<h3
+										class="mb-3 fs-6 fs-lg-5 text-decoration-underline"
+										data-aos="fade-up"
+										data-aos-duration="800"
+										data-aos-delay="800"
+									>
+										Sophie 老師：現代爵士的靈感藝術家，喚醒孩子內心的情感舞者
+									</h3>
+									<ul class="list-unstyled mb-6 mb-lg-8">
+										<li class="d-flex gap-2 class" data-aos="fade-right" data-aos-duration="600" data-aos-delay="200">
+											Sophie
+											老師的課程融入故事元素，讓孩子透過舞蹈表達情緒，療癒內心並激發想像力。學生常在表演中發現自己的故事，家長看到孩子變得更開放和自信。課程還包括親子分享會，讓家庭一起參與，強化親子連結並見證成長。
+										</li>
+									</ul>
+									<h3
+										class="mb-3 fs-6 fs-lg-5 text-decoration-underline"
+										data-aos="fade-up"
+										data-aos-duration="800"
+										data-aos-delay="900"
+									>
+										Emma 老師：踢踏節奏的快樂傳播者，踏出孩子自信的節拍
+									</h3>
+									<ul class="list-unstyled mb-6 mb-lg-8">
+										<li class="d-flex gap-2 class" data-aos="fade-right" data-aos-duration="600" data-aos-delay="300">
+											Lily Emma
+											老師的課程像音樂遊戲，讓孩子在節奏中找到樂趣，提升專注力和協調性。學生常參與敲擊表演，培養團隊默契，並在比賽中獲得獎項。家長分享孩子上課後變得更活潑，舞蹈成為他們釋放壓力和展現個性的方式。
+										</li>
+									</ul>
+									<div
+										class="bg-accent-400 rounded-5 p-4 mb-0 fs-7 fs-lg-5 text-center text-primary-300"
+										data-aos="fade-up"
+										data-aos-duration="800"
+										data-aos-delay="1000"
+									>
+										準備讓您的孩子舞動夢想？探索我們的課程，與專業教師一起開啟快樂旅程！專業教師，舞動孩子未來！
+									</div>
+								</div>
+								<a
+									href="./totur-details.html"
+									class="btn btn-outline-secondary mx-auto"
+									data-aos="fade-up"
+									data-aos-duration="800"
+									data-aos-delay="1100"
+									>了解更多</a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<%- include('./layout/toTopButton'); -%> <%- include('./layout/footer'); -%>
+		<script type="module" src="../main.js"></script>
+	</body>
 </html>

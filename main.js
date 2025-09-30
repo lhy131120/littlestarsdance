@@ -239,35 +239,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 		}
 
 		// 表單切換邏輯
-		// if (document.querySelector("#mainForm")) {
-		// 	const from = document.querySelector("#mainForm");
-		// 	const loginSection = document.getElementById("login-section");
-		// 	const registerSection = document.getElementById("register-section");
-		// 	const changeToRegister = document.getElementById("changeToRegister");
-		// 	const changeToLogin = document.getElementById("changeToLogin");
-		// 	const loginImage = document.getElementById("loginImage");
-		// 	const registerImage = document.getElementById("registerImage");
-
-		// 	changeToRegister.addEventListener("click", () => {
-		// 		loginSection.classList.remove("active");
-		// 		registerSection.classList.add("active");
-		// 		loginImage.classList.remove("active");
-		// 		registerImage.classList.add("active");
-		// 		setTimeout(() => {
-		// 			from.reset();
-		// 		}, 500);
-		// 	});
-
-		// 	changeToLogin.addEventListener("click", () => {
-		// 		registerSection.classList.remove("active");
-		// 		loginSection.classList.add("active");
-		// 		registerImage.classList.remove("active");
-		// 		loginImage.classList.add("active");
-		// 		setTimeout(() => {
-		// 			from.reset();
-		// 		}, 500);
-		// 	});
-		// }
 
     if (document.querySelector("#mainForm")) {
 			const from = document.querySelector("#mainForm");
@@ -285,7 +256,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 				registerImage.classList.add("active");
 				setTimeout(() => {
 					from.reset();
-					AOS.refresh(); // 刷新 AOS 以觸發新顯示區塊的動畫
+					AOS.refresh(); 
 				}, 500);
 			});
 
@@ -296,7 +267,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 				loginImage.classList.add("active");
 				setTimeout(() => {
 					from.reset();
-					AOS.refresh(); // 刷新 AOS 以觸發新顯示區塊的動畫
+					AOS.refresh(); 
 				}, 500);
 			});
 		}
