@@ -10,127 +10,191 @@
 		<link rel="manifest" href="/favicon/manifest.json" />
 		<meta name="msapplication-TileColor" content="#ffffff" />
 		<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png" />
-		<title>課程詳細頁</title>
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-	</head>
+    <title>專業指導</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body class="emfont-GenSenRoundedJP">
+    <%- include('./layout/loading'); -%> <%- include('./layout/header',
+    {showLogin: true, }); -%>
+    <main>
+      <%- include('./layout/hero', { isCoursesPage: false, isToturPage: true,
+      heroImageSrc: '/assets/images/inside-heros/hero-3.jpg', sectionDesc:
+      '專業教師，舞動孩子未來！' }); -%>
 
-	<body class="emfont-GenSenRoundedJP">
-		<%- include('./layout/loading'); -%> <%- include('./layout/header', {showLogin: true, }); -%>
-		<main>
-			<%- include('./layout/courseDetailsHero', { isCoursesDetailsPage: true, courseName: '幼兒芭蕾', heroImageSrc:
-			'/assets/images/course-thumbnail/course-1.jpg', label: ['3-6歲', '初級'] }); -%>
-			<section class="py-11 py-lg-14">
-				<div class="container">
-					<div class="row justify-content-around gap-7 gap-lg-0">
-						<div class="col-lg-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
-							<ul class="list-unstyled d-flex flex-column gap-6 gap-lg-7 mb-0">
-								<li data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-									<h2 class="mb-4 fs-4 fs-lg-1">關於課程</h2>
-									<p>
-										我們的創意芭蕾課程專為3-6歲的小舞者設計。透過富有想像的遊戲和溫柔的指導，孩子們將發現運動的樂趣，同時發展協調性、平衡和創造力。每節課都包含熱身練習、基本芭蕾舞姿勢、簡單的編舞以及富有創意的舞蹈遊戲，幫助孩子建立自信，並培養自我表達能力。
-									</p>
-								</li>
-								<li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-									<h2 class="mb-4 fs-4 fs-lg-1">您將獲得什麼</h2>
-									<ul class="list-unstyled mb-0 d-flex flex-column gap-3">
-										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="0">
-											提高協調性和平衡能力
-										</li>
-										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">
-											培養音樂感和節奏感
-										</li>
-										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="200">
-											增強自信和自我表達能力
-										</li>
-										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="300">
-											激發創造力和想像力
-										</li>
-										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="400">
-											透過小組活動提升社交技能
-										</li>
-									</ul>
-								</li>
-								<li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-									<h2 class="mb-4 fs-4 fs-lg-1">課堂所需物品</h2>
-									<ul class="list-unstyled mb-0 d-flex flex-column gap-3">
-										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="0">
-											舒適且方便活動的衣服
-										</li>
-										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">
-											芭蕾舞鞋或防滑襪
-										</li>
-										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="200">
-											頭髮綁起來（適合長髮
-										</li>
-										<li class="d-flex gap-2 star" data-aos="fade-right" data-aos-duration="600" data-aos-delay="300">
-											水瓶
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-						<div class="col-lg-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
-							<div
-								class="d-flex flex-column gap-4 p-6 border border-2 border-gray-300 rounded-5 mb-7"
-								data-aos="fade-up"
-								data-aos-duration="800"
-								data-aos-delay="100"
-							>
-								<h3 class="fs-1 letter-spacing-1 text-center mb-2 mb-lg-4 text-primary-500">$600/月</h3>
-								<a
-									href="./payment.html"
-									class="btn btn-primary-300 py-lg-3 w-75 w-lg-100 mx-auto"
-									data-aos="fade-up"
-									data-aos-duration="600"
-									data-aos-delay="0"
-									>立即報名</a
-								>
-								<button
-									type="button"
-									class="btn btn-primary py-lg-3 w-75 w-lg-100 mx-auto"
-									data-aos="fade-up"
-									data-aos-duration="600"
-									data-aos-delay="100"
-								>
-									參加試課
-								</button>
-							</div>
-							<div
-								class="d-flex flex-column gap-4 p-6 border border-2 border-gray-300 rounded-5"
-								data-aos="fade-up"
-								data-aos-duration="800"
-								data-aos-delay="200"
-							>
-								<h3 class="fs-1 letter-spacing-1 text-center mb-2 mb-lg-4 text-primary-500">課程資料</h3>
-								<ul class="list-unstyled d-flex flex-column gap-5 mb-0">
-									<li class="text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
-										<h4 class="fs-8 fs-lg-7 mb-1">導師</h4>
-										<h5 class="text-primary-500 fs-6 fs-lg-5">Lily老師</h5>
-									</li>
-									<li class="text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-										<h4 class="fs-8 fs-lg-7 mb-1">課程時間</h4>
-										<h5 class="text-primary-500 fs-6 fs-lg-5">每週六上午 10:00</h5>
-									</li>
-									<li class="text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-										<h4 class="fs-8 fs-lg-7 mb-1">每月堂數</h4>
-										<h5 class="text-primary-500 fs-6 fs-lg-5">4堂</h5>
-									</li>
-									<li class="text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-										<h4 class="fs-8 fs-lg-7 mb-1">時長</h4>
-										<h5 class="text-primary-500 fs-6 fs-lg-5">45分鐘</h5>
-									</li>
-									<li class="text-center" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
-										<h4 class="fs-8 fs-lg-7 mb-1">地點</h4>
-										<h5 class="text-primary-500 fs-6 fs-lg-5">舞蹈室A</h5>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
-		<%- include('./layout/toTopButton'); -%> <%- include('./layout/footer'); -%>
-		<script type="module" src="../main.js"></script>
-	</body>
+      <section class="py-11 py-lg-14 overflow-hidden" id="totur-details-list">
+        <div class="container">
+          <!-- Lily -->
+          <div data-toturs-name="lily" class="row mb-6 mb-lg-9 d-none" data-aos="fade-up" data-aos-duration="800">
+            <div class="col">
+              <div class="mb-2 mw-500p mx-auto" data-aos="zoom-in" data-aos-delay="100">
+                <img
+                  src="/assets/images/tutor/Lily.jpg"
+                  class="img-fluid"
+                  alt="Lily"
+                />
+              </div>
+              <p class="text-center mb-5 mb-lg-9" data-aos="fade-in" data-aos-delay="200">
+                <small>優雅芭蕾的靈魂導師，讓孩子在舞步中綻放自信</small>
+              </p>
+              <ul class="list-unstyled d-flex flex-column gap-5 gap-lg-9">
+                <li data-aos="fade-right" data-aos-delay="300">
+                  <p class="mb-0 lh-lg">
+                    Lily老師擁有超過10年的芭蕾教學經驗，專注於幼兒和青少年的舞蹈教育。她畢業於知名舞蹈學院，並持有國際認可的芭蕾教師資格。Lily老師熱愛與孩子們互動，致力於培養他們對舞蹈的熱情和自信心。
+                  </p>
+                </li>
+                <li data-aos="fade-left" data-aos-delay="400">
+                  <h2 class="mb-3 text-primary-500">教學專長</h2>
+                  <p class="mb-0 lh-lg">
+                    Lily 老師專精於芭蕾舞教育，特別針對 3-16
+                    歲的幼兒和青少年設計課程。她擅長從基礎姿勢到進階技巧的循序漸進教學，融入遊戲元素，讓孩子在快樂中學習芭蕾的優雅與紀律。無論是初學者還是小小舞者，她都能根據年齡和體能調整課程，幫助孩子發展肢體協調、平衡感和藝術表現力。
+                  </p>
+                </li>
+                <li data-aos="fade-right" data-aos-delay="500">
+                  <h2 class="mb-3 text-primary-500">專業資格</h2>
+                  <ul
+                    class="list-unstyled d-flex flex-column gap-2 gap-lg-3 mb-0"
+                  >
+                    <li class="star d-flex gap-2">
+                      畢業於知名舞蹈學院（例如英國皇家舞蹈學院或類似國際機構）。
+                    </li>
+                    <li class="star d-flex gap-2">
+                      持有國際認可的芭蕾教師資格證書（如 RAD 或 ISTD 認證）。
+                    </li>
+                    <li class="star d-flex gap-2">
+                      超過 10
+                      年芭蕾教學經驗，曾在多所兒童舞蹈學校擔任首席教練，並參與國際芭蕾工作坊。
+                    </li>
+                  </ul>
+                </li>
+                <li data-aos="fade-left" data-aos-delay="600">
+                  <h2 class="mb-3 text-primary-500">教學理念與個人故事</h2>
+                  <p class="mb-0 lh-lg">
+                    Lily
+                    老師的教學理念是「舞蹈不僅是技巧，更是自信的源泉」。她相信每個孩子都擁有獨特的潛力，透過芭蕾能培養他們的堅持與優雅。她自己的故事令人鼓舞：小時候，Lily
+                    曾是個害羞的女孩，透過芭蕾舞找到自信，從街頭小表演到登上國際舞台。她常分享：「我希望每個學生都能像我一樣，在舞步中發現內心的力量。」在課堂上，她不僅教舞步，還融入故事敘述和角色扮演，讓孩子們想像自己是小天鵝或芭蕾公主，激發他們的熱情。許多家長反饋，孩子上課後不僅舞技進步，還變得更勇敢面對挑戰。
+                  </p>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="700">
+                  <h3 class="text-danger text-lg-center fs-6 letter-spacing-1">
+                    加入 Lily
+                    老師的課程，讓您的孩子在優雅中成長，成為自信的小舞者！
+                  </h3>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Jay -->
+          <div data-toturs-name="jay" class="row mb-6 mb-lg-9 d-none" data-aos="fade-up" data-aos-duration="800">
+            <div class="col">
+              <div class="mb-2 mw-500p mx-auto" data-aos="zoom-in" data-aos-delay="100">
+                <img src="/assets/images/tutor/Jay.jpg" class="img-fluid" alt="Jay">
+              </div>
+              <p class="text-center mb-5 mb-lg-9" data-aos="fade-in" data-aos-delay="200"><small>街頭嘻哈的能量爆發者，點燃青少年的個性火花</small></p>
+              <ul class="list-unstyled d-flex flex-column gap-5 gap-lg-9">
+                <li data-aos="fade-right" data-aos-delay="300">
+                  <p class="mb-0 lh-lg">Jay老師是一位經驗豐富的嘻哈舞蹈教練，擁有超過8年的教學經驗。他曾在多個國際舞蹈比賽中獲獎，並且熱衷於分享街舞文化。Jay老師注重學生的個人風格發展，並鼓勵他們在舞台上自信表現。</p>
+                </li>
+                <li data-aos="fade-left" data-aos-delay="400">
+                  <h2 class="mb-3 text-primary-500">教學專長</h2>
+                  <p class="mb-0 lh-lg">Jay 老師專攻嘻哈和街舞，適合 8-16 歲青少年，課程強調動感節奏、身體協調和即興創作。他擅長分解複雜動作，讓初學者輕鬆上手，並融入流行音樂和文化元素，幫助學生發展個人風格，如 breaking、popping 或 locking 等技巧。</p>
+                </li>
+                <li data-aos="fade-right" data-aos-delay="500">
+                  <h2 class="mb-3 text-primary-500">專業資格</h2>
+                  <ul class="list-unstyled d-flex flex-column gap-2 gap-lg-3 mb-0">
+                    <li class="star d-flex gap-2">超過 8 年嘻哈舞蹈教學經驗，曾在街舞工作室和學校任教。</li>
+                    <li class="star d-flex gap-2">多項國際舞蹈比賽獲獎，包括世界街舞錦標賽（World Hip Hop Dance Championship）前三名。</li>
+                    <li class="star d-flex gap-2">超持有街舞教練認證（如 Urban Dance Camp 培訓證書），並參與過多個街舞節目編舞。</li>
+                  </ul>
+                </li>
+                <li data-aos="fade-left" data-aos-delay="600">
+                  <h2 class="mb-3 text-primary-500">教學理念與個人故事</h2>
+                  <p class="mb-0 lh-lg">Jay 老師的理念是「嘻哈不是規則，而是自由表達的藝術」。他鼓勵學生打破框架，透過舞蹈展現真我，尤其在青少年時期幫助他們釋放壓力與能量。他的個人故事充滿激勵：從街頭自學舞者起步，Jay 曾面臨家庭反對，但憑藉熱情贏得多場比賽，成為專業教練。他回憶：「嘻哈救了我，讓我從迷失中找到方向。」在課堂上，他不僅教動作，還分享街舞歷史和文化，讓孩子們理解嘻哈的精神。學生們常說，上 Jay 的課像參加派對，充滿樂趣與成就感。</p>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="700">
+                  <h3 class="text-danger text-lg-center fs-6 letter-spacing-1">適合想讓孩子展現個性的家長，Jay 老師將引導他們在舞台上閃耀自信！</h3>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Sophie -->
+          <div data-toturs-name="sophie" class="row mb-6 mb-lg-9 d-none" data-aos="fade-up" data-aos-duration="800">
+            <div class="col">
+              <div class="mb-2 mw-500p mx-auto" data-aos="zoom-in" data-aos-delay="100">
+                <img src="/assets/images/tutor/Sophie.jpg" class="img-fluid" alt="Sophie">
+              </div>
+              <p class="text-center mb-5 mb-lg-9" data-aos="fade-in" data-aos-delay="200"><small>現代爵士的靈感藝術家，喚醒孩子內心的情感舞者</small></p>
+              <ul class="list-unstyled d-flex flex-column gap-5 gap-lg-9">
+                <li data-aos="fade-right" data-aos-delay="300">
+                  <p class="mb-0 lh-lg">Sophie老師擁有現代舞和爵士舞的雙重專業背景，並在國際舞台上有豐富的表演經驗。她熱愛教學，致力於幫助學生發掘他們的舞蹈潛力。Sophie老師注重技術與情感的結合，鼓勵學生在舞蹈中找到自我表達的方式。</p>
+                </li>
+                <li data-aos="fade-left" data-aos-delay="400">
+                  <h2 class="mb-3 text-primary-500">教學專長</h2>
+                  <p class="mb-0 lh-lg">Sophie 老師精通現代舞和爵士舞，課程針對 6-16 歲兒童和青少年，結合流暢動作、情感表達和音樂詮釋。她擅長設計主題課程，如「情感故事舞」或「爵士即興」，幫助學生從技術層面到內心層面全面發展，培養柔韌性、創造力和表演力。</p>
+                </li>
+                <li data-aos="fade-right" data-aos-delay="500">
+                  <h2 class="mb-3 text-primary-500">專業資格</h2>
+                  <ul class="list-unstyled d-flex flex-column gap-2 gap-lg-3 mb-0">
+                    <li class="star d-flex gap-2">雙重專業背景：現代舞與爵士舞，擁有豐富國際表演經驗，包括歐洲舞蹈節和美國巡演。</li>
+                    <li class="star d-flex gap-2">持有專業舞蹈教師資格（如美國舞蹈教師協會認證）。</li>
+                    <li class="star d-flex gap-2">超持有街舞教練認證（如 Urban Dance Camp 培訓證書），並參與過多個街舞節目編舞。</li>
+                  </ul>
+                </li>
+                <li data-aos="fade-left" data-aos-delay="600">
+                  <h2 class="mb-3 text-primary-500">教學理念與個人故事</h2>
+                  <p class="mb-0 lh-lg">Sophie 老師的理念是「舞蹈是技術與情感的完美融合，讓孩子找到自我聲音」。她強調不只練身體，更要練心靈，透過舞蹈療癒情緒並激發創意。她的故事溫暖人心：年輕時，Sophie 經歷喪失親人的低潮，透過現代舞找到療癒與重生，從業餘舞者轉為專業表演者。她分享：「舞蹈讓我學會表達無法言喻的情感。」在課堂上，她鼓勵孩子創作自己的舞步，融入個人故事，讓學習變成探索自我的旅程。家長們讚賞，孩子不僅學會舞技，還變得更敏感與自信。</p>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="700">
+                <h3 class="text-danger text-lg-center fs-6 letter-spacing-1">加入 Sophie 的課程，讓您的孩子在舞蹈中發現無限可能！</h3>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Emma -->
+          <div data-toturs-name="emma" class="row mb-6 mb-lg-9 d-none" data-aos="fade-up" data-aos-duration="800">
+            <div class="col">
+              <div class="mb-2 mw-500p mx-auto" data-aos="zoom-in" data-aos-delay="100">
+                <img src="/assets/images/tutor/Emma.jpg" class="img-fluid" alt="Emma">
+              </div>
+              <p class="text-center mb-5 mb-lg-9" data-aos="fade-in" data-aos-delay="200"><small>踢踏節奏的快樂傳播者，踏出孩子自信的節拍</small></p>
+              <ul class="list-unstyled d-flex flex-column gap-5 gap-lg-9">
+                <li data-aos="fade-right" data-aos-delay="300">
+                  <p class="mb-0 lh-lg">Emma老師是一位專業的踢踏舞教練，擁有多年的教學經驗。她曾在多個國際踢踏舞比賽中獲獎，並且熱衷於分享踢踏舞的樂趣。Emma老師注重學生的節奏感和協調性，並鼓勵他們在舞台上自信表現。</p>
+                </li>
+                <li data-aos="fade-left" data-aos-delay="400">
+                  <h2 class="mb-3 text-primary-500">教學專長</h2>
+                  <p class="mb-0 lh-lg">Emma 老師專精踢踏舞，適合 5-16 歲幼兒和青少年，課程聚焦節奏訓練、腳步協調和舞台表演。她擅長從基本敲擊到複雜組合的教學，融入音樂遊戲，讓孩子在敲擊聲中享受樂趣，發展聽覺敏感度和肢體控制。</p>
+                </li>
+                <li data-aos="fade-right" data-aos-delay="500">
+                  <h2 class="mb-3 text-primary-500">專業資格</h2>
+                  <ul class="list-unstyled d-flex flex-column gap-2 gap-lg-3 mb-0">
+                    <li class="star d-flex gap-2">多年踢踏舞教學經驗，曾在專業舞蹈學校任教。</li>
+                    <li class="star d-flex gap-2">多項國際踢踏舞比賽獲獎，包括世界踢踏舞錦標賽（World Tap Dance Championships）冠軍。</li>
+                    <li class="star d-flex gap-2">持有踢踏舞教練資格證書（如美國踢踏舞協會認證），並參與過百老匯風格的表演製作。</li>
+                  </ul>
+                </li>
+                <li data-aos="fade-left" data-aos-delay="600">
+                  <h2 class="mb-3 text-primary-500">教學理念與個人故事</h2>
+                  <p class="mb-0 lh-lg">Emma 老師的理念是「踢踏舞是節奏的魔法，能點亮孩子的自信與快樂」。她相信透過敲擊聲，孩子能學會堅持與團隊合作，尤其適合活潑好動的青少年釋放能量。她的個人故事充滿活力：從小迷戀踢踏電影，Emma 自學成才，克服協調障礙後贏得多場比賽，成為專業教練。她常說：「每一步敲擊，都是自信的宣言。」在課堂上，她不僅教技巧，還組織小表演，讓孩子體驗舞台的興奮。學生反饋，上課像玩遊戲，充滿笑聲與成就。</p>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="700">
+                <h3 class="text-danger text-lg-center fs-6 letter-spacing-1">適合想讓孩子學習獨特舞蹈的家長，Emma 老師將帶領他們踏出屬於自己的節奏人生！</h3>
+                </li>
+              </ul>
+            </div>
+          </div>
+        
+          <div class="row">
+            <div class="col text-center">
+              <a href="./toturs.html" class="btn btn-outline-secondary" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1000">回導師列表</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('./layout/toTopButton'); -%> <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+  </body>
 </html>

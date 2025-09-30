@@ -294,5 +294,40 @@ document.addEventListener("DOMContentLoaded", async () => {
 				}
 			});
 		}
+
+    if (document.querySelector("#totur-list")) {
+			// Handle clicks on .gototours buttons
+			const buttons = document.querySelectorAll(".gototours");
+			buttons.forEach((button) => {
+				button.addEventListener("click", function (event) {
+					event.preventDefault();
+					const tutorName = this.getAttribute("data-totur").toLowerCase(); // Normalize to lowercase
+					// Redirect to details page with query param
+					window.location.href = "./totur-details.html?tutor=" + encodeURIComponent(tutorName);
+				});
+			});
+		}
+
+    if (document.querySelector('#totur-details-list')) {
+        // Get the tutor name from URL query param
+        const urlParams = new URLSearchParams(window.location.search);
+        const tutorName = urlParams.get('tutor');
+
+        if (tutorName) {
+            // Find the matching div by data-toturs-name (assuming lowercase)
+            const targetDiv = document.querySelector(`[data-toturs-name="${tutorName}"]`);
+            if (targetDiv) {
+                // Remove d-none class
+                targetDiv.classList.remove('d-none');
+                // Optionally scroll to the section
+                const section = document.querySelector('#totur-details-list');
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
+    }
+
+
 	}
 });
